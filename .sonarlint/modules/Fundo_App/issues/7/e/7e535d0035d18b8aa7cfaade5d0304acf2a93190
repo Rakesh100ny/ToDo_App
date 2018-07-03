@@ -1,0 +1,73 @@
+
+à%squid:RedundantThrowsDeclarationCheckb"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.(é½¬HRMINORZ
+CODE_SMELL
+±%squid:RedundantThrowsDeclarationCheckb"jRemove the declaration of thrown exception 'java.lang.NumberFormatException' which is a runtime exception.(é½¬HRMINORZ
+CODE_SMELL
+À%squid:RedundantThrowsDeclarationCheckb"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.(é½¬HRMINORZ
+CODE_SMELL
+å%squid:RedundantThrowsDeclarationCheckn"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.(™¤ÀõøÿÿÿÿHRMINORZ
+CODE_SMELL
+À%squid:RedundantThrowsDeclarationCheck"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.( ‹Í‘H‘RMINORZ
+CODE_SMELL
+à%squid:RedundantThrowsDeclarationCheck"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.( ‹Í‘H’RMINORZ
+CODE_SMELL
+†squid:S11925"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁáH“RCRITICALZ
+CODE_SMELL
+‹squid:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŞÒÈ…úÿÿÿÿH”RMINORZ
+CODE_SMELL
+‹squid:S2293;"YReplace the type specification in this constructor call with the diamond operator ("<>").(ËùñÿüÿÿÿÿH•RMINORZ
+CODE_SMELL
+‹squid:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(»Ò‘ÑşÿÿÿÿH–RMINORZ
+CODE_SMELL
+‹squid:S2293M"YReplace the type specification in this constructor call with the diamond operator ("<>").(ü°–¿şÿÿÿÿH—RMINORZ
+CODE_SMELL
+†squid:S2293X"YReplace the type specification in this constructor call with the diamond operator ("<>").(üÙ÷²H˜RMINORZ
+CODE_SMELL
+‹squid:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—ŞÿÿÿÿÿH™RMINORZ
+CODE_SMELL
+‹squid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚäÓøÿÿÿÿHšRMINORZ
+CODE_SMELL
+‹squid:S2293r"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿH›RMINORZ
+CODE_SMELL
+‹squid:S2293z"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÍèõûÿÿÿÿHœRMINORZ
+CODE_SMELL
+Œsquid:S2293‡"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿHRMINORZ
+CODE_SMELL
+Œsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(éÅÖæøÿÿÿÿHRMINORZ
+CODE_SMELL
+e
+squid:S1062"9Replace this use of System.out or System.err by a logger.(£·£¸HŸRMAJORZ
+CODE_SMELL
+e
+squid:S1065"9Replace this use of System.out or System.err by a logger.(èÕÁáH RMAJORZ
+CODE_SMELL
+j
+squid:S106>"9Replace this use of System.out or System.err by a logger.(ù€¸ÍøÿÿÿÿH¡RMAJORZ
+CODE_SMELL
+j
+squid:S106I"9Replace this use of System.out or System.err by a logger.(¾£¦ÖÿÿÿÿÿH¢RMAJORZ
+CODE_SMELL
+e
+squid:S106V"9Replace this use of System.out or System.err by a logger.(èƒ‡ÏH£RMAJORZ
+CODE_SMELL
+e
+squid:S106W"9Replace this use of System.out or System.err by a logger.(ìÈÚ÷H¤RMAJORZ
+CODE_SMELL
+e
+squid:S106d"9Replace this use of System.out or System.err by a logger.(‡®éÕH¥RMAJORZ
+CODE_SMELL
+e
+squid:S106e"9Replace this use of System.out or System.err by a logger.(È×àH¦RMAJORZ
+CODE_SMELL
+j
+squid:S106u"9Replace this use of System.out or System.err by a logger.(¤şìÊıÿÿÿÿH§RMAJORZ
+CODE_SMELL
+f
+squid:S106"9Replace this use of System.out or System.err by a logger.(‡®éÕH¨RMAJORZ
+CODE_SMELL
+f
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(ß·èÏH©RMAJORZ
+CODE_SMELL
+k
+squid:S106Š"9Replace this use of System.out or System.err by a logger.(€÷ˆÆşÿÿÿÿHªRMAJORZ
+CODE_SMELL

@@ -1,0 +1,9 @@
+
+ˆsquid:S00116"URename this field "MAIL_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÌƒéûÿÿÿÿHÚRMINORZ
+CODE_SMELL
+Ssquid:S1170"!Make this final field static too.(ØÌƒéûÿÿÿÿHÝRMINORZ
+CODE_SMELL
+‹squid:S00116"]Rename this field "DEFAULT_BROKER_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆóÙæHÜRMINORZ
+CODE_SMELL
+Nsquid:S1170"!Make this final field static too.(ˆóÙæHÛRMINORZ
+CODE_SMELL

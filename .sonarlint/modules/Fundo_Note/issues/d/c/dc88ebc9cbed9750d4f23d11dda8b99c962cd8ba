@@ -1,0 +1,33 @@
+
+vsquid:S1192$"FDefine a constant instead of duplicating this literal "email" 4 times.(¹ºÊH§RCRITICALZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(æ§ã²H¨RMAJORZ
+CODE_SMELL
+j
+squid:S106'"9Replace this use of System.out or System.err by a logger.(´ÇåÿÿÿÿÿH©RMAJORZ
+CODE_SMELL
+e
+squid:S106>"9Replace this use of System.out or System.err by a logger.(‘–«HªRMAJORZ
+CODE_SMELL
+e
+squid:S106?"9Replace this use of System.out or System.err by a logger.(±óÚßH«RMAJORZ
+CODE_SMELL
+e
+squid:S106E"9Replace this use of System.out or System.err by a logger.(ÿƒŒØH¬RMAJORZ
+CODE_SMELL
+e
+squid:S106\"9Replace this use of System.out or System.err by a logger.(³ÕüH­RMAJORZ
+CODE_SMELL
+‰squid:S14884"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­H®RMINORZ
+CODE_SMELL
+‰squid:S1488R"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­H¯RMINORZ
+CODE_SMELL
+tsquid:CallToDeprecatedMethod$"6Remove this use of "createCriteria"; it is deprecated.(¹ºÊH°RMINORZ
+CODE_SMELL
+tsquid:CallToDeprecatedMethod1"6Remove this use of "createCriteria"; it is deprecated.(ïÑÙäH±RMINORZ
+CODE_SMELL
+ysquid:CallToDeprecatedMethodA"6Remove this use of "createCriteria"; it is deprecated.(¨£ÑˆúÿÿÿÿH²RMINORZ
+CODE_SMELL
+tsquid:CallToDeprecatedMethodP"6Remove this use of "createCriteria"; it is deprecated.(•úúÄH³RMINORZ
+CODE_SMELL

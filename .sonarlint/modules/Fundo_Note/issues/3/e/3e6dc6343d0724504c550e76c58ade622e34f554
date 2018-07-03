@@ -1,0 +1,20 @@
+
+qsquid:S2147"DCombine this catch with the one at line 28, which has the same body.(°±âÝHøRMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ê¢¢’HùRMAJORZ
+CODE_SMELL
+•squid:S1450"cRemove the "EMAIL_RESPONSE_QUEUE" field and declare it as a local variable in the relevant methods.(ŽìÚ¯ûÿÿÿÿHúRMINORZ
+CODE_SMELL
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿHûRMINORZVULNERABILITY
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹†é"HüRMAJORZ
+CODE_SMELL
+’squid:S00116"_Rename this field "EMAIL_RESPONSE_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽìÚ¯ûÿÿÿÿHýRMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ì²“óHþRMAJORZ
+CODE_SMELL
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿHÿRMINORZVULNERABILITY
+Ssquid:S1170"!Make this final field static too.(ŽìÚ¯ûÿÿÿÿH€RMINORZ
+CODE_SMELL

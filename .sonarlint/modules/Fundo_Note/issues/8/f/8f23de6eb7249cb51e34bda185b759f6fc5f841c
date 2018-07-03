@@ -1,0 +1,18 @@
+
+l
+squid:S106="9Replace this use of System.out or System.err by a logger.(ÔÕÊŞ8½ò„Æ,H—(RMAJORZ
+CODE_SMELL
+_squid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H˜(RMINORZVULNERABILITY
+l
+squid:S106K"9Replace this use of System.out or System.err by a logger.(ğ‰í°8‹¦˜…Æ,HË(RMAJORZ
+CODE_SMELL
+q
+squid:S1066"9Replace this use of System.out or System.err by a logger.(Ò’¾ıûÿÿÿÿ8½ò„Æ,H–(RMAJORZ
+CODE_SMELL
+k
+squid:S106."9Replace this use of System.out or System.err by a logger.(°—]8½ò„Æ,H•(RMAJORZ
+CODE_SMELL
+q
+squid:S106$"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,H”(RMAJORZ
+CODE_SMELL
+_squid:S1148\"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H™(RMINORZVULNERABILITY
