@@ -68,9 +68,7 @@ public class NoteServiceImpl implements INoteService {
 	@Transactional
 	@Override
 	public boolean deleteNoteById(long id) {
-		
-		
-        
+		        
 		if (!noteDao.deleteNoteById(id)) {
 			System.out.println("Unable to delete. User with id " + id + " not found");
 			throw new NoteNotFoundException("Note is not found...!");

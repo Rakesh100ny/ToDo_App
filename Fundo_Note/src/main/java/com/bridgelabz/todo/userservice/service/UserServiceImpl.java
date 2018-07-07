@@ -59,7 +59,7 @@ public class UserServiceImpl implements IUserService {
 		StringBuffer URL = request.getRequestURL();
 		System.out.println("URL : " + URL);
 
-		String url = "<a href=" + URL.substring(0, URL.lastIndexOf("/")) + "/verifytoken/" + token + " ></a>";
+		String url = "<a href="+ URL.substring(0, URL.lastIndexOf("/")) + "/verifytoken/" + token + " ></a>";
 		/*
 		 * System.out.println("Url : "+url);
 		 */
@@ -101,7 +101,7 @@ public class UserServiceImpl implements IUserService {
 		User user = userDao.getUserDetailsByEmail(email);
 
 		if (user != null) {
-			if (BCrypt.checkpw(password, user.getPassword())) {
+			if (BCrypt.checkpw(password, user.getPassword()) ) {
 				System.out.println("r1");
 				return true;
 			} else {
@@ -228,19 +228,19 @@ public class UserServiceImpl implements IUserService {
 
 	@Transactional
 	@Override
-	public String isActivated(String email) 
+	public boolean isEmailActivated(String email) 
 	{
 	 User user=userDao.getUserDetailsByEmail(email);
-	 String token=null;
+	
 	 
-	 if(!user.isActivated())
+	 if(user.isActivated()==true)
 	 {
-	  return token;
+	  return true;
 	 }
-	 
-	 token=Token.generateToken(user.getId());
-	 
-	 System.out.println("Token isActivated : "+token);
-	 return token;
+	 else
+	 {
+	   return false;	 
+	 }
+		
 	}
 }

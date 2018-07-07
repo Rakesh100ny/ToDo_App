@@ -1,6 +1,7 @@
 package com.bridgelabz.todo.userservice.controller;
 
- import java.security.SignatureException;
+ import java.io.IOException;
+import java.security.SignatureException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bridgelabz.todo.userservice.exception.EmailIdAlreadyExistException;
 import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 import com.bridgelabz.todo.userservice.model.ForgotModel;
 import com.bridgelabz.todo.userservice.model.LoginModel;
@@ -25,6 +27,8 @@ import com.bridgelabz.todo.userservice.model.PasswordModel;
 import com.bridgelabz.todo.userservice.model.RegisterModel;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.userservice.service.IUserService;
+import com.bridgelabz.todo.utility.Response;
+import com.bridgelabz.todo.utility.Token;
 import com.bridgelabz.todo.validation.UserValidation;
 
 @RestController
@@ -43,24 +47,30 @@ public class UserController {
 	/*-------------------------------Register a User-----------------------------------------------*/
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ResponseEntity<Void> registerUser(@Validated @RequestBody RegisterModel registerModel, BindingResult result,
-			HttpServletRequest request) {
+	public ResponseEntity<?> registerUser(@Validated @RequestBody RegisterModel registerModel, BindingResult result,
+			HttpServletRequest request) throws EmailIdAlreadyExistException 
+	{
 		System.out.println("Creating User with unique Email-Id " + registerModel.getEmail());
 	
-		if (userService.isUserExist(registerModel.getEmail())) {
-			
-			System.out.println("A User with Email-Id " + registerModel.getEmail() + " Already Exist");
-			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
-		}
 		
 		if(result.hasErrors())
 		{
-			return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);	
+			System.out.println("ron");
+						
+			return new ResponseEntity<>(new Response(false, "Check All Fileds"),HttpStatus.BAD_REQUEST);	
 		}
 		
+		if (userService.isUserExist(registerModel.getEmail())) {
+			
+			System.out.println("A User with Email-Id " + registerModel.getEmail() + " Already Exist");
+			throw new EmailIdAlreadyExistException("A User with Email-Id  is Already Exist");
+		 }
+	
+		
 		userService.insert(registerModel,request);
-
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		
+        System.out.println("shi chl rha hey");
+		return new ResponseEntity<>(new Response(true, "User is Successfully Registered...!"),HttpStatus.CREATED);
 
 	}
 
@@ -75,45 +85,60 @@ public class UserController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);	
 		}
 
-
 		if(!userService.isUserExist(loginModel.getEmail()))
 		{
 		 throw new UserNotFoundException("User Not Found Exception...!");	
 		}
 		
-		System.out.println("mango");
 		if (!userService.isCheckCredentials(loginModel.getPassword(), loginModel.getEmail())) {
 			System.out.println("A User with Email-Id " + loginModel.getEmail() + " and Password " + loginModel.getPassword() + " is Invalid");
 			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 		}
+	
 
-		String token=userService.isActivated(loginModel.getEmail());
-		
-		if(token==null)
+		if(!userService.isEmailActivated(loginModel.getEmail()))
 		{
 			System.out.println("A User with Email-Id " + loginModel.getEmail() + " is not Actived please First Active Your Account");
 			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 		}
-	
-		response.setHeader("token", token);
-		response.setStatus(200);
 		
-		User user = userService.getUserDetailsByEmail(loginModel.getEmail());
-
-		return new ResponseEntity<User>(user, HttpStatus.OK);
+			User user = userService.getUserDetailsByEmail(loginModel.getEmail());
+			
+			String token=Token.generateToken(user.getId());
+			
+			System.out.println("token : "+token);
+			
+			response.setHeader("token", token);
+		
+			
+	 	return new ResponseEntity<>(new Response(true, token), HttpStatus.OK);
 	}
 
 	
 	/*----------------------------------Verify Token--------------------------------------*/
 	@RequestMapping(value = "/verifytoken/{token:.+}", method = RequestMethod.GET)
-	public ResponseEntity<String> token(@PathVariable("token") String token) throws UserNotFoundException, NumberFormatException, SignatureException {
+	public ResponseEntity<?> token(@PathVariable("token") String token,HttpServletResponse response,HttpServletRequest request) throws UserNotFoundException, NumberFormatException, SignatureException, IOException {
 
 		System.out.println("Token : " + token);
 		System.out.println("Ranu");
 
 		userService.isVerified(token);
 
-		return new ResponseEntity<String>("User is Successfully Activated...!", HttpStatus.OK);
+		StringBuffer URL=request.getRequestURL();
+		System.out.println("URL : "+URL);
+		
+		String url1=URL.substring(0, URL.lastIndexOf("/"));
+		
+		System.out.println("url1 for login : "+url1);
+		
+		String url2=url1.substring(0,url1.lastIndexOf("/"));
+		
+		System.out.println("url2 for login : "+url2);
+				
+		
+		response.sendRedirect(url2+"/#!/login");
+		
+		return new ResponseEntity<>("User is Successfully Activated...!", HttpStatus.OK);
 
 	}
 	/*---------------------------------forgot Password------------------------------------*/

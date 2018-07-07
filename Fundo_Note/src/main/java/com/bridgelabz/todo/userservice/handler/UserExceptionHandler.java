@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.bridgelabz.todo.userservice.error.UserErrorResponse;
+import com.bridgelabz.todo.userservice.exception.EmailIdAlreadyExistException;
 import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 
 @ControllerAdvice
@@ -13,12 +14,21 @@ public class UserExceptionHandler
 {
 
 	 @ExceptionHandler(UserNotFoundException.class)
-	    public ResponseEntity<UserErrorResponse> handleUserNotFoundException(Exception ex) {
+	    public ResponseEntity<UserErrorResponse> handleUserNotFoundException(Exception exception) {
 	        UserErrorResponse errorResponse = new UserErrorResponse();
 	        errorResponse.setErrorCode(400);
-	        errorResponse.setErrorMessage(ex.getMessage());
+	        errorResponse.setErrorMessage(exception.getMessage());
 	        return new ResponseEntity<UserErrorResponse>(errorResponse, HttpStatus.NOT_FOUND);
 	    }
+	 
+	 @ExceptionHandler(EmailIdAlreadyExistException.class)
+	 public ResponseEntity<UserErrorResponse> handleEmailIdAlreadyExistException(Exception exception)
+	 {
+	  UserErrorResponse errorResponse=new UserErrorResponse();
+	  errorResponse.setErrorCode(HttpStatus.PRECONDITION_FAILED.value());
+	  errorResponse.setErrorMessage(exception.getMessage());
+	  return new ResponseEntity<UserErrorResponse>(errorResponse,HttpStatus.NOT_ACCEPTABLE);
+	 }
 	  
 	    @ExceptionHandler(Exception.class)
 	    public ResponseEntity<UserErrorResponse> handleGenericException(Exception ex) {

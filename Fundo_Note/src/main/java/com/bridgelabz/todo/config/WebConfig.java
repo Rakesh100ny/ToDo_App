@@ -2,6 +2,7 @@ package com.bridgelabz.todo.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -11,13 +12,26 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 public class WebConfig implements WebMvcConfigurer {
 
-	
-   
-/*	@Bean
-	public MessageSource messageSource() {
-		ResourceBundleMessageSource source = new ResourceBundleMessageSource();
-		source.setBasename("message");
-		return source;
-	}*/
+/*		@Override
+	    public void configureViewResolvers(ViewResolverRegistry registry) {
+	        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+	        viewResolver.setPrefix("/webapp/");
+	        viewResolver.setSuffix(".html");
+	        registry.viewResolver(viewResolver);
+	    }
+	 
+		
+	    @Override
+	    public void addViewControllers(ViewControllerRegistry registry) {
+
+	    }*/
+
+
+	    @Override
+	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+	        configurer.enable();
+	    }
+	   
+	 
 
 }

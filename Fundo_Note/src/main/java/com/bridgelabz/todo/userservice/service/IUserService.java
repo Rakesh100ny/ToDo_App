@@ -28,6 +28,6 @@ public interface IUserService {
 
 	void restPassword(String token,String password);
 
-	String isActivated(String email);
+	boolean isEmailActivated(String email);
 
 }

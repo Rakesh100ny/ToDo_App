@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailUtility
 {
-    public static void sendEmail(String toAddress,String subject, String msg) throws AddressException,MessagingException 
+    public static void sendEmail(String toAddress,String subject, String link) throws AddressException,MessagingException 
     {
         // sets SMTP server properties
         Properties properties = new Properties();
@@ -36,7 +36,18 @@ public class EmailUtility
         };
  
         Session session = Session.getInstance(properties, auth);
- 
+        System.out.println("link : "+link);
+        
+        /*StringBuilder bodyText = new StringBuilder(); 
+        bodyText.append("<div>")
+             .append("  Dear User<br/><br/>")
+             .append("  Thank you for registration. Your mail ("+toAddress+") is under verification<br/>")
+             .append("  Please click here or open below link in browser "+link+"")
+             .append("  <br/><br/>")
+             .append("  Thanks,<br/>")
+             .append("  Fundoo Team")
+             .append("</div>");
+        */
         // creates a new e-mail message
         Message message = new MimeMessage(session);
  
@@ -46,7 +57,9 @@ public class EmailUtility
         message.setRecipients(Message.RecipientType.TO, toAddresses);
         message.setSubject(subject);
         message.setSentDate(new Date());
-        message.setText(msg);
+      //  message.setContent(bodyText.toString(),"text/html; charset=utf-8");
+        message.setText(link);
+        Transport.send(message);
  
         // sends the e-mail
         Transport.send(message);

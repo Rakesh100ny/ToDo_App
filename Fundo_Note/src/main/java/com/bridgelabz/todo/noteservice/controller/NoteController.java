@@ -36,7 +36,7 @@ public class NoteController {
 	}
 
 	
-	//------------------- Update a User Note----------------------------------------
+	//------------------- Update a User Note (Some Error is Occured)------------------------
 	  @RequestMapping(value = "/updatenote", method = RequestMethod.PUT) 
 	  public ResponseEntity<?> updateNote(@RequestBody Note note) 
 	  { 
@@ -50,7 +50,7 @@ public class NoteController {
 
 	  
 
-	  //-------------------Retrieve All Users-----------------------------------------
+	  //-------------------Retrieve All Users Notes-----------------------------------------
 	  
 	  @RequestMapping(value = "/note", method = RequestMethod.GET) 
 	  public ResponseEntity<List<Note>> listAllNotes(@RequestHeader("token")String token)
