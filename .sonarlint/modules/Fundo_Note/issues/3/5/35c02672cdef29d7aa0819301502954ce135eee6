@@ -1,16 +1,12 @@
 
-vsquid:S1192'"FDefine a constant instead of duplicating this literal "email" 6 times.(Ä¤ÄüHøRCRITICALZ
+„squid:S1192,"NDefine a constant instead of duplicating this literal "Pattern.email" 3 times.(­ÌÿÈúÿÿÿÿH ¡RCRITICALZ
 CODE_SMELL
-squid:S1192'"ODefine a constant instead of duplicating this literal "NotEmpty.email" 3 times.(Ä¤ÄüHùRCRITICALZ
+wsquid:S1192'"FDefine a constant instead of duplicating this literal "email" 6 times.(Ä¤ÄüH›¡RCRITICALZ
 CODE_SMELL
-ƒsquid:S1192,"NDefine a constant instead of duplicating this literal "Pattern.email" 3 times.(­ÌÿÈúÿÿÿÿHúRCRITICALZ
+€squid:S1192'"ODefine a constant instead of duplicating this literal "NotEmpty.email" 3 times.(Ä¤ÄüHœ¡RCRITICALZ
 CODE_SMELL
-‚squid:S1192("RDefine a constant instead of duplicating this literal "NotEmpty.password" 3 times.(µºÿóHûRCRITICALZ
+tsquid:S1126"AReplace this if-then-else statement by a single return statement.(°ÌÞˆûÿÿÿÿHŸ¡RMINORZ
 CODE_SMELL
-ysquid:S1192("IDefine a constant instead of duplicating this literal "password" 3 times.(µºÿóHüRCRITICALZ
-CODE_SMELL
-e
-squid:S106 "9Replace this use of System.out or System.err by a logger.(ÂÈ£èHýRMAJORZ
-CODE_SMELL
-ssquid:S1126"AReplace this if-then-else statement by a single return statement.(°ÌÞˆûÿÿÿÿHþRMINORZ
+f
+squid:S106 "9Replace this use of System.out or System.err by a logger.(ÂÈ£èHš¡RMAJORZ
 CODE_SMELL

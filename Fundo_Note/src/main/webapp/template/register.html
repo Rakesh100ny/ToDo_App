@@ -1,5 +1,5 @@
 <div layout="column" layout-align="center center">
-	<span style="color: red;"><p>{{result}}</p></span> <img
+	<img
 		src="asset/keep.png" width="80" height="80"> <span><h4
 			style="font-family: Arial;">
 			Welcome in the FundooNote !
@@ -27,7 +27,7 @@
 		<label>Email Address</label>
 		<md-input-container class="md-block"> <md-icon>
 		<i class="material-icons">email</i></md-icon> <input type="email" name="email"
-			ng-pattern="/^.+@.+\..+$/" minlength="10"
+			ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/" 
 			ng-model="registerModel.email" required>
 		<div ng-messages="myForm.email.$error">
 			<div ng-message="required">Email is required...!</div>
@@ -53,12 +53,12 @@
 		<md-input-container class="md-block"> <md-icon>
 		<i class="material-icons">phone_iphone</i></md-icon> <input type="tel"
 			name="mobileNo" ng-model="registerModel.mobileNo"
-			ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/"
+			ng-pattern="/^\d{2}\+?[- ]?\d{3}[- ]??\d{3}[- ]??\d{4,6}$/"
 			required />
 
 		<div ng-messages="myForm.mobileNo.$error">
 			<div ng-message="required">Mobile Number is required...!</div>
-			<div ng-message="pattern">Must be a valid 10 digit phone number</div>
+			<div ng-message="pattern">Please match pattern [91+ 8290771900]</div>
 </div>
 </md-input-container>
 

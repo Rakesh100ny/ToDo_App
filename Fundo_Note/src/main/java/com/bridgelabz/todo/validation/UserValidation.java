@@ -63,8 +63,9 @@ public class UserValidation implements Validator {
 		}
 		else if(target instanceof PasswordModel)
 		{
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty.password");
-			
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "newPassword", "NotEmpty.newPassword");
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "NotEmpty.confirmPassword");
+
 
 		}
 

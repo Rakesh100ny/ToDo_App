@@ -11,15 +11,19 @@ public class RedisUtility {
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 
-	public void saveToken(String id, String token) {
+	
+
+	public void saveToken(String id, String token) 
+	{
 		stringRedisTemplate.opsForValue().set(id, token);
+		
 	}
 
-	public String getSaveToken(String id) {
+	public String getSaveToken(String id){
 		return stringRedisTemplate.opsForValue().get(id);
 	}
 
 	public void expireSaveToken(String id) {
-		stringRedisTemplate.expire(id, 5,TimeUnit.SECONDS);
+		stringRedisTemplate.expire(id, 5, TimeUnit.SECONDS);
 	}
 }

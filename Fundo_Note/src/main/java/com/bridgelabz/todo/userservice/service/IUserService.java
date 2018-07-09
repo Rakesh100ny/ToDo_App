@@ -22,11 +22,11 @@ public interface IUserService {
 
 	EmailModel getEmailModel(String token,HttpServletRequest request,User user);
 
-	void isVerified(String token) ;
+	void isVerifiedUser(String token) ;
 
-	void forgotPassword(String email,HttpServletRequest request);
+	String forgotPassword(String email,HttpServletRequest request);
 
-	void restPassword(String token,String password);
+	void restPassword(String token,String newPassword);
 
 	boolean isEmailActivated(String email);
 

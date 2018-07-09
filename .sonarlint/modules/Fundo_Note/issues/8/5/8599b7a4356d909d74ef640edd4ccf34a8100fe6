@@ -1,104 +1,83 @@
 
-l
-squid:S106°"9Replace this use of System.out or System.err by a logger.(€÷ˆÆşÿÿÿÿH¨
-RMAJORZ
-CODE_SMELL
-csquid:S1452P"&Remove usage of generic wildcard type.(ê…ËÊúÿÿÿÿ8Ê‹šÇ,HŸ¨
-RCRITICALZ
-CODE_SMELL
-·%squid:RedundantThrowsDeclarationCheckx"jRemove the declaration of thrown exception 'java.lang.NumberFormatException' which is a runtime exception.(³Õ¦ùÿÿÿÿH…¨
-RMINORZ
-CODE_SMELL
-squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÍèõûÿÿÿÿH†¨
-RMINORZ
-CODE_SMELL
-k
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(¾£¦ÖÿÿÿÿÿH‡¨
-RMAJORZ
-CODE_SMELL
-squid:S1192A"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁá8òù Ç,H¹èRCRITICALZ
-CODE_SMELL
-l
-squid:S106e"9Replace this use of System.out or System.err by a logger.(âö€V8ğˆüıÆ,H”¨
-RMAJORZ
+squid:S2293–"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿHö»RMINORZ
 CODE_SMELL
 m
-squid:S106z"9Replace this use of System.out or System.err by a logger.(‡®éÕ8£¼œ›Ç,HƒÁRMAJORZ
+squid:S106_"9Replace this use of System.out or System.err by a logger.(èƒ‡Ï8£¼œ›Ç,Hø»RMAJORZ
 CODE_SMELL
-Â%squid:RedundantThrowsDeclarationCheck¥"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.( ‹Í‘H‘¨
-RMINORZ
-CODE_SMELL
-g
-squid:S106„"9Replace this use of System.out or System.err by a logger.(«ç‹üH˜¨
-RMAJORZ
-CODE_SMELL
-l
-squid:S106™"9Replace this use of System.out or System.err by a logger.(¤şìÊıÿÿÿÿH¨
-RMAJORZ
-CODE_SMELL
-csquid:S1452x"&Remove usage of generic wildcard type.(³Õ¦ùÿÿÿÿ8·ÿÑŸÇ,HÀ¶RCRITICALZ
-CODE_SMELL
-â%squid:RedundantThrowsDeclarationCheck¥"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.( ‹Í‘H‚¨
-RMINORZ
-CODE_SMELL
-f
-squid:S1065"9Replace this use of System.out or System.err by a logger.(£·£¸H™¨
-RMAJORZ
-CODE_SMELL
-squid:S2293­"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿHœ¨
-RMINORZ
+_squid:S1452¼"&Remove usage of generic wildcard type.(™è‘8×šúœÇ,Hğ»RCRITICALZ
 CODE_SMELL
 n
-squid:S106©"9Replace this use of System.out or System.err by a logger.(ß·èÏ8¶¬ƒ¡Ç,H¼èRMAJORZ
+squid:S106„"9Replace this use of System.out or System.err by a logger.(«ç‹ü8¹ÿ­íÇ,H‡  RMAJORZ
 CODE_SMELL
-æ%squid:RedundantThrowsDeclarationCheckx"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.(³Õ¦ùÿÿÿÿH•¨
-RMINORZ
+”squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.RequestHeader'.(ØÙë™8”‚©ğÇ,H“ì RMINORZ
+CODE_SMELL
+l
+squid:S106™"9Replace this use of System.out or System.err by a logger.(¤şìÊıÿÿÿÿHñ»RMAJORZ
+CODE_SMELL
+m
+squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8ÇÃ¤Ç,Hê»RMAJORZ
+CODE_SMELL
+€squid:S3027†"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8Šˆ°ÒÇ,Hõ»RMAJORZ
+CODE_SMELL
+dsquid:S1452’"&Remove usage of generic wildcard type.(Š†èØıÿÿÿÿ8Ï¹¦ëÇ,H‰ˆRCRITICALZ
+CODE_SMELL
+l
+squid:S106f"9Replace this use of System.out or System.err by a logger.(âö€V8Ø†ÕïÇ,H‘  RMAJORZ
+CODE_SMELL
+^squid:S14523"&Remove usage of generic wildcard type.(Ÿ’•8Ê‹šÇ,Hë»RCRITICALZ
+CODE_SMELL
+l
+squid:S106À"9Replace this use of System.out or System.err by a logger.(ÆêúÿÿÿÿÿHü»RMAJORZ
 CODE_SMELL
 f
-squid:S106:"9Replace this use of System.out or System.err by a logger.(‡÷½­HŠ¨
-RMAJORZ
+squid:S106I"9Replace this use of System.out or System.err by a logger.(â³œÓHä»RMAJORZ
 CODE_SMELL
-e
-squid:S106m"9Replace this use of System.out or System.err by a logger.(³Ë‘GH‚ÁRMAJORZ
-CODE_SMELL
-f
-squid:S106H"9Replace this use of System.out or System.err by a logger.(â³œÓH¸èRMAJORZ
-CODE_SMELL
-ç%squid:RedundantThrowsDeclarationCheck’"˜Remove the declaration of thrown exception 'com.bridgelabz.todo.userservice.exception.UserNotFoundException', as it cannot be thrown from method's body.(™¤ÀõøÿÿÿÿHˆ¨
-RMINORZ
-CODE_SMELL
-g
-squid:S106€"9Replace this use of System.out or System.err by a logger.(ÊÍ´HŒ¨
-RMAJORZ
-CODE_SMELL
-m
-squid:S106A"9Replace this use of System.out or System.err by a logger.(èÕÁá8òù Ç,H»èRMAJORZ
-CODE_SMELL
-‡squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8¶¬ƒ¡Ç,H½èRMINORZ
-CODE_SMELL
-squid:S2293³"YReplace the type specification in this constructor call with the diamond operator ("<>").(éÅÖæøÿÿÿÿH¨
-RMINORZ
-CODE_SMELL
-^squid:S14522"&Remove usage of generic wildcard type.(Ÿ’•8×šúœÇ,Hş¹RCRITICALZ
-CODE_SMELL
-€squid:S3027†"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8ÇÃ¤Ç,Hü²RMAJORZ
-CODE_SMELL
-squid:S2293–"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿH¨
-RMINORZ
-CODE_SMELL
-m
-squid:S106^"9Replace this use of System.out or System.err by a logger.(èƒ‡Ï8ÇÃ¤Ç,Hı²RMAJORZ
-CODE_SMELL
-m
-squid:S106{"9Replace this use of System.out or System.err by a logger.(È×à8åí›¡Ç,H§RMAJORZ
+ˆsquid:S00117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8ôåªÒÇ,Hï»RMINORZ
 CODE_SMELL
 n
-squid:S106§"9Replace this use of System.out or System.err by a logger.(‡®éÕ8ğˆüıÆ,H’¨
-RMAJORZ
+squid:S106Â"9Replace this use of System.out or System.err by a logger.(Ì¼8ğˆüıÆ,Hû»RMAJORZ
 CODE_SMELL
-Æ%squid:RedundantThrowsDeclarationCheckx"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.(³Õ¦ùÿÿÿÿHƒ¨
-RMINORZ
+n
+squid:S106¦"9Replace this use of System.out or System.err by a logger.(‡®éÕ8ğˆüıÆ,Há»RMAJORZ
+CODE_SMELL
+^squid:S1452x"&Remove usage of generic wildcard type.(–ÿ˜¹8Ô™¶ÑÇ,Hé»RCRITICALZ
+CODE_SMELL
+_squid:S1452¤"&Remove usage of generic wildcard type.(±Ø‚8ÇÉµÑÇ,Hş»RCRITICALZ
+CODE_SMELL
+r
+squid:S106R"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8Ï¹¦ëÇ,H“ˆRMAJORZ
+CODE_SMELL
+f
+squid:S106z"9Replace this use of System.out or System.err by a logger.(‡®éÕHô»RMAJORZ
+CODE_SMELL
+m
+squid:S106{"9Replace this use of System.out or System.err by a logger.(È×à8Ï¹¦ëÇ,HˆRMAJORZ
+CODE_SMELL
+€squid:S3027°"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8ÇÃ¤Ç,Hå»RMAJORZ
+CODE_SMELL
+^squid:S1452Q"&Remove usage of generic wildcard type.(‹„êÕ8ÌÙ–ĞÇ,Hì»RCRITICALZ
+CODE_SMELL
+n
+squid:S106€"9Replace this use of System.out or System.err by a logger.(ÊÍ´8òù Ç,Hæ»RMAJORZ
+CODE_SMELL
+m
+squid:S106;"9Replace this use of System.out or System.err by a logger.(‡÷½­8¹ÿ­íÇ,H íRMAJORZ
+CODE_SMELL
+l
+squid:S106n"9Replace this use of System.out or System.err by a logger.(³Ë‘G8Ï¹¦ëÇ,HŒˆRMAJORZ
+CODE_SMELL
+g
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(È×àHù»RMAJORZ
+CODE_SMELL
+‡squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8¶¬ƒ¡Ç,Hã»RMINORZ
+CODE_SMELL
+squid:S1192B"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁá8òù Ç,Hç»RCRITICALZ
+CODE_SMELL
+f
+squid:S1066"9Replace this use of System.out or System.err by a logger.(£·£¸Hè»RMAJORZ
+CODE_SMELL
+˜squid:UselessImportCheck"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ8àÙèïÇ,Hº¹ RMINORZ
 CODE_SMELL
 s
-squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(¿ÌŠ•üÿÿÿÿ8Íâú§Ç,HìÙRMAJORZ
+squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(¿ÌŠ•üÿÿÿÿ8Ìã°ÒÇ,Hà»RMAJORZ
 CODE_SMELL

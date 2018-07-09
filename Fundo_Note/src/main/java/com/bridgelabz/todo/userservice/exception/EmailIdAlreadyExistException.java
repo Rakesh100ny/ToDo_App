@@ -1,6 +1,6 @@
 package com.bridgelabz.todo.userservice.exception;
 
-public class EmailIdAlreadyExistException extends Exception
+public class EmailIdAlreadyExistException extends RuntimeException
 {
 	/**
 	 * 

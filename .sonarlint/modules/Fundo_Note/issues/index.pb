@@ -67,8 +67,6 @@ m
 =src/main/java/com/bridgelabz/todo/noteservice/model/Note.java,6/0/606fa337dec7dd9b0902e7a5f5b569e99319a6b2
 r
 Bsrc/main/java/com/bridgelabz/todo/noteservice/dao/NoteDaoImpl.java,c/8/c83d27a04c39aa4e95be802e6666bf6c27273c87
-Z
-*src/main/webapp/controller/registerCtrl.js,4/b/4b78adc37e0d85952dd0efb9e11675f9bc92d0b9
 T
 $src/main/webapp/directive/sidebar.js,d/8/d8e0c7cf8eb46c323d518224643f21aa35211130
 F
@@ -95,3 +93,15 @@ T
 $src/main/webapp/template/navbar.html,e/0/e0e9766d3e61e87994265d6ad28f51b23bdeeb97
 V
 &src/main/webapp/service/noteService.js,6/1/61947a685a6b828509273f54926e5ae08c330652
+[
++src/main/webapp/template/signupSuccess.html,a/7/a737d8b64422a913b977a1a1b348d0fa50daf616
+N
+src/main/webapp/css/fundoo.css,6/2/625488f962d5102bcc4d1d3fba41e17bc374f0f2
+s
+Csrc/main/java/com/bridgelabz/todo/userservice/model/LoginModel.java,f/0/f0c62f5ba8cc048e84a5e3882309f65771f2ed5b
+v
+Fsrc/main/java/com/bridgelabz/todo/userservice/model/PasswordModel.java,6/8/68d21dc1cfa9c8b2df683623f73ac460115d5b62
+[
++src/main/webapp/template/resetPassword.html,1/9/19ea9f02b63bc767122168faacb89543384e853f
+X
+(src/main/resources/validation.properties,e/2/e24a70df3a9ab35a6545d4dca6a3122222334dc5

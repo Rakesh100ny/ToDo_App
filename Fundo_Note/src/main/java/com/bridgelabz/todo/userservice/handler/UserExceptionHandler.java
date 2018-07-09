@@ -14,7 +14,7 @@ public class UserExceptionHandler
 {
 
 	 @ExceptionHandler(UserNotFoundException.class)
-	    public ResponseEntity<UserErrorResponse> handleUserNotFoundException(Exception exception) {
+	    public ResponseEntity<UserErrorResponse> handleUserNotFoundException(RuntimeException exception) {
 	        UserErrorResponse errorResponse = new UserErrorResponse();
 	        errorResponse.setErrorCode(400);
 	        errorResponse.setErrorMessage(exception.getMessage());
@@ -22,7 +22,7 @@ public class UserExceptionHandler
 	    }
 	 
 	 @ExceptionHandler(EmailIdAlreadyExistException.class)
-	 public ResponseEntity<UserErrorResponse> handleEmailIdAlreadyExistException(Exception exception)
+	 public ResponseEntity<UserErrorResponse> handleEmailIdAlreadyExistException(RuntimeException exception)
 	 {
 	  UserErrorResponse errorResponse=new UserErrorResponse();
 	  errorResponse.setErrorCode(HttpStatus.PRECONDITION_FAILED.value());

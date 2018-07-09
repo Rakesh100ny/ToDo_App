@@ -149,36 +149,42 @@ public class UserServiceImpl implements IUserService {
 
 	@Transactional
 	@Override
-	public void isVerified(String token) {
-		String storedToken = null;
-		try {
-			storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
-			System.out.println("isvarified storedToken : "+storedToken);
-			redisUtility.expireSaveToken(Token.getParseJWT(token));
-			if (storedToken.equals(token)) {
+	public void isVerifiedUser(String token) {
+		
+			try {
+			String storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
+				System.out.println("isvarified storedToken : "+storedToken);
+			
+				redisUtility.expireSaveToken(Token.getParseJWT(token));
 
-				User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
+				if (storedToken.equals(token)) {
 
-				if (user != null) {
-					user.setActivated(true);
-					updateUser(user);
+					User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
 
-				} else {
-					throw new UserNotFoundException("User Not Found...!");
+					if (user != null) {
+						user.setActivated(true);
+						updateUser(user);
+
+					} else {
+						throw new UserNotFoundException("User Not Found...!");
+					}
 				}
+			} catch (SignatureException e) {
+				e.printStackTrace();
 			}
-		} catch (NumberFormatException | SignatureException | UserNotFoundException e) {
-			System.err.println("Exception [UserServiceImp.java] : " + e.getMessage());
-		}
+
+		
 
 	}
 
 	@Transactional
 	@Override
-	public void forgotPassword(String email, HttpServletRequest request) {
+	public String forgotPassword(String email, HttpServletRequest request) {
+		
+		
 		User user = getUserDetailsByEmail(email);
 		if (user != null) {
-			String token = Token.generateToken(user.getId());
+		 String	token = Token.generateToken(user.getId());
 
 			redisUtility.saveToken(Long.toString(user.getId()), token);
 
@@ -186,41 +192,38 @@ public class UserServiceImpl implements IUserService {
 
 			messageSender.sendMessage(emailModel);
 
+			return token;
 		} else {
-			try {
+			
 				throw new UserNotFoundException("User Not Found...!");
-			} catch (UserNotFoundException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 
 	@Transactional
 	@Override
-	public void restPassword(String token, String password) {
+	public void restPassword(String token, String newPassword) {
 		System.out.println("rakesh2");
 		try {
 			String storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
 			System.out.println("storedToken : "+storedToken);
 			redisUtility.expireSaveToken(Token.getParseJWT(token));
 			if (storedToken.equals(token)) {
-				System.out.println("r1");
-				User user = getUserById(Integer.parseInt(Token.getParseJWT(token)));
+				User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
 
 				
 				if (user != null) {
-					user.setPassword(BCrypt.hashpw(password, BCrypt.gensalt(12)));
-					System.out.println("password : " + user.getPassword());
+					user.setPassword(BCrypt.hashpw(newPassword, BCrypt.gensalt(12)));
+					System.out.println("Password : " + user.getPassword());
 
 					updateUser(user);
+					System.out.println("updated Password : " + user.getPassword());
 
 				} else {
 					throw new UserNotFoundException("User Not Found...!");
 				}
-			} else {
-				System.out.println("Token is not matched");
 			}
-		} catch (SignatureException | UserNotFoundException e) {
+		}
+		 catch (SignatureException e) {
 			e.printStackTrace();
 		}
 
