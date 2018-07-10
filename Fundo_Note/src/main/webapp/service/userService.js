@@ -9,14 +9,12 @@ app.service('userService',function($http,$state)
           data: angular.toJson(registerModel)
         };
        
-        $http(request).then(function successCallback(response){
+        return $http(request);/*.then(function successCallback(response){
         	$state.go('success')
-        	$scope.result=response.data.email;
-        	console.log("result",$scope.result);
-     	   console.log("successfully",response.data.message); 
+    	 console.log("successfully",response.data.message); 
        },function errorCallback(response){
      	console.log("failed",response.data);  
-       })
+       })*/
       };
 
  var loginUser=function(loginModel)
@@ -26,19 +24,11 @@ app.service('userService',function($http,$state)
 	   method:"POST",
 	   url:"login",
 	   headers: {
-	        'Content-Type': "application/json",
 	        'tokenLogin':localStorage.getItem("tokenLogin")
 	      },
 	   data:angular.toJson(loginModel)
 	  };
-      $http(request).then(function successCallback(response)
-      {
-    	  $state.go('home');
-    	  localStorage.setItem("tokenLogin",response.data.message);
-    	  console.log("successfully",response.data.message); 
-      },function errorCallback(response){
-    	console.log("failed",response.data);  
-      })
+     return $http(request);
  };
       
  var forgotPasswordUser=function(forgotPasswordModel)
@@ -50,13 +40,7 @@ app.service('userService',function($http,$state)
 	   data:angular.toJson(forgotPasswordModel)
 	  };
      
-      $http(request).then(function successCallback(response){
-    	  localStorage.setItem("tokenForgotPassword",response.data.message);
-    	  console.log("successfully",response.data.message); 
- 
-      },function errorCallback(response){
-    	  console.log("failed",response.data); 
-      });
+      return $http(request);
  }
 
  
@@ -72,12 +56,7 @@ app.service('userService',function($http,$state)
 	   data:angular.toJson(passwordModel)
 	  };
      
-      $http(request).then(function successCallback(response){
-    	  console.log("successfully",response.data.message); 
-    	  
-      },function errorCallback(response){
-    	  console.log("failed",response.data); 
-      });
+      return $http(request);
  }
  
       return {

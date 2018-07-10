@@ -16,8 +16,8 @@ app.config([ '$stateProvider', '$urlRouterProvider',
 				controller : 'userController'
 			})
 
-			.state('success', {
-				url : '/success',
+			.state('signupSuccess', {
+				url : '/register/success',
 				templateUrl : 'template/signupSuccess.html',
 				controller : 'userController'
 			})
@@ -28,6 +28,11 @@ app.config([ '$stateProvider', '$urlRouterProvider',
 				controller : 'userController'
 			})
 			
+			.state('forgotpasswordSuccess', {
+				url : '/forgotpassword/success',
+				templateUrl : 'template/forgotPasswordSuccess.html',
+				controller : 'userController'
+			})
 			.state('resetpassword', {
 				url : '/resetpassword',
 				templateUrl : 'template/resetPassword.html',

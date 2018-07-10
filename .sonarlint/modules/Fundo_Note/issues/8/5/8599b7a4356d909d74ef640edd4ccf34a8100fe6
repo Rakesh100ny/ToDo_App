@@ -1,83 +1,40 @@
 
-squid:S2293–"YReplace the type specification in this constructor call with the diamond operator ("<>").(±£íùÿÿÿÿHö»RMINORZ
+dsquid:S1452œ"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8Ô™¶ÑÇ,H¸ú0RCRITICALZ
+CODE_SMELL
+squid:S3027s"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8Šˆ°ÒÇ,HÁú0RMAJORZ
+CODE_SMELL
+^squid:S1452j"&Remove usage of generic wildcard type.(Æ«›ó8Ï¹¦ëÇ,H½ú0RCRITICALZ
 CODE_SMELL
 m
-squid:S106_"9Replace this use of System.out or System.err by a logger.(èƒ‡Ï8£¼œ›Ç,Hø»RMAJORZ
-CODE_SMELL
-_squid:S1452¼"&Remove usage of generic wildcard type.(™è‘8×šúœÇ,Hğ»RCRITICALZ
-CODE_SMELL
-n
-squid:S106„"9Replace this use of System.out or System.err by a logger.(«ç‹ü8¹ÿ­íÇ,H‡  RMAJORZ
-CODE_SMELL
-”squid:UselessImportCheck"RRemove this unused import 'org.springframework.web.bind.annotation.RequestHeader'.(ØÙë™8”‚©ğÇ,H“ì RMINORZ
-CODE_SMELL
-l
-squid:S106™"9Replace this use of System.out or System.err by a logger.(¤şìÊıÿÿÿÿHñ»RMAJORZ
-CODE_SMELL
-m
-squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8ÇÃ¤Ç,Hê»RMAJORZ
-CODE_SMELL
-€squid:S3027†"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8Šˆ°ÒÇ,Hõ»RMAJORZ
-CODE_SMELL
-dsquid:S1452’"&Remove usage of generic wildcard type.(Š†èØıÿÿÿÿ8Ï¹¦ëÇ,H‰ˆRCRITICALZ
-CODE_SMELL
-l
-squid:S106f"9Replace this use of System.out or System.err by a logger.(âö€V8Ø†ÕïÇ,H‘  RMAJORZ
-CODE_SMELL
-^squid:S14523"&Remove usage of generic wildcard type.(Ÿ’•8Ê‹šÇ,Hë»RCRITICALZ
-CODE_SMELL
-l
-squid:S106À"9Replace this use of System.out or System.err by a logger.(ÆêúÿÿÿÿÿHü»RMAJORZ
-CODE_SMELL
-f
-squid:S106I"9Replace this use of System.out or System.err by a logger.(â³œÓHä»RMAJORZ
-CODE_SMELL
-ˆsquid:S00117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8ôåªÒÇ,Hï»RMINORZ
-CODE_SMELL
-n
-squid:S106Â"9Replace this use of System.out or System.err by a logger.(Ì¼8ğˆüıÆ,Hû»RMAJORZ
-CODE_SMELL
-n
-squid:S106¦"9Replace this use of System.out or System.err by a logger.(‡®éÕ8ğˆüıÆ,Há»RMAJORZ
-CODE_SMELL
-^squid:S1452x"&Remove usage of generic wildcard type.(–ÿ˜¹8Ô™¶ÑÇ,Hé»RCRITICALZ
-CODE_SMELL
-_squid:S1452¤"&Remove usage of generic wildcard type.(±Ø‚8ÇÉµÑÇ,Hş»RCRITICALZ
+squid:S1063"9Replace this use of System.out or System.err by a logger.(£·£¸8¹ÿ­íÇ,H·ú0RMAJORZ
 CODE_SMELL
 r
-squid:S106R"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8Ï¹¦ëÇ,H“ˆRMAJORZ
+squid:S106J"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8Ìã°ÒÇ,H¹ú0RMAJORZ
 CODE_SMELL
-f
-squid:S106z"9Replace this use of System.out or System.err by a logger.(‡®éÕHô»RMAJORZ
+^squid:S14521"&Remove usage of generic wildcard type.(Ÿ’•8Ê‹šÇ,HÅú0RCRITICALZ
 CODE_SMELL
-m
-squid:S106{"9Replace this use of System.out or System.err by a logger.(È×à8Ï¹¦ëÇ,HˆRMAJORZ
+‡squid:S00117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8¶¬ƒ¡Ç,H»ú0RMINORZ
 CODE_SMELL
-€squid:S3027°"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8ÇÃ¤Ç,Hå»RMAJORZ
-CODE_SMELL
-^squid:S1452Q"&Remove usage of generic wildcard type.(‹„êÕ8ÌÙ–ĞÇ,Hì»RCRITICALZ
-CODE_SMELL
-n
-squid:S106€"9Replace this use of System.out or System.err by a logger.(ÊÍ´8òù Ç,Hæ»RMAJORZ
+squid:S1192<"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁá8òù Ç,HÇú0RCRITICALZ
 CODE_SMELL
 m
-squid:S106;"9Replace this use of System.out or System.err by a logger.(‡÷½­8¹ÿ­íÇ,H íRMAJORZ
+squid:S106U"9Replace this use of System.out or System.err by a logger.(¶² 8Ï¹¦ëÇ,Hºú0RMAJORZ
 CODE_SMELL
 l
-squid:S106n"9Replace this use of System.out or System.err by a logger.(³Ë‘G8Ï¹¦ëÇ,HŒˆRMAJORZ
+squid:S106["9Replace this use of System.out or System.err by a logger.(«©Y8Ï¹¦ëÇ,HÀú0RMAJORZ
 CODE_SMELL
-g
-squid:S106¨"9Replace this use of System.out or System.err by a logger.(È×àHù»RMAJORZ
+€squid:S3027’"JPut single-quotes around '/' to use the faster "lastIndexOf(char)" method.(½‰€Ì8ÇÃ¤Ç,H¿ú0RMAJORZ
 CODE_SMELL
-‡squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8¶¬ƒ¡Ç,Hã»RMINORZ
+csquid:S1452}"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8ÌÙ–ĞÇ,H¼ú0RCRITICALZ
 CODE_SMELL
-squid:S1192B"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁá8òù Ç,Hç»RCRITICALZ
+dsquid:S1452‹"&Remove usage of generic wildcard type.(ÈÑÉøıÿÿÿÿ8ÇÉµÑÇ,H¾ú0RCRITICALZ
+CODE_SMELL
+ˆsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯8ôåªÒÇ,HÆú0RMINORZ
+CODE_SMELL
+squid:S11927"QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,H©«7RCRITICALZ
+CODE_SMELL
+^squid:S1452I"&Remove usage of generic wildcard type.(‹„êÕ8×šúœÇ,HÃú0RCRITICALZ
 CODE_SMELL
 f
-squid:S1066"9Replace this use of System.out or System.err by a logger.(£·£¸Hè»RMAJORZ
-CODE_SMELL
-˜squid:UselessImportCheck"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ8àÙèïÇ,Hº¹ RMINORZ
-CODE_SMELL
-s
-squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(¿ÌŠ•üÿÿÿÿ8Ìã°ÒÇ,Hà»RMAJORZ
+squid:S106<"9Replace this use of System.out or System.err by a logger.(èÕÁáHÂú0RMAJORZ
 CODE_SMELL

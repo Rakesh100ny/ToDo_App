@@ -12,20 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 public class WebConfig implements WebMvcConfigurer {
 
-/*		@Override
-	    public void configureViewResolvers(ViewResolverRegistry registry) {
-	        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-	        viewResolver.setPrefix("/webapp/");
-	        viewResolver.setSuffix(".html");
-	        registry.viewResolver(viewResolver);
-	    }
-	 
-		
-	    @Override
-	    public void addViewControllers(ViewControllerRegistry registry) {
-
-	    }*/
-
 
 	    @Override
 	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {

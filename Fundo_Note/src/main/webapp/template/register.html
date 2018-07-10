@@ -1,10 +1,11 @@
 <div layout="column" layout-align="center center">
-	<img
-		src="asset/keep.png" width="80" height="80"> <span><h4
-			style="font-family: Arial;">
+	<img src="asset/keep.png" width="80" height="80"> <span>
+	
+				<span style="color: red;"><p>{{ errorMessage }}</p></span>
+	
+	<h4	style="font-family: Arial;">
 			Welcome in the FundooNote !
-			<md-icon>
-			<i style="color: coral" class="material-icons">sentiment_satisfied_alt</i></md-icon>
+			<md-icon><i style="color: coral" class="material-icons">sentiment_satisfied_alt</i></md-icon>
 		</h4></span>
 	<md-card style="width: 340px;" class="md-whiteframe-24dp md-padding">
 	<form name="myForm" class='form'>
@@ -53,8 +54,8 @@
 		<md-input-container class="md-block"> <md-icon>
 		<i class="material-icons">phone_iphone</i></md-icon> <input type="tel"
 			name="mobileNo" ng-model="registerModel.mobileNo"
-			ng-pattern="/^\d{2}\+?[- ]?\d{3}[- ]??\d{3}[- ]??\d{4,6}$/"
-			required />
+			ng-pattern="/^\d{2}\+{1} []??\d{3}[]??\d{3}[]??\d{4}$/"
+			required/>
 
 		<div ng-messages="myForm.mobileNo.$error">
 			<div ng-message="required">Mobile Number is required...!</div>

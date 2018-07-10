@@ -1,20 +1,22 @@
 
-qsquid:S2147"DCombine this catch with the one at line 28, which has the same body.(°±âİHøRMINORZ
-CODE_SMELL
 e
-squid:S106"9Replace this use of System.out or System.err by a logger.(ê¢¢’HùRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹†é"H¢ı(RMAJORZ
 CODE_SMELL
-•squid:S1450"cRemove the "EMAIL_RESPONSE_QUEUE" field and declare it as a local variable in the relevant methods.(ìÚ¯ûÿÿÿÿHúRMINORZ
+squid:S00116"WRename this field "EmailUtility" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÀÑÆ8¦ĞØŸÈ,HĞ—.RMINORZ
 CODE_SMELL
-Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHûRMINORZVULNERABILITY
-d
-squid:S106"9Replace this use of System.out or System.err by a logger.(¹†é"HüRMAJORZ
+Ysquid:S1148#"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿH¥ı(RMINORZVULNERABILITY
+Tsquid:S1170"!Make this final field static too.(ìÚ¯ûÿÿÿÿH ı(RMINORZ
 CODE_SMELL
-’squid:S00116"_Rename this field "EMAIL_RESPONSE_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÚ¯ûÿÿÿÿHıRMINORZ
+“squid:S00116"_Rename this field "EMAIL_RESPONSE_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÚ¯ûÿÿÿÿHŸı(RMINORZ
 CODE_SMELL
-e
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ì²“óHşRMAJORZ
+k
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ûš¼ÛıÿÿÿÿH¦ı(RMAJORZ
 CODE_SMELL
-Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHÿRMINORZVULNERABILITY
-Ssquid:S1170"!Make this final field static too.(ìÚ¯ûÿÿÿÿH€RMINORZ
+f
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ì²“óHı(RMAJORZ
 CODE_SMELL
+rsquid:S2147$"DCombine this catch with the one at line 34, which has the same body.(°±âİH¡ı(RMINORZ
+CODE_SMELL
+–squid:S1450"cRemove the "EMAIL_RESPONSE_QUEUE" field and declare it as a local variable in the relevant methods.(ìÚ¯ûÿÿÿÿH¤ı(RMINORZ
+CODE_SMELL
+Ysquid:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿH£ı(RMINORZVULNERABILITY

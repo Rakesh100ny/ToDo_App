@@ -105,3 +105,13 @@ Fsrc/main/java/com/bridgelabz/todo/userservice/model/PasswordModel.java,6/8/68d
 +src/main/webapp/template/resetPassword.html,1/9/19ea9f02b63bc767122168faacb89543384e853f
 X
 (src/main/resources/validation.properties,e/2/e24a70df3a9ab35a6545d4dca6a3122222334dc5
+p
+@src/main/java/com/bridgelabz/todo/validation/EmailValidator.java,8/b/8bfe4293c861c2608c12b47d5a33cff1ff7fe651
+R
+"src/main/resources/mail.properties,2/9/296a83ae57f02acb589f265b1ca229908b8101af
+\
+,src/main/webapp/template/forgotPassword.html,7/f/7fbedf5bda3a41033428c16807c96ccf29937631
+c
+3src/main/webapp/template/forgotPasswordSuccess.html,1/0/10a4578ac98e92cdb972ac5e0df85d0b0ed82f3f
+Å
+Qsrc/main/java/com/bridgelabz/todo/userservice/exception/TokenExpireException.java,2/1/2131e365a162fcd92c55cf061aae03685acd3aef

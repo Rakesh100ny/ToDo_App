@@ -1,9 +1,11 @@
 
-ˆsquid:S00116"URename this field "MAIL_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÌƒéûÿÿÿÿHÚRMINORZ
+Osquid:S1170-"!Make this final field static too.(ˆóÙæHŒı.RMINORZ
 CODE_SMELL
-Ssquid:S1170"!Make this final field static too.(ØÌƒéûÿÿÿÿHİRMINORZ
+‰squid:S00116."URename this field "MAIL_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÌƒéûÿÿÿÿH‹ı.RMINORZ
 CODE_SMELL
-‹squid:S00116"]Rename this field "DEFAULT_BROKER_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆóÙæHÜRMINORZ
+Tsquid:S1170."!Make this final field static too.(ØÌƒéûÿÿÿÿHŠı.RMINORZ
 CODE_SMELL
-Nsquid:S1170"!Make this final field static too.(ˆóÙæHÛRMINORZ
+‰squid:S00100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥šÙûùÿÿÿÿ8ªÄúŸÈ,Hı.RMINORZ
+CODE_SMELL
+Œsquid:S00116-"]Rename this field "DEFAULT_BROKER_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆóÙæHı.RMINORZ
 CODE_SMELL

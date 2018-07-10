@@ -24,6 +24,6 @@ public class RedisUtility {
 	}
 
 	public void expireSaveToken(String id) {
-		stringRedisTemplate.expire(id, 5, TimeUnit.SECONDS);
+		stringRedisTemplate.expire(id, 2, TimeUnit.MINUTES);
 	}
 }

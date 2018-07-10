@@ -1,74 +1,29 @@
 
-Šsquid:S1192©"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(¹£˜ÛüÿÿÿÿH¡ˆRCRITICALZ
+wsquid:HiddenFieldCheckÚ"8Rename "user" which hides the field declared at line 28.(Î‰…èşÿÿÿÿHµ«7RMAJORZ
 CODE_SMELL
-~squid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(ûÇ«ŒıÿÿÿÿH£ˆRMAJORZ
+€squid:S00117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯H««7RMINORZ
 CODE_SMELL
-l
-squid:S106Ø"9Replace this use of System.out or System.err by a logger.(ííéúÿÿÿÿH‰  RMAJORZ
+Zsquid:S1148¡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿH­«7RMINORZVULNERABILITY
+^squid:S1125Ü"(Remove the literal "true" boolean value.(íØ÷Á8ñŒÖ§Ç,H¶«7RMINORZ
 CODE_SMELL
-s
-squid:S106Û"9Replace this use of System.out or System.err by a logger.(îÄ Òûÿÿÿÿ8Àœ—ËÅ,H¨ˆRMAJORZ
+osquid:S1126\"AReplace this if-then-else statement by a single return statement.(Â˜ÑH³«7RMINORZ
 CODE_SMELL
-~squid:HiddenFieldCheckÓ"8Rename "user" which hides the field declared at line 27.(ôÖ†üüÿÿÿÿ8ÕôşıÆ,HŸˆRMAJORZ
+asquid:S1148Ò"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¡ÌÇ,H¯«7RMINORZVULNERABILITY
+~squid:HiddenFieldCheck–"8Rename "user" which hides the field declared at line 28.(ôÖ†üüÿÿÿÿ8ÕôşıÆ,H±«7RMAJORZ
 CODE_SMELL
-f
-squid:S1065"9Replace this use of System.out or System.err by a logger.(óêç™H—ˆRMAJORZ
+ysquid:HiddenFieldCheckª"8Rename "user" which hides the field declared at line 28.(Š¨ÖÃ8ÕôşıÆ,H´«7RMAJORZ
 CODE_SMELL
-squid:S00117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯H¯ˆRMINORZ
+wsquid:S1126Ü"AReplace this if-then-else statement by a single return statement.(íØ÷Á8ñŒÖ§Ç,Hª«7RMINORZ
 CODE_SMELL
-asquid:S1148­"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¡ÌÇ,HªˆRMINORZVULNERABILITY
-g
-squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(²›šŞH›ˆRMAJORZ
+xsquid:HiddenFieldCheck°">Rename "emailModel" which hides the field declared at line 31.(ŒÅÊH¸«7RMAJORZ
 CODE_SMELL
-f
-squid:S106X"9Replace this use of System.out or System.err by a logger.(šÈŞ§H²ˆRMAJORZ
+~squid:HiddenFieldCheckÆ"8Rename "user" which hides the field declared at line 28.(ôÖ†üüÿÿÿÿ8ÕôşıÆ,H°«7RMAJORZ
 CODE_SMELL
-e
-squid:S106l"9Replace this use of System.out or System.err by a logger.(µûôQH”ˆRMAJORZ
+Šsquid:S1192"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(¹£˜ÛüÿÿÿÿH·«7RCRITICALZ
 CODE_SMELL
-vsquid:HiddenFieldChecke"8Rename "user" which hides the field declared at line 27.(Î‰…èşÿÿÿÿH•ˆRMAJORZ
+€squid:S001179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯H¬«7RMINORZ
 CODE_SMELL
-k
-squid:S106N"9Replace this use of System.out or System.err by a logger.(ÿ·¡üÿÿÿÿHœˆRMAJORZ
+{squid:S1126N"AReplace this if-then-else statement by a single return statement.(Ç¶Şİüÿÿÿÿ8ä›Ü™È,H²«7RMINORZ
 CODE_SMELL
-g
-squid:S106Š"9Replace this use of System.out or System.err by a logger.(ÊÍ´H°ˆRMAJORZ
-CODE_SMELL
-|squid:S1126ï"AReplace this if-then-else statement by a single return statement.(„İçáıÿÿÿÿ8ñŒÖ§Ç,H¤ˆRMINORZ
-CODE_SMELL
-~squid:HiddenFieldCheck¢"8Rename "user" which hides the field declared at line 27.(ôÖ†üüÿÿÿÿ8ÕôşıÆ,HˆRMAJORZ
-CODE_SMELL
-f
-squid:S106i"9Replace this use of System.out or System.err by a logger.(ŠŞ˜ÆH©ˆRMAJORZ
-CODE_SMELL
-wsquid:HiddenFieldCheckì"8Rename "user" which hides the field declared at line 27.(Î‰…èşÿÿÿÿH¦ˆRMAJORZ
-CODE_SMELL
-f
-squid:S106U"9Replace this use of System.out or System.err by a logger.(ŠŞ˜ÆH¬ˆRMAJORZ
-CODE_SMELL
-f
-squid:S1069"9Replace this use of System.out or System.err by a logger.(‡®éÕHšˆRMAJORZ
-CODE_SMELL
-f
-squid:S1061"9Replace this use of System.out or System.err by a logger.(åªH–ˆRMAJORZ
-CODE_SMELL
-f
-squid:S106œ"9Replace this use of System.out or System.err by a logger.(ÌòçH®ˆRMAJORZ
-CODE_SMELL
-l
-squid:S106Í"9Replace this use of System.out or System.err by a logger.(òîş»ÿÿÿÿÿH§ˆRMAJORZ
-CODE_SMELL
-tsquid:S1126Z"AReplace this if-then-else statement by a single return statement.(Ç¶ŞİüÿÿÿÿH™ˆRMINORZ
-CODE_SMELL
-ysquid:HiddenFieldCheck¹"8Rename "user" which hides the field declared at line 27.(Š¨ÖÃ8ÕôşıÆ,H­ˆRMAJORZ
-CODE_SMELL
-xsquid:HiddenFieldCheck¿">Rename "emailModel" which hides the field declared at line 30.(ŒÅÊH¢ˆRMAJORZ
-CODE_SMELL
-€squid:S00117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯H˜ˆRMINORZ
-CODE_SMELL
-Zsquid:S1148ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿH±ˆRMINORZVULNERABILITY
-csquid:S1125ï"(Remove the literal "true" boolean value.(„İçáıÿÿÿÿ8ñŒÖ§Ç,HˆRMINORZ
-CODE_SMELL
-f
-squid:S106<"9Replace this use of System.out or System.err by a logger.(ÊÍ´H ˆRMAJORZ
+vsquid:HiddenFieldCheckY"8Rename "user" which hides the field declared at line 28.(Î‰…èşÿÿÿÿH®«7RMAJORZ
 CODE_SMELL

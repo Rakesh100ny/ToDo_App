@@ -1,4 +1,4 @@
-app.controller('userController', function($scope, userService) {
+app.controller('userController', function($scope, userService,$state) {
 
 	$scope.registerModel = {
 		firstName : "Enter First Name ie. Ronny",
@@ -24,30 +24,82 @@ app.controller('userController', function($scope, userService) {
 			
 		};
 	
-	$scope.result="";
-		
+	 $scope.error = new Array;
+	 $scope.errorMessage;
+	 
+	 $scope.status = new Array;
+	 $scope.message;
 	$scope.register = function(registerModel) {
-		$scope.result=registerModel.email;
-		console.log("result inside method",$scope.result);
 		console.log("User Details", angular.toJson(registerModel));
-		userService.registerUser(registerModel);
+		localStorage.setItem("registerEmail",registerModel.email);
+		userService.registerUser(registerModel).then(function successCallback(response){
+			$state.go('signupSuccess')
+       	 console.log("successfully",response.data.message); 
+          },function errorCallback(response){
+        	console.log("failed",response.data);  
+        	$scope.error=response.data;
+	       	$scope.errorMessage=$scope.error.errorMessage;
+	       		        
+	    	$scope.status=response.data;
+	       	$scope.message=$scope.status.message;           
+          })
 	};
+	
 
-	console.log("result outside method",$scope.result);
+	$scope.registerEmail=localStorage.getItem("registerEmail");
 	
 	$scope.login = function(loginModel) {
 		console.log("Login Details", angular.toJson(loginModel));
-		userService.loginUser(loginModel);
+		userService.loginUser(loginModel).then(function successCallback(response)
+	      {
+	    	  $state.go('home');
+	    	  localStorage.setItem("tokenLogin",response.data.message);
+	    	  console.log("successfully",response.data.message); 
+	      },function errorCallback(response){
+	    	console.log("failed",response.data);  
+	    	$scope.error=response.data;
+	       	$scope.errorMessage=$scope.error.errorMessage;
+	       	
+	        
+	    	$scope.status=response.data;
+	       	$scope.message=$scope.status.message;
+	      })
 	};
 
 	$scope.forgotPassword = function(forgotPasswordModel) {
 		console.log("ForgotPassword Details", angular.toJson(forgotPasswordModel));
-		userService.forgotPasswordUser(forgotPasswordModel);
+		localStorage.setItem("forgotPasswordEmail",forgotPasswordModel.email);
+		userService.forgotPasswordUser(forgotPasswordModel).then(function successCallback(response){
+			localStorage.setItem("tokenForgotPassword",response.data.message);
+	    	  console.log("successfully",response.data.message); 
+	  		$state.go('forgotpasswordSuccess')  
+	      },function errorCallback(response){
+	    	  console.log("failed",response.data);
+	    		$scope.error=response.data;
+		       	$scope.errorMessage=$scope.error.errorMessage;
+		       	
+		        
+		    	$scope.status=response.data;
+		       	$scope.message=$scope.status.message;
+	      })
 	};
 
+	$scope.forgotPasswordEmail=localStorage.getItem("forgotPasswordEmail");
+	
 	$scope.resetPassword = function(passwordModel) {
 		console.log("ResetPassword Details", angular.toJson(passwordModel));
-		userService.resetPasswordUser(passwordModel);
+		userService.resetPasswordUser(passwordModel).then(function successCallback(response){
+			$state.go('login')
+	    	  console.log("successfully",response.data.message); 
+	    	  
+	      },function errorCallback(response){
+	    	  console.log("failed",response.data);
+	    		$scope.error=response.data;
+		       	$scope.errorMessage=$scope.error.errorMessage;
+		       			        
+		    	$scope.status=response.data;
+		       	$scope.message=$scope.status.message;
+	      })
 	};
 	
 });

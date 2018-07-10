@@ -1,7 +1,11 @@
 
-“squid:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(…νδόϊÿÿÿÿ8Ο›ΛΗ,H”‚$RMINORZ
+squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8„Η½Η,H―έ9RMINORZ
 CODE_SMELL
-squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8„Η½Η,H•‚$RMINORZ
+squid:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ζ―ΰ•ÿÿÿÿÿH±έ9RMINORZ
 CODE_SMELL
-squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ζ―ΰ•ÿÿÿÿÿH–‚$RMINORZ
+squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8Ο›ΛΗ,H°έ9RMINORZ
+CODE_SMELL
+“squid:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(…νδόϊÿÿÿÿ8ƒβ¨Θ,H²έ9RMINORZ
+CODE_SMELL
+ squid:S4144"kUpdate this method so that its implementation is not identical to "handleUserNotFoundException" on line 18.(Α“πτ8ƒβ¨Θ,H³έ9RMAJORZ
 CODE_SMELL

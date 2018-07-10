@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.todo.userservice.dao.IUserDao;
+import com.bridgelabz.todo.userservice.exception.TokenExpireException;
 import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 import com.bridgelabz.todo.userservice.jms.MessageSender;
 import com.bridgelabz.todo.userservice.model.EmailModel;
@@ -39,30 +40,24 @@ public class UserServiceImpl implements IUserService {
 	@Transactional
 	@Override
 	public void insert(RegisterModel registerModel, HttpServletRequest request) {
+
 		user.setFirstName(registerModel.getFirstName());
 		user.setLastName(registerModel.getLastName());
 		user.setEmail(registerModel.getEmail());
 		user.setPassword(registerModel.getPassword());
-		user.setMobileNo(registerModel.getMobileNo());
+		
+		user.setMobileNo(registerModel.getMobileNo().substring(3));
 
 		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
-		System.out.println("password : " + user.getPassword());
 
 		userDao.insert(user);
 
-		System.out.println("User Id : " + user.getId());
-
 		String token = Token.generateToken(user.getId());
 
-		System.out.println("Token : " + token);
-
 		StringBuffer URL = request.getRequestURL();
-		System.out.println("URL : " + URL);
 
-		String url = "<a href="+ URL.substring(0, URL.lastIndexOf("/")) + "/verifytoken/" + token + " ></a>";
-		/*
-		 * System.out.println("Url : "+url);
-		 */
+		String url = "<a href=" + URL.substring(0, URL.lastIndexOf("/")) + "/verifytoken/" + token + " ></a>";
+
 		String subject = "link to activate your account";
 
 		emailModel.setSubject(subject);
@@ -73,19 +68,12 @@ public class UserServiceImpl implements IUserService {
 
 		redisUtility.saveToken(Long.toString(user.getId()), token);
 
-		String tokenValue = redisUtility.getSaveToken(Long.toString(user.getId()));
-
-		System.out.println("Saved Token in Redis : " + tokenValue);
-
 	}
 
 	@Transactional
 	@Override
 	public boolean isUserExist(String email) {
-        System.out.println("r1");
 		long count = userDao.isUserExist(email);
-
-		System.out.println("count : " + count);
 
 		if (count >= 1) {
 			return true;
@@ -101,11 +89,9 @@ public class UserServiceImpl implements IUserService {
 		User user = userDao.getUserDetailsByEmail(email);
 
 		if (user != null) {
-			if (BCrypt.checkpw(password, user.getPassword()) ) {
-				System.out.println("r1");
+			if (BCrypt.checkpw(password, user.getPassword())) {
 				return true;
 			} else {
-				System.out.println("r2");
 				return false;
 			}
 		}
@@ -135,7 +121,6 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public EmailModel getEmailModel(String token, HttpServletRequest request, User user) {
 		StringBuffer URL = request.getRequestURL();
-		System.out.println("URL : " + URL);
 
 		String url = "<a href=" + URL.substring(0, URL.lastIndexOf("/")) + "/resetpassword/" + token + " ></a>";
 
@@ -150,41 +135,41 @@ public class UserServiceImpl implements IUserService {
 	@Transactional
 	@Override
 	public void isVerifiedUser(String token) {
-		
-			try {
+
+		try {
 			String storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
-				System.out.println("isvarified storedToken : "+storedToken);
+
+			redisUtility.expireSaveToken(Token.getParseJWT(token));
 			
-				redisUtility.expireSaveToken(Token.getParseJWT(token));
+			if(storedToken==null)
+				 throw new TokenExpireException("Token is Expired Please Again do Registration");
+				
+			
+			if (storedToken.equals(token)) {
 
-				if (storedToken.equals(token)) {
+				User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
 
-					User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
+				if (user != null) {
+					user.setActivated(true);
+					updateUser(user);
 
-					if (user != null) {
-						user.setActivated(true);
-						updateUser(user);
-
-					} else {
-						throw new UserNotFoundException("User Not Found...!");
-					}
+				} else {
+					throw new UserNotFoundException("User Not Found...!");
 				}
-			} catch (SignatureException e) {
-				e.printStackTrace();
 			}
-
-		
+		} catch (SignatureException e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	@Transactional
 	@Override
 	public String forgotPassword(String email, HttpServletRequest request) {
-		
-		
+
 		User user = getUserDetailsByEmail(email);
 		if (user != null) {
-		 String	token = Token.generateToken(user.getId());
+			String token = Token.generateToken(user.getId());
 
 			redisUtility.saveToken(Long.toString(user.getId()), token);
 
@@ -194,36 +179,34 @@ public class UserServiceImpl implements IUserService {
 
 			return token;
 		} else {
-			
-				throw new UserNotFoundException("User Not Found...!");
+
+			throw new UserNotFoundException("User Not Found...!");
 		}
 	}
 
 	@Transactional
 	@Override
 	public void restPassword(String token, String newPassword) {
-		System.out.println("rakesh2");
 		try {
 			String storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
-			System.out.println("storedToken : "+storedToken);
 			redisUtility.expireSaveToken(Token.getParseJWT(token));
+			
+			if(storedToken==null)
+			 throw new TokenExpireException("Token is Expired Please Again do ForgotPassword");
+			
 			if (storedToken.equals(token)) {
 				User user = getUserById(Long.parseLong(Token.getParseJWT(token)));
 
-				
 				if (user != null) {
 					user.setPassword(BCrypt.hashpw(newPassword, BCrypt.gensalt(12)));
-					System.out.println("Password : " + user.getPassword());
 
 					updateUser(user);
-					System.out.println("updated Password : " + user.getPassword());
 
 				} else {
 					throw new UserNotFoundException("User Not Found...!");
 				}
 			}
-		}
-		 catch (SignatureException e) {
+		} catch (SignatureException e) {
 			e.printStackTrace();
 		}
 
@@ -231,19 +214,14 @@ public class UserServiceImpl implements IUserService {
 
 	@Transactional
 	@Override
-	public boolean isEmailActivated(String email) 
-	{
-	 User user=userDao.getUserDetailsByEmail(email);
-	
-	 
-	 if(user.isActivated()==true)
-	 {
-	  return true;
-	 }
-	 else
-	 {
-	   return false;	 
-	 }
-		
+	public boolean isEmailActivated(String email) {
+		User user = userDao.getUserDetailsByEmail(email);
+
+		if (user.isActivated() == true) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 }
