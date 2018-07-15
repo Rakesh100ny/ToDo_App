@@ -1,18 +1,22 @@
 
-`squid:S1148Z"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H³¶RMINORZVULNERABILITY
-r
-squid:S106$"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,H´¶RMAJORZ
-CODE_SMELL
 m
-squid:S106I"9Replace this use of System.out or System.err by a logger.(ğ‰í°8‹¦˜…Æ,Hµ¶RMAJORZ
+squid:S106?"9Replace this use of System.out or System.err by a logger.(ÔÕÊŞ8‹¦˜…Æ,H¥ÍBRMAJORZ
 CODE_SMELL
+`squid:S1148x"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HÂÍBRMINORZVULNERABILITY
 l
-squid:S106."9Replace this use of System.out or System.err by a logger.(°—]8½ò„Æ,H¶¶RMAJORZ
+squid:S1060"9Replace this use of System.out or System.err by a logger.(°—]8½ò„Æ,HÏÍBRMAJORZ
 CODE_SMELL
 r
-squid:S1066"9Replace this use of System.out or System.err by a logger.(Ò’¾ıûÿÿÿÿ8½ò„Æ,H·¶RMAJORZ
+squid:S106&"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,H¨ÍBRMAJORZ
 CODE_SMELL
+`squid:S1148N"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H§ÍBRMINORZVULNERABILITY
+r
+squid:S1068"9Replace this use of System.out or System.err by a logger.(Ò’¾ıûÿÿÿÿ8½ò„Æ,H©ÍBRMAJORZ
+CODE_SMELL
+`squid:S1148("#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HÎÍBRMINORZVULNERABILITY
 m
-squid:S106="9Replace this use of System.out or System.err by a logger.(ÔÕÊŞ8½ò„Æ,H¸¶RMAJORZ
+squid:S106`"9Replace this use of System.out or System.err by a logger.(ğ‰í°8½ò„Æ,H¦ÍBRMAJORZ
 CODE_SMELL
-`squid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H¹¶RMINORZVULNERABILITY
+`squid:S1148i"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HªÍBRMINORZVULNERABILITY
+«squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8¢„¥ÀÉ,HÑÍBRMINORZ
+CODE_SMELL

@@ -1,32 +1,32 @@
 
-^squid:S1452H"&Remove usage of generic wildcard type.(™Ñ‘8î¾›…Æ,HË† RCRITICALZ
-CODE_SMELL
-r
-squid:S106+"9Replace this use of System.out or System.err by a logger.(ÛŸêÿÿÿÿÿ8¦½ò„Æ,HÌ† RMAJORZ
-CODE_SMELL
-squid:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸’Ô¢8¦½ò„Æ,HÍ† RMINORZ
+m
+squid:S106B"9Replace this use of System.out or System.err by a logger.(¸’Ô¢8¦½ò„Æ,H¢ÍBRMAJORZ
 CODE_SMELL
 m
-squid:S106>"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8íşİÙÅ,HÎ† RMAJORZ
-CODE_SMELL
-m
-squid:S106A"9Replace this use of System.out or System.err by a logger.(¸’Ô¢8¦½ò„Æ,HÏ† RMAJORZ
-CODE_SMELL
-m
-squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8¦½ò„Æ,HĞ† RMAJORZ
-CODE_SMELL
-m
-squid:S106J"9Replace this use of System.out or System.err by a logger.(åÔãÅ8¦½ò„Æ,HÑ† RMAJORZ
+squid:S106?"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8¦½ò„Æ,H¡ÍBRMAJORZ
 CODE_SMELL
 l
-squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8¦½ò„Æ,HÒ† RMAJORZ
+squid:S106 "9Replace this use of System.out or System.err by a logger.(°—]8¦½ò„Æ,HŸÍBRMAJORZ
 CODE_SMELL
-“squid:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(»Ò‘Ñşÿÿÿÿ8íşİÙÅ,HÓ† RMINORZ
+^squid:S1452*"&Remove usage of generic wildcard type.(ÖÕëâ8¦½ò„Æ,HÍBRCRITICALZ
+CODE_SMELL
+m
+squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8¦½ò„Æ,H™ÍBRMAJORZ
 CODE_SMELL
 r
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ã•…Éşÿÿÿÿ8¦½ò„Æ,HÔ† RMAJORZ
+squid:S106,"9Replace this use of System.out or System.err by a logger.(ÛŸêÿÿÿÿÿ8¦½ò„Æ,HšÍBRMAJORZ
 CODE_SMELL
-^squid:S1452)"&Remove usage of generic wildcard type.(‹‰á»8¦½ò„Æ,HÕ† RCRITICALZ
+r
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ã•…Éşÿÿÿÿ8íşİÙÅ,H ÍBRMAJORZ
 CODE_SMELL
-“squid:S2293?"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ‘Òúÿÿÿÿ8¦½ò„Æ,HÖ† RMINORZ
+“squid:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ‘Òúÿÿÿÿ8¦½ò„Æ,H£ÍBRMINORZ
+CODE_SMELL
+csquid:S1452I"&Remove usage of generic wildcard type.(Š›ú¤ıÿÿÿÿ8›¡§É,H›ÍBRCRITICALZ
+CODE_SMELL
+squid:S2293B"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸’Ô¢8¦½ò„Æ,HÍBRMINORZ
+CODE_SMELL
+m
+squid:S106K"9Replace this use of System.out or System.err by a logger.(åÔãÅ8¦½ò„Æ,H˜ÍBRMAJORZ
+CODE_SMELL
+csquid:S1452"&Remove usage of generic wildcard type.(™±©ˆùÿÿÿÿ8î¾›…Æ,HœÍBRCRITICALZ
 CODE_SMELL

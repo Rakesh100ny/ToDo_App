@@ -58,6 +58,8 @@ public class UserServiceImpl implements IUserService {
 
 		String url = "<a href=" + URL.substring(0, URL.lastIndexOf("/")) + "/verifytoken/" + token + " ></a>";
 
+		System.out.println("origin : "+request.getHeader("Origin"));
+		
 		String subject = "link to activate your account";
 
 		emailModel.setSubject(subject);
@@ -135,16 +137,26 @@ public class UserServiceImpl implements IUserService {
 	@Transactional
 	@Override
 	public void isVerifiedUser(String token) {
-
+		System.out.println("r2");
+		
 		try {
 			String storedToken = redisUtility.getSaveToken(Token.getParseJWT(token));
-
+			System.out.println("storedToken in redis : "+storedToken); 
+			System.out.println("r3");
 			redisUtility.expireSaveToken(Token.getParseJWT(token));
-			
+			System.out.println("r4");
 			if(storedToken==null)
-				 throw new TokenExpireException("Token is Expired Please Again do Registration");
+			{
+				System.out.println("r5");	
+				//throw new UserNotFoundException("User Not Found...!");
+
+				throw new TokenExpireException("Token is Expired Please Again do Registration");
+			 
+			}
+				
 				
 			
+			System.out.println("r6");
 			if (storedToken.equals(token)) {
 
 				User user = getUserById(Long.parseLong(Token.getParseJWT(token)));

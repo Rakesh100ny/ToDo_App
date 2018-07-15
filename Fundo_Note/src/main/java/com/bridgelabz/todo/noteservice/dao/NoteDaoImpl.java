@@ -52,7 +52,9 @@ public class NoteDaoImpl implements INoteDao {
 	 
 	 if(note==null)return false;
 	 
+	 
 	 session.delete(note);;
+	 
 	 return true;
 	 
 	}

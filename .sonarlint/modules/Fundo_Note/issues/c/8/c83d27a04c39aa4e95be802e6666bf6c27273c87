@@ -1,11 +1,11 @@
 
-hsquid:EmptyStatementUsageCheck7"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,H÷(RMINORZ
+r
+squid:S106*"9Replace this use of System.out or System.err by a logger.(§ì¥ðûÿÿÿÿ8±±õ„Æ,H«ÍBRMAJORZ
 CODE_SMELL
-q
-squid:S106*"9Replace this use of System.out or System.err by a logger.(§ì¥ðûÿÿÿÿ8±±õ„Æ,Hô(RMAJORZ
+m
+squid:S106$"9Replace this use of System.out or System.err by a logger.(œØžŽ8±±õ„Æ,H¬ÍBRMAJORZ
 CODE_SMELL
-l
-squid:S106$"9Replace this use of System.out or System.err by a logger.(œØžŽ8±±õ„Æ,Hö(RMAJORZ
+isquid:EmptyStatementUsageCheck8"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,H®ÍBRMINORZ
 CODE_SMELL
-hsquid:EmptyStatementUsageCheck#"Remove this empty statement.(šùµ°þÿÿÿÿ8±±õ„Æ,Hõ(RMINORZ
+isquid:EmptyStatementUsageCheck#"Remove this empty statement.(šùµ°þÿÿÿÿ8±±õ„Æ,H­ÍBRMINORZ
 CODE_SMELL

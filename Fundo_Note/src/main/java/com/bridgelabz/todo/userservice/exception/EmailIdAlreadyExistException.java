@@ -9,7 +9,8 @@ public class EmailIdAlreadyExistException extends RuntimeException
 	}
  
     public EmailIdAlreadyExistException(String errorMessage) {
-        this.errorMessage = errorMessage;
+        super(errorMessage);
+    	this.errorMessage = errorMessage;
     }
  
     public String getErrorMessage() {

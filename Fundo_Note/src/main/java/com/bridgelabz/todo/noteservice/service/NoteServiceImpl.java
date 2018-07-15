@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +13,7 @@ import com.bridgelabz.todo.noteservice.dao.INoteDao;
 import com.bridgelabz.todo.noteservice.exception.NoteNotFoundException;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
+import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
 
@@ -49,7 +51,7 @@ public class NoteServiceImpl implements INoteService {
 
 	@Transactional
 	@Override
-	public void update(Note note) {
+	public void update(Note note,String token) {
 
 		System.out.println("Note Id : " + note.getId());
 
@@ -61,20 +63,48 @@ public class NoteServiceImpl implements INoteService {
 		System.out.println("Note title : " + note.getTitle());
 		note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
 
-		noteDao.update(note);
+		User user;
+		try {
+			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
+			if(user.getId()==note.getId())
+			{
+				noteDao.update(note);	
+			}
+			else
+			{
+			 throw new UserNotFoundException("User Not Found Exception...!"); 	
+			}
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 
 	}
 
 	@Transactional
 	@Override
-	public boolean deleteNoteById(long id) {
+	public boolean deleteNoteById(long id,String token) {
 		        
-		if (!noteDao.deleteNoteById(id)) {
-			System.out.println("Unable to delete. User with id " + id + " not found");
-			throw new NoteNotFoundException("Note is not found...!");
+		User user;
+		try {
+			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
+			if(user.getId()==id)
+			{
+			 if (!noteDao.deleteNoteById(id)) {
+				System.out.println("Unable to delete. User with id " + id + " not found");
+				throw new NoteNotFoundException("Note is not found...!");
+			 }
+		    }
+			else
+			{
+			 throw new UserNotFoundException("User Not Found Exception...!");	
+			}
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
 		}
-
-		
+	
 		return true;
 	}
 

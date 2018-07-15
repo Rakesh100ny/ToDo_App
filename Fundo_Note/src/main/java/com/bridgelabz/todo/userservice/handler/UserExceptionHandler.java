@@ -24,7 +24,7 @@ public class UserExceptionHandler
 	 
 	 
 	 @ExceptionHandler(TokenExpireException.class)
-	    public ResponseEntity<UserErrorResponse> handleTokenExpireException(RuntimeException exception) {
+	    public ResponseEntity<UserErrorResponse> handleTokenExpireException(RuntimeException exception)  {
 	        UserErrorResponse errorResponse = new UserErrorResponse();
 	        errorResponse.setErrorCode(400);
 	        errorResponse.setErrorMessage(exception.getMessage());
@@ -41,12 +41,12 @@ public class UserExceptionHandler
 	  return new ResponseEntity<UserErrorResponse>(errorResponse,HttpStatus.NOT_ACCEPTABLE);
 	 }
 	  
-	    @ExceptionHandler(Exception.class)
-	    public ResponseEntity<UserErrorResponse> handleGenericException(Exception ex) {
+	/*    @ExceptionHandler(Exception.class)
+	    public ResponseEntity<UserErrorResponse> handleGenericException(Exception exception) {
 	        UserErrorResponse errorResponse = new UserErrorResponse();
 	        errorResponse.setErrorCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-	        errorResponse.setErrorMessage(ex.getMessage());
+	        errorResponse.setErrorMessage(exception.getMessage());
 	        return new ResponseEntity<UserErrorResponse>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-	    }
+	    }*/
 
 }

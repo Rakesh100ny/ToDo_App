@@ -1,0 +1,10 @@
+
+Æ%squid:RedundantThrowsDeclarationCheck"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.(™„•ƒşÿÿÿÿH¸ÍBRMINORZ
+CODE_SMELL
+squid:S3008"NRename this field "KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¬ÉìùÿÿÿÿH¹ÍBRMINORZ
+CODE_SMELL
+“squid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "getToken".(´òªüÿÿÿÿHºÍBRMINORZ
+CODE_SMELL
+msquid:S1118
+":Add a private constructor to hide the implicit public one.(¼ÎŸÌıÿÿÿÿH»ÍBRMAJORZ
+CODE_SMELL

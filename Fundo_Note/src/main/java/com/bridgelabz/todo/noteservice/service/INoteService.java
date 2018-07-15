@@ -9,11 +9,11 @@ public interface INoteService
 {
 	void addNote(Note note,String token);
 	 
-	 void update(Note note);
+	 void update(Note note,String token);
 	 
 	 Note getNoteById(long id);
 	 
-	 boolean deleteNoteById(long id);
+	 boolean deleteNoteById(long id,String token);
 	 
 	 List<Note> getAllNotes(String token);
 	 

@@ -1,11 +1,11 @@
 
-squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8„Η½Η,H―έ9RMINORZ
+squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8Ο›ΛΗ,Hήά:RMINORZ
 CODE_SMELL
-squid:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ζ―ΰ•ÿÿÿÿÿH±έ9RMINORZ
+squid:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ζ―ΰ•ÿÿÿÿÿHΫά:RMINORZ
 CODE_SMELL
-squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8Ο›ΛΗ,H°έ9RMINORZ
+squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊή—©8„Η½Η,HΪά:RMINORZ
 CODE_SMELL
-“squid:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(…νδόϊÿÿÿÿ8ƒβ¨Θ,H²έ9RMINORZ
+squid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(£°w8ά®½Θ,HαΫ;RMAJORZ
 CODE_SMELL
- squid:S4144"kUpdate this method so that its implementation is not identical to "handleUserNotFoundException" on line 18.(Α“πτ8ƒβ¨Θ,H³έ9RMAJORZ
+ squid:S4144"kUpdate this method so that its implementation is not identical to "handleUserNotFoundException" on line 18.(Α“πτ8ωΣΊ½Θ,H•υ;RMAJORZ
 CODE_SMELL

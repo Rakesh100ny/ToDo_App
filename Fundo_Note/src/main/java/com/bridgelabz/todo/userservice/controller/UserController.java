@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -30,6 +32,8 @@ import com.bridgelabz.todo.utility.Response;
 import com.bridgelabz.todo.utility.Token;
 import com.bridgelabz.todo.validation.UserValidation;
 
+
+@PropertySource("classpath:clientside.properties")
 @RestController
 public class UserController {
 	@Autowired
@@ -43,6 +47,12 @@ public class UserController {
 		binder.addValidators(userValidation);
 	}
 
+	@Value("${redirect.login}")
+	String login;
+	
+	@Value("${redirect.resetpassword}")
+	String resetPassword;
+	
 	/*-------------------------------Register a User-----------------------------------------------*/
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
@@ -106,16 +116,26 @@ public class UserController {
 	public ResponseEntity<?> token(@PathVariable("token") String token, HttpServletResponse response,
 			HttpServletRequest request) throws IOException {
 
+		System.out.println("r1");
 		userService.isVerifiedUser(token);
 
-		StringBuffer URL = request.getRequestURL();
+		System.out.println("r7");
+/*		StringBuffer URL = request.getRequestURL();
 
+		System.out.println("URL : "+URL);
 		String url1 = URL.substring(0, URL.lastIndexOf("/"));
 
+		System.out.println("url1 : "+url1);
+		
 		String url2 = url1.substring(0, url1.lastIndexOf("/"));
 
+		System.out.println("url2 : "+url2);
 		response.sendRedirect(url2 + "/#!/login");
-
+		*/
+		
+		
+		response.sendRedirect(login);
+		
 		return new ResponseEntity<>(new Response(true, "User is Successfully Activated...!"), HttpStatus.OK);
 
 	}
@@ -136,16 +156,9 @@ public class UserController {
 
 	/*---------------------------Send Reset API--------------------------*/
 	@RequestMapping(value = "/resetpassword/{token:.+}", method = RequestMethod.GET)
-	public ResponseEntity<?> sendResetPassword(@PathVariable("token") String token, HttpServletResponse response,
-			HttpServletRequest request) throws IOException {
+	public ResponseEntity<?> sendResetPassword(@PathVariable("token") String token, HttpServletResponse response) throws IOException {
 
-		StringBuffer URL = request.getRequestURL();
-
-		String url1 = URL.substring(0, URL.lastIndexOf("/"));
-
-		String url2 = url1.substring(0, url1.lastIndexOf("/"));
-
-		response.sendRedirect(url2 + "/#!/resetpassword");
+		response.sendRedirect(resetPassword);
 
 		return new ResponseEntity<>(new Response(true, "Send Reset-Password API"), HttpStatus.OK);
 
@@ -158,6 +171,8 @@ public class UserController {
 
 		String token = request.getHeader("tokenForgotPassword");
 
+		System.out.println("Reset Token : "+token);
+		
 		if (result.hasErrors()) {
 			return new ResponseEntity<>(new Response(false, "Check All Fileds"),HttpStatus.BAD_REQUEST);
 		}
