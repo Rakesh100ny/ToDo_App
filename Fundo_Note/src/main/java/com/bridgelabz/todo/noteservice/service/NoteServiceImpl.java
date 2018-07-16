@@ -53,44 +53,50 @@ public class NoteServiceImpl implements INoteService {
 	@Override
 	public void update(Note note,String token) {
 
-		System.out.println("Note Id : " + note.getId());
-
-		note = noteDao.getNoteById(note.getId());
-
-		if (note == null) {
-			throw new NoteNotFoundException("Note is not Found...!");
-		}
+		System.out.println("Note Color : "+note.getColor());
+  
+		Note note2=noteDao.getNoteById(note.getId());
+		
+		note2.setColor(note.getColor());
+		
 		System.out.println("Note title : " + note.getTitle());
 		note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
 
 		User user;
 		try {
+			
+			long id=Long.parseLong(Token.getParseJWT(token));
+			System.out.println("User id : "+id);
+			
+			
+			
 			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
-			if(user.getId()==note.getId())
+			if(user.getId()==note2.getUser().getId())
 			{
-				noteDao.update(note);	
+				
+				noteDao.update(note2);	
 			}
 			else
 			{
-			 throw new UserNotFoundException("User Not Found Exception...!"); 	
+			 throw new UserNotFoundException("This User is Not Allow to Update Note...!"); 	
 			}
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();
 		}
 		
 		
-		
-
 	}
 
 	@Transactional
 	@Override
 	public boolean deleteNoteById(long id,String token) {
-		        
+
+		Note note=noteDao.getNoteById(id);
+		
 		User user;
 		try {
 			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
-			if(user.getId()==id)
+			if(user.getId()==note.getUser().getId())
 			{
 			 if (!noteDao.deleteNoteById(id)) {
 				System.out.println("Unable to delete. User with id " + id + " not found");
@@ -99,7 +105,7 @@ public class NoteServiceImpl implements INoteService {
 		    }
 			else
 			{
-			 throw new UserNotFoundException("User Not Found Exception...!");	
+			 throw new UserNotFoundException("This User is Not Allow to Delete Note...!");	
 			}
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();

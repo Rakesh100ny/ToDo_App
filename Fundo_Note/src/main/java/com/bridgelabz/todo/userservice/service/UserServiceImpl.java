@@ -148,8 +148,6 @@ public class UserServiceImpl implements IUserService {
 			if(storedToken==null)
 			{
 				System.out.println("r5");	
-				//throw new UserNotFoundException("User Not Found...!");
-
 				throw new TokenExpireException("Token is Expired Please Again do Registration");
 			 
 			}

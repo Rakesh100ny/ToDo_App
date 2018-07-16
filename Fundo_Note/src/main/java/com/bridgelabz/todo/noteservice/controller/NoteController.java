@@ -41,11 +41,11 @@ public class NoteController {
 	  @RequestMapping(value = "/updatenote", method = RequestMethod.PUT) 
 	  public ResponseEntity<?> updateNote(@RequestBody Note note,@RequestHeader("userLoginToken")String token) 
 	  { 
-		  System.out.println("Updating User Note" + note.getTitle());
+		  System.out.println("Updating User Note : " + note.getTitle());
 	  
 	   noteService.update(note,token);
 	  
-	  return new ResponseEntity<>(HttpStatus.OK);
+	  return new ResponseEntity<>(new Response(true, "Note is successfully updated...!"),HttpStatus.OK);
 	  
 	  }
 
@@ -76,10 +76,10 @@ public class NoteController {
 	  
 	   if(noteService.deleteNoteById(id,token))
 	   {
-		   return new ResponseEntity<>(HttpStatus.OK);
+		   return new ResponseEntity<>(new Response(true, "Note is successfully deleted...!"),HttpStatus.OK);
 	   }
 	   
-	    return new ResponseEntity<>(HttpStatus.NO_CONTENT); 
+	    return new ResponseEntity<>(new Response(false, "Note is not deleted...!"),HttpStatus.NO_CONTENT); 
 	   }
 	  
 	 
