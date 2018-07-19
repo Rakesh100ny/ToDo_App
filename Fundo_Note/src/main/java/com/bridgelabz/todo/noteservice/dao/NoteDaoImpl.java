@@ -26,9 +26,7 @@ public class NoteDaoImpl implements INoteDao {
 	@Override
 	public void update(Note note)
 	{
-	 System.out.println("r1");	
 	 Session session=sessionFactory.getCurrentSession();
-	 System.out.println("r2");
 	 session.saveOrUpdate(note);
 	 System.out.println("Note is successfully updated...!");
 	}
@@ -36,7 +34,6 @@ public class NoteDaoImpl implements INoteDao {
 	@Override
 	public Note getNoteById(long id) 
 	{
-	 System.out.println("soni");	
 	 Session session=sessionFactory.getCurrentSession();
 	  return session.get(Note.class, id);
 	}

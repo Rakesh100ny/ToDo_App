@@ -1,0 +1,13 @@
+
+m
+squid:S106H"9Replace this use of System.out or System.err by a logger.(ð‰í°8±°¼œË,HõÔBRMAJORZ
+CODE_SMELL
+`squid:S1148R"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ç³Ô›Ë,H‘ÔBRMINORZVULNERABILITY
+`squid:S1148#"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8’ï˜›Ë,HÃÓBRMINORZVULNERABILITY
+£squid:UselessImportCheck"\Remove this unused import 'com.bridgelabz.todo.noteservice.exception.NoteNotFoundException'.(äŒÐœýÿÿÿÿ8±°¼œË,HöÔBRMINORZ
+CODE_SMELL
+Šsquid:UselessImportCheck"IRemove this unused import 'com.sun.org.apache.regexp.internal.recompile'.(…ø±L8¢Ð¿œË,HýÔBRMINORZ
+CODE_SMELL
+isquid:S1191"5Use classes from the Java API instead of Sun classes.(…ø±L8¢Ð¿œË,HüÔBRMAJORZ
+CODE_SMELL
+`squid:S11485"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8àë®œË,HêÔBRMINORZVULNERABILITY

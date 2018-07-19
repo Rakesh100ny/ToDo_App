@@ -60,10 +60,9 @@ public class NoteController {
 	  
 	  if(users.isEmpty())
 	  {
-		  System.out.println("r1"); 
 		  return new ResponseEntity<List<Note>>(HttpStatus.NO_CONTENT); 
 	  }
-	  System.out.println("r2"); return new ResponseEntity<List<Note>>(users, HttpStatus.OK); 
+	  return new ResponseEntity<List<Note>>(users, HttpStatus.OK); 
 	 }
 	  
 	  

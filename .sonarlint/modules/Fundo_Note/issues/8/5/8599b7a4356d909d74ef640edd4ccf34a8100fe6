@@ -1,43 +1,27 @@
 
-^squid:S1452t"&Remove usage of generic wildcard type.(Æ«›ó8Ï¹¦ëÇ,HÖÎBRCRITICALZ
+^squid:S1452O"&Remove usage of generic wildcard type.(‹„êÕ8Ê‹šÇ,HˆÒBRCRITICALZ
 CODE_SMELL
-€squid:CommentedOutCodeLine{"<This block of commented-out lines of code should be removed.(±£ğå8à£ÒÃÉ,H×ÎBRMAJORZ
-CODE_SMELL
-m
-squid:S106F"9Replace this use of System.out or System.err by a logger.(èÕÁá8Øæƒ½È,HØÎBRMAJORZ
-CODE_SMELL
-dsquid:S1452©"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8×šúœÇ,HÙÎBRCRITICALZ
-CODE_SMELL
-^squid:S1452;"&Remove usage of generic wildcard type.(Ÿ’•8ÇÉµÑÇ,HÚÎBRCRITICALZ
-CODE_SMELL
-l
-squid:S106z"9Replace this use of System.out or System.err by a logger.(™ŠÕm8Ìã°ÒÇ,HÛÎBRMAJORZ
-CODE_SMELL
-squid:S1192F"VDefine a constant instead of duplicating this literal "A User with Email-Id " 3 times.(èÕÁá8òù Ç,HÜÎBRCRITICALZ
-CODE_SMELL
-m
-squid:S106w"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8‰µ„½È,HİÎBRMAJORZ
-CODE_SMELL
-squid:S1192A"QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,HŞÎBRCRITICALZ
-CODE_SMELL
-dsquid:S1452‘"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8Ô™¶ÑÇ,HßÎBRCRITICALZ
+csquid:S1452s"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8Ô™¶ÑÇ,H‰ÒBRCRITICALZ
 CODE_SMELL
 n
-squid:S106®"9Replace this use of System.out or System.err by a logger.(œñ±Ó8…ÙƒÆÉ,HàÎBRMAJORZ
+squid:S106–"9Replace this use of System.out or System.err by a logger.(œñ±Ó8…ÙƒÆÉ,HŠÒBRMAJORZ
+CODE_SMELL
+^squid:S14527"&Remove usage of generic wildcard type.(Ÿ’•8ÇÉµÑÇ,H‹ÒBRCRITICALZ
 CODE_SMELL
 m
-squid:S106_"9Replace this use of System.out or System.err by a logger.(¶² 8¹ÿ­íÇ,HáÎBRMAJORZ
+squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8Øæƒ½È,HŒÒBRMAJORZ
 CODE_SMELL
-m
-squid:S106="9Replace this use of System.out or System.err by a logger.(£·£¸8Ï¹¦ëÇ,HâÎBRMAJORZ
+dsquid:S1452Œ"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8×šúœÇ,HÒBRCRITICALZ
 CODE_SMELL
-^squid:S1452S"&Remove usage of generic wildcard type.(‹„êÕ8Ê‹šÇ,HãÎBRCRITICALZ
+^squid:S1452f"&Remove usage of generic wildcard type.(Æ«›ó8Ï¹¦ëÇ,HÒBRCRITICALZ
 CODE_SMELL
-l
-squid:S106e"9Replace this use of System.out or System.err by a logger.(«©Y8Ï¹¦ëÇ,HäÎBRMAJORZ
-CODE_SMELL
-dsquid:S1452Ÿ"&Remove usage of generic wildcard type.(šè¼úÿÿÿÿ8ÌÙ–ĞÇ,HåÎBRCRITICALZ
+squid:S1192="QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,HÒBRCRITICALZ
 CODE_SMELL
 k
-squid:S106T"9Replace this use of System.out or System.err by a logger.(¾£¦ÖÿÿÿÿÿHæÎBRMAJORZ
+squid:S106P"9Replace this use of System.out or System.err by a logger.(¾£¦ÖÿÿÿÿÿHÒBRMAJORZ
+CODE_SMELL
+m
+squid:S1069"9Replace this use of System.out or System.err by a logger.(£·£¸8Ï¹¦ëÇ,H‘ÒBRMAJORZ
+CODE_SMELL
+_squid:S1452"&Remove usage of generic wildcard type.(´¦Æè8Ò‰ŒË,H’ÒBRCRITICALZ
 CODE_SMELL

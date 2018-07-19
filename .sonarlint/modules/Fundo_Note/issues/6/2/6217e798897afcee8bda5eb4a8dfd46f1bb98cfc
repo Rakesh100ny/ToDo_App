@@ -1,10 +1,10 @@
 
-csquid:S1313".Make this IP "127.0.0.1" address configurable.(µı©üıÿÿÿÿHŞRMINORZVULNERABILITY
-vsquid:CallToDeprecatedMethod"3Remove this use of "setHostName"; it is deprecated.(µı©üıÿÿÿÿHàRMINORZ
+dsquid:S1313".Make this IP "127.0.0.1" address configurable.(µı©üıÿÿÿÿHÒBRMINORZVULNERABILITY
+wsquid:CallToDeprecatedMethod"3Remove this use of "setHostName"; it is deprecated.(µı©üıÿÿÿÿHÒBRMINORZ
 CODE_SMELL
-rsquid:CallToDeprecatedMethod"/Remove this use of "setPort"; it is deprecated.(ğ„½ùÿÿÿÿHßRMINORZ
+ssquid:CallToDeprecatedMethod"/Remove this use of "setPort"; it is deprecated.(ğ„½ùÿÿÿÿHŸÒBRMINORZ
 CODE_SMELL
-usquid:CallToDeprecatedMethod"2Remove this use of "setUsePool"; it is deprecated.(ä„çıÿÿÿÿHáRMINORZ
+squid:S1488!"kImmediately return this expression instead of assigning it to the temporary variable "stringRedisTemplate".(ôèüÿÿÿÿÿH ÒBRMINORZ
 CODE_SMELL
-squid:S1488!"kImmediately return this expression instead of assigning it to the temporary variable "stringRedisTemplate".(ôèüÿÿÿÿÿHâRMINORZ
+vsquid:CallToDeprecatedMethod"2Remove this use of "setUsePool"; it is deprecated.(ä„çıÿÿÿÿH¡ÒBRMINORZ
 CODE_SMELL

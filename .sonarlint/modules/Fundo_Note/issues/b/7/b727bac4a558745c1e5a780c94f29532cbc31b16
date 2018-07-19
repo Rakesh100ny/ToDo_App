@@ -1,0 +1,23 @@
+
+“squid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8ŒŠùšË,H€ÔBRMINORZ
+CODE_SMELL
+m
+squid:S1067"9Replace this use of System.out or System.err by a logger.(İŠ–é8²›Ë,HÿÓBRMAJORZ
+CODE_SMELL
+squid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8ŒŠùšË,HşÓBRMINORZ
+CODE_SMELL
+m
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢ûŸ¬8ŒŠùšË,H´ÓBRMAJORZ
+CODE_SMELL
+m
+squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8²›Ë,H¸ÓBRMAJORZ
+CODE_SMELL
+ˆsquid:UselessImportCheck"GRemove this unused import 'com.bridgelabz.todo.noteservice.model.Note'.(£ÑŠ:8ÏıÉ›Ë,HÔBRMINORZ
+CODE_SMELL
+csquid:S14525"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8¥±ÇœË,H‡ÕBRCRITICALZ
+CODE_SMELL
+^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8²›Ë,H¶ÓBRCRITICALZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8ŒŠùšË,H¢ÓBRMAJORZ
+CODE_SMELL

@@ -73,7 +73,6 @@ public class NoteServiceImpl implements INoteService {
 			}
 			else
 			{
-			 System.out.println("r2");	
 			 throw new UnauthorizedException("This User is Not Allow to Update Note...!"); 	
 			}
 		} catch (NumberFormatException | SignatureException e) {

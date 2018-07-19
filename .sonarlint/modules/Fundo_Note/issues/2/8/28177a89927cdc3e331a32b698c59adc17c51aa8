@@ -1,0 +1,11 @@
+
+˜squid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "labels".(Ïùš€ùÿÿÿÿ8Çï›Ë,H¬ÔBRMINORZ
+CODE_SMELL
+ˆsquid:UselessImportCheck"GRemove this unused import 'com.bridgelabz.todo.userservice.model.User'.(Ï’İ8“ıä›Ë,H¦ÔBRMINORZ
+CODE_SMELL
+squid:CallToDeprecatedMethod"6Remove this use of "createCriteria"; it is deprecated.(š‹°‹şÿÿÿÿ8Çï›Ë,H­ÔBRMINORZ
+CODE_SMELL
+ˆsquid:UselessImportCheck"GRemove this unused import 'com.bridgelabz.todo.noteservice.model.Note'.(£ÑŠ:8Òá©œË,HâÔBRMINORZ
+CODE_SMELL
+isquid:EmptyStatementUsageCheck+"Remove this empty statement.(¿¯Â¨øÿÿÿÿ8Ÿ ´œË,HóÔBRMINORZ
+CODE_SMELL
