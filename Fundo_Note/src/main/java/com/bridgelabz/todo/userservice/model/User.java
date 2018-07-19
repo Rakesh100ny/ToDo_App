@@ -53,6 +53,15 @@ public class User {
 	@JsonIgnore
 	@OneToMany(mappedBy="user",fetch=FetchType.EAGER,cascade=CascadeType.PERSIST)
 	private List<Note> listOfNotes = new ArrayList<Note>();
+	
+	
+
+	public User(RegisterModel registerModel) {
+		this.firstName = registerModel.getFirstName();
+		this.lastName = registerModel.getLastName();
+		this.email = registerModel.getEmail();
+		this.mobileNo=registerModel.getMobileNo();
+	}
 
 	public List<Note> getListOfNotes() {
 		return listOfNotes;

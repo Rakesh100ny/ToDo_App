@@ -11,14 +11,12 @@ public interface IUserService {
 	void insert(RegisterModel registerModel,HttpServletRequest request);
 
 	boolean isUserExist(String email);
-
-	boolean isCheckCredentials(String password, String email);
-
+	
 	User getUserDetailsByEmail(String email);
 	
-	 User getUserById(long id);
+	User getUserById(long id);
 	 
-	 void updateUser(User user);
+	void updateUser(User user);
 
 	EmailModel getEmailModel(String token,HttpServletRequest request,User user);
 
@@ -28,6 +26,6 @@ public interface IUserService {
 
 	void restPassword(String token,String newPassword);
 
-	boolean isEmailActivated(String email);
+	String verifyLogin(String email,String password);
 
 }

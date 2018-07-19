@@ -41,15 +41,8 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public void insert(RegisterModel registerModel, HttpServletRequest request) {
 
-		user.setFirstName(registerModel.getFirstName());
-		user.setLastName(registerModel.getLastName());
-		user.setEmail(registerModel.getEmail());
-		user.setPassword(registerModel.getPassword());
-		
-		user.setMobileNo(registerModel.getMobileNo().substring(3));
-
-		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
-
+		User user = new User(registerModel);
+		user.setPassword(BCrypt.hashpw(registerModel.getPassword(), BCrypt.gensalt(12)));
 		userDao.insert(user);
 
 		String token = Token.generateToken(user.getId());
@@ -82,22 +75,6 @@ public class UserServiceImpl implements IUserService {
 		} else {
 			return false;
 		}
-
-	}
-
-	@Transactional
-	@Override
-	public boolean isCheckCredentials(String password, String email) {
-		User user = userDao.getUserDetailsByEmail(email);
-
-		if (user != null) {
-			if (BCrypt.checkpw(password, user.getPassword())) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-		return false;
 
 	}
 
@@ -222,16 +199,34 @@ public class UserServiceImpl implements IUserService {
 
 	}
 
-	@Transactional
+    @Transactional
 	@Override
-	public boolean isEmailActivated(String email) {
-		User user = userDao.getUserDetailsByEmail(email);
+	public String verifyLogin(String email,String password) 
+	{
+	 String token="";	
+	 User user = userDao.getUserDetailsByEmail(email);
 
-		if (user.isActivated() == true) {
-			return true;
-		} else {
-			return false;
+	 if (user != null) {
+	 if(!user.getEmail().equals(email))
+	 {
+		throw new UserNotFoundException("User Not Found ...!");
+     }
+	  
+			if(BCrypt.checkpw(password, user.getPassword()) && user.isActivated())
+			{
+			  return token=Token.generateTokenByUserInfo(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName());
+			} 
+			else 
+			{
+				System.out.println("A User with Email-Id " + email+ " and Password "
+						+ password + " is Invalid");
+			}
 		}
-
+	 else
+	 {
+		 throw new UserNotFoundException("User Not Found ...!");	 
+	 }
+	
+		return token;
 	}
 }

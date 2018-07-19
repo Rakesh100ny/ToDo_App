@@ -5,15 +5,14 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.todo.noteservice.dao.INoteDao;
 import com.bridgelabz.todo.noteservice.exception.NoteNotFoundException;
+import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
-import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
 
@@ -31,9 +30,9 @@ public class NoteServiceImpl implements INoteService {
 	public void addNote(Note note, String token) {
 		try {
 			User user = userDao.getUserById(Integer.parseInt(Token.getParseJWT(token)));
-			note.setCreatedDate(new Date(System.currentTimeMillis()));
-			note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
-
+			/*note.setCreatedDate(new Date(System.currentTimeMillis()));
+			note.setLastUpdatedDate(new Date(System.currentTimeMillis()));*/	
+		     note.setUser(user);
 			noteDao.addNote(note, user);
 			System.out.println("Note is successfully created...!");
 		} catch (NumberFormatException | SignatureException e) {
@@ -52,33 +51,30 @@ public class NoteServiceImpl implements INoteService {
 	@Transactional
 	@Override
 	public void update(Note note,String token) {
+	
+		System.out.println("note id : "+note.getId());
 
-		System.out.println("Note Color : "+note.getColor());
-  
-		Note note2=noteDao.getNoteById(note.getId());
-		
-		note2.setColor(note.getColor());
-		
-		System.out.println("Note title : " + note.getTitle());
 		note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
 
-		User user;
+		//Note note2=noteDao.getNoteById(note.getId());
+				
+		System.out.println("note2 : "+note.getId());
+
 		try {
 			
 			long id=Long.parseLong(Token.getParseJWT(token));
+			
 			System.out.println("User id : "+id);
 			
-			
-			
-			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
-			if(user.getId()==note2.getUser().getId())
+			if(id==note.getUser().getId())
 			{
-				
-				noteDao.update(note2);	
+			 System.out.println("sonu");	
+			 noteDao.update(note);	
 			}
 			else
 			{
-			 throw new UserNotFoundException("This User is Not Allow to Update Note...!"); 	
+			 System.out.println("r2");	
+			 throw new UnauthorizedException("This User is Not Allow to Update Note...!"); 	
 			}
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();
@@ -105,7 +101,7 @@ public class NoteServiceImpl implements INoteService {
 		    }
 			else
 			{
-			 throw new UserNotFoundException("This User is Not Allow to Delete Note...!");	
+			 throw new UnauthorizedException("This User is Not Allow to Delete Note...!");	
 			}
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();

@@ -21,17 +21,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.todo.userservice.exception.EmailIdAlreadyExistException;
-import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
 import com.bridgelabz.todo.userservice.model.ForgotModel;
 import com.bridgelabz.todo.userservice.model.LoginModel;
 import com.bridgelabz.todo.userservice.model.PasswordModel;
 import com.bridgelabz.todo.userservice.model.RegisterModel;
-import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.userservice.service.IUserService;
 import com.bridgelabz.todo.utility.Response;
-import com.bridgelabz.todo.utility.Token;
 import com.bridgelabz.todo.validation.UserValidation;
-
 
 @PropertySource("classpath:clientside.properties")
 @RestController
@@ -49,10 +45,10 @@ public class UserController {
 
 	@Value("${redirect.login}")
 	String login;
-	
+
 	@Value("${redirect.resetpassword}")
 	String resetPassword;
-	
+
 	/*-------------------------------Register a User-----------------------------------------------*/
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
@@ -87,28 +83,18 @@ public class UserController {
 			return new ResponseEntity<>(new Response(false, "Check All Fileds"), HttpStatus.BAD_REQUEST);
 		}
 
-		if (!userService.isUserExist(loginModel.getEmail())) {
-			throw new UserNotFoundException("User Not Found Exception...!");
+		
+		String token=userService.verifyLogin(loginModel.getEmail(),loginModel.getPassword());
+		
+		if(token!="")
+		{
+			return new ResponseEntity<>(new Response(true, token), HttpStatus.OK);	
 		}
+			
+		return new ResponseEntity<>(new Response(false,"You Can't successfully login...please check something was wrong"), HttpStatus.CONFLICT);
 
-		if (!userService.isCheckCredentials(loginModel.getPassword(), loginModel.getEmail())) {
-			System.out.println("A User with Email-Id " + loginModel.getEmail() + " and Password "
-					+ loginModel.getPassword() + " is Invalid");
-			return new ResponseEntity<>(new Response(false, "Invalid User And Password...!"), HttpStatus.UNAUTHORIZED);
-		}
 
-		if (!userService.isEmailActivated(loginModel.getEmail())) {
-			System.out.println("A User with Email-Id " + loginModel.getEmail()
-					+ " is not Actived please First Active Your Account");
-			return new ResponseEntity<>(new Response(false," A User with Email-Id " + loginModel.getEmail()
-					+ " is not Actived please First Active Your Account"),HttpStatus.UNAUTHORIZED);
-		}
-
-		User user = userService.getUserDetailsByEmail(loginModel.getEmail());
-
-		String token = Token.generateToken(user.getId());
-
-		return new ResponseEntity<>(new Response(true, token), HttpStatus.OK);
+		
 	}
 
 	/*----------------------------------Verify Token--------------------------------------*/
@@ -116,26 +102,10 @@ public class UserController {
 	public ResponseEntity<?> token(@PathVariable("token") String token, HttpServletResponse response,
 			HttpServletRequest request) throws IOException {
 
-		System.out.println("r1");
 		userService.isVerifiedUser(token);
-
-		System.out.println("r7");
-/*		StringBuffer URL = request.getRequestURL();
-
-		System.out.println("URL : "+URL);
-		String url1 = URL.substring(0, URL.lastIndexOf("/"));
-
-		System.out.println("url1 : "+url1);
-		
-		String url2 = url1.substring(0, url1.lastIndexOf("/"));
-
-		System.out.println("url2 : "+url2);
-		response.sendRedirect(url2 + "/#!/login");
-		*/
-		
-		
+	
 		response.sendRedirect(login);
-		
+
 		return new ResponseEntity<>(new Response(true, "User is Successfully Activated...!"), HttpStatus.OK);
 
 	}
@@ -145,7 +115,7 @@ public class UserController {
 	public ResponseEntity<?> forgotPassword(@Validated @RequestBody ForgotModel forgotModel, BindingResult result,
 			HttpServletRequest request) {
 		if (result.hasErrors()) {
-			return new ResponseEntity<>(new Response(false, "Check All Fileds"),HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>(new Response(false, "Check All Fileds"), HttpStatus.BAD_REQUEST);
 		}
 
 		String token = userService.forgotPassword(forgotModel.getEmail(), request);
@@ -156,7 +126,8 @@ public class UserController {
 
 	/*---------------------------Send Reset API--------------------------*/
 	@RequestMapping(value = "/resetpassword/{token:.+}", method = RequestMethod.GET)
-	public ResponseEntity<?> sendResetPassword(@PathVariable("token") String token, HttpServletResponse response) throws IOException {
+	public ResponseEntity<?> sendResetPassword(@PathVariable("token") String token, HttpServletResponse response)
+			throws IOException {
 
 		response.sendRedirect(resetPassword);
 
@@ -169,17 +140,15 @@ public class UserController {
 	public ResponseEntity<?> restPassword(@Validated @RequestBody PasswordModel passwordModel, BindingResult result,
 			HttpServletRequest request) {
 
+
+		if (result.hasErrors()) {
+			return new ResponseEntity<>(new Response(false, "Check All Fileds"), HttpStatus.BAD_REQUEST);
+		}
+
 		String token = request.getHeader("tokenForgotPassword");
 
-		System.out.println("Reset Token : "+token);
-		
-		if (result.hasErrors()) {
-			return new ResponseEntity<>(new Response(false, "Check All Fileds"),HttpStatus.BAD_REQUEST);
-		}
+		System.out.println("Reset Token : " + token);
 
-		if (!passwordModel.getNewPassword().equals(passwordModel.getConfirmPassword())) {
-			return new ResponseEntity<>(new Response(false, "Both Password must be matched"), HttpStatus.UNAUTHORIZED);
-		}
 
 		userService.restPassword(token, passwordModel.getNewPassword());
 

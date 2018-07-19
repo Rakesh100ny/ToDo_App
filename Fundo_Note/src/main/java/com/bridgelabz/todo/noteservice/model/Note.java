@@ -30,14 +30,14 @@ public class Note {
 		
 	private String title;
 	private String description;
-	private String color;
+	private String color = "white";
 	private boolean isPined;
 	private boolean isTrashed;
 	private boolean isArchived;
 	@Temporal(TemporalType.DATE)
-	private Date createdDate;
+	private Date createdDate = new Date();
 	@Temporal(TemporalType.DATE)
-	private Date lastUpdatedDate;
+	private Date lastUpdatedDate = new Date() ;
    
 	@ManyToOne
 	@NotFound(action=NotFoundAction.IGNORE)
@@ -50,13 +50,6 @@ public class Note {
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public Note() {
-		color = "white";
-		isPined = false;
-		isTrashed = false;
-		isArchived = false;
 	}
 
 	public long getId() {

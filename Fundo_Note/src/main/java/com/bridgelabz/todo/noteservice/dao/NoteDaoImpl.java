@@ -20,19 +20,16 @@ public class NoteDaoImpl implements INoteDao {
 	public void addNote(Note note,User user)
 	{
      Session session=sessionFactory.getCurrentSession();
-     List<Note> notes=user.getListOfNotes();
-     notes.add(note);
-     user.setListOfNotes(notes);
-     note.setUser(user);
-     session.saveOrUpdate(user);
      session.save(note);
 	}
 
 	@Override
 	public void update(Note note)
 	{
+	 System.out.println("r1");	
 	 Session session=sessionFactory.getCurrentSession();
-	 session.saveOrUpdate(note);;
+	 System.out.println("r2");
+	 session.saveOrUpdate(note);
 	 System.out.println("Note is successfully updated...!");
 	}
 	
