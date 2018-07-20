@@ -10,7 +10,7 @@ public interface ILabelDao
 
 	void addLabel(Label label);
 
-	List<Label> getAllLabels(long id);
+	List<Label> getAllLabels(User user);
 
 	boolean deleteLabelById(long id);
 

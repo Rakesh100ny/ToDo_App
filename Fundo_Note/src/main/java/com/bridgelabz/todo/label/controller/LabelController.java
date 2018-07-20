@@ -43,7 +43,11 @@ public class LabelController
 			{
 			 return new ResponseEntity<List<Label>>(HttpStatus.NO_CONTENT); 
 			}
-			  
+			
+			for(Label label : labels) {
+	            System.out.println(label.getLabelName());
+	        }
+			
 			return new ResponseEntity<List<Label>>(labels, HttpStatus.OK); 
 			
 	}

@@ -1,23 +1,24 @@
 
-“squid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8ŒŠùšË,H€ÔBRMINORZ
-CODE_SMELL
-m
-squid:S1067"9Replace this use of System.out or System.err by a logger.(İŠ–é8²›Ë,HÿÓBRMAJORZ
-CODE_SMELL
-squid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8ŒŠùšË,HşÓBRMINORZ
-CODE_SMELL
-m
-squid:S106"9Replace this use of System.out or System.err by a logger.(¢ûŸ¬8ŒŠùšË,H´ÓBRMAJORZ
-CODE_SMELL
-m
-squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8²›Ë,H¸ÓBRMAJORZ
-CODE_SMELL
-ˆsquid:UselessImportCheck"GRemove this unused import 'com.bridgelabz.todo.noteservice.model.Note'.(£ÑŠ:8ÏıÉ›Ë,HÔBRMINORZ
-CODE_SMELL
-csquid:S14525"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8¥±ÇœË,H‡ÕBRCRITICALZ
-CODE_SMELL
-^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8²›Ë,H¶ÓBRCRITICALZ
+r
+squid:S1060"9Replace this use of System.out or System.err by a logger.(‘Â¸Šùÿÿÿÿ8ŒŠùšË,HÌÖBRMAJORZ
 CODE_SMELL
 l
-squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8ŒŠùšË,H¢ÓBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8²›Ë,HÒÖBRMAJORZ
+CODE_SMELL
+“squid:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8ŒŠùšË,HÍÖBRMINORZ
+CODE_SMELL
+csquid:S14528"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8²›Ë,HÏÖBRCRITICALZ
+CODE_SMELL
+squid:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8ŒŠùšË,HÑÖBRMINORZ
+CODE_SMELL
+m
+squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8ŒŠùšË,HËÖBRMAJORZ
+CODE_SMELL
+r
+squid:S106"9Replace this use of System.out or System.err by a logger.(å¶Ø‚ıÿÿÿÿ8²›Ë,HĞÖBRMAJORZ
+CODE_SMELL
+m
+squid:S106:"9Replace this use of System.out or System.err by a logger.(İŠ–é8Ä»¢ÀË,HÚÖBRMAJORZ
+CODE_SMELL
+^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8¥±ÇœË,HÎÖBRCRITICALZ
 CODE_SMELL

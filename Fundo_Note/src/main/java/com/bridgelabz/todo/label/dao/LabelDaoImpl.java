@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.bridgelabz.todo.label.model.Label;
+import com.bridgelabz.todo.userservice.model.User;
 
 @Repository
 public class LabelDaoImpl implements ILabelDao{
@@ -24,11 +25,11 @@ public class LabelDaoImpl implements ILabelDao{
 	}
 
 	@Override
-	public List<Label> getAllLabels(long id) {
+	public List<Label> getAllLabels(User user) {
 		Session session=sessionFactory.getCurrentSession();
 		@SuppressWarnings("deprecation")
 		Criteria criteria = session.createCriteria(Label.class);
-		criteria.add(Restrictions.eq("user", id));
+		criteria.add(Restrictions.eq("user", user));
 		@SuppressWarnings("unchecked")
 		List<Label> labels = criteria.list();
 		return labels;

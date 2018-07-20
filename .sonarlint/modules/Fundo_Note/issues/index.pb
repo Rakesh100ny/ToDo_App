@@ -107,3 +107,7 @@ t
 Dsrc/main/java/com/bridgelabz/todo/label/error/UserErrorResponse.java,f/2/f2b2358d98bbb0bb87fa08b6f1b951990db0beba
 w
 Gsrc/main/java/com/bridgelabz/todo/label/controller/LabelController.java,b/7/b727bac4a558745c1e5a780c94f29532cbc31b16
+Å
+Qsrc/main/java/com/bridgelabz/todo/label/exception/UnauthorizedLabelException.java,9/3/93ba90009a99b2f310aa6bd0c388ffa39628f9b2
+z
+Jsrc/main/java/com/bridgelabz/todo/label/handler/LabelExceptionHandler.java,9/e/9efc35d5cc0226b80cfd1e56426dc6baf347cbef

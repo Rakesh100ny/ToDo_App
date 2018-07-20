@@ -43,9 +43,12 @@ public class LabelServiceImpl implements ILabelService
         User user;
 		try {
 			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
+			System.out.println("User id : "+user.getId());
+			
 			if(user != null)
 	        {
-	        	labels = labelDao.getAllLabels(user.getId());
+				System.out.println("hello");
+	        	labels = labelDao.getAllLabels(user);
 	        	return labels;
 	        }
 		} catch (NumberFormatException | SignatureException e) {
