@@ -15,13 +15,14 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.model.User;
 
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScans({@ComponentScan("com.bridgelabz.todo.userservice"),@ComponentScan("com.bridgelabz.todo.userservice")})
+@ComponentScans({@ComponentScan("com.bridgelabz.todo.userservice"),@ComponentScan("com.bridgelabz.todo.noteservice"),@ComponentScan("com.bridgelabz.todo.label")})
 
 public class HibernateConfig {
 
@@ -57,7 +58,8 @@ public class HibernateConfig {
 		
 		factoryBean.setPackagesToScan("com.bridgelabz.todo.userservice.model");
 		factoryBean.setPackagesToScan("com.bridgelabz.todo.noteservice.model");
-		factoryBean.setAnnotatedClasses(User.class,Note.class);
+		factoryBean.setPackagesToScan("com.bridgelabz.todo.label.model");
+		factoryBean.setAnnotatedClasses(User.class,Note.class,Label.class);
 		
 
 		return factoryBean;

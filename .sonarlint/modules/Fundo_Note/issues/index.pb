@@ -93,8 +93,6 @@ X
 (src/main/resources/clientside.properties,1/6/16fa5a1b593af6a5b9c6f122f1546583d7fded9f
 h
 8src/main/java/com/bridgelabz/todo/label/model/Label.java,e/8/e85b8c52bd5bd1fe9d35e9c11dcbcd74b73426f2
-j
-:src/main/java/com/bridgelabz/todo/label/dao/ILabalDao.java,1/9/19cf299154b873d35c6c0f51388a93f4af9d03f2
 r
 Bsrc/main/java/com/bridgelabz/todo/label/service/ILabelService.java,4/a/4a756c0b3aa51ed0af098108a7ba18cf5db76a9d
 j

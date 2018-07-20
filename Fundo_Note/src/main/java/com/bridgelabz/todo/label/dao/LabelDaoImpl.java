@@ -7,11 +7,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.bridgelabz.todo.label.model.Label;
-import com.bridgelabz.todo.noteservice.model.Note;
-import com.bridgelabz.todo.userservice.model.User;
 
+@Repository
 public class LabelDaoImpl implements ILabelDao{
 
 	@Autowired
@@ -26,8 +26,10 @@ public class LabelDaoImpl implements ILabelDao{
 	@Override
 	public List<Label> getAllLabels(long id) {
 		Session session=sessionFactory.getCurrentSession();
+		@SuppressWarnings("deprecation")
 		Criteria criteria = session.createCriteria(Label.class);
 		criteria.add(Restrictions.eq("user", id));
+		@SuppressWarnings("unchecked")
 		List<Label> labels = criteria.list();
 		return labels;
 	}

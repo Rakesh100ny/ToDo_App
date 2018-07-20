@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.label.service.ILabelService;
-import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.utility.Response;
 
 @RestController
@@ -26,7 +25,7 @@ public class LabelController
 	@RequestMapping(value = "/addlabel", method = RequestMethod.POST)
 	public ResponseEntity<?> addLabel(@RequestBody Label label, @RequestHeader("userLoginToken")String token)
 	{
-		System.out.println("Creating User " + label.getLabelName());
+		System.out.println("Creating label " + label.getLabelName());
 		System.out.println("token in Note : "+token);
 		System.out.println("rakesh");
 		labelService.addLabel(label, token);

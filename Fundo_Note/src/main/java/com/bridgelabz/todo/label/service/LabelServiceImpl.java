@@ -4,19 +4,19 @@ import java.security.SignatureException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.todo.label.dao.ILabelDao;
 import com.bridgelabz.todo.label.exception.LabelNotFoundException;
+import com.bridgelabz.todo.label.exception.UnauthorizedLabelException;
 import com.bridgelabz.todo.label.model.Label;
-import com.bridgelabz.todo.noteservice.exception.NoteNotFoundException;
-import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
-import com.sun.org.apache.regexp.internal.recompile;
 
 @Transactional
+@Service
 public class LabelServiceImpl implements ILabelService
 {
 	@Autowired
@@ -75,7 +75,7 @@ public class LabelServiceImpl implements ILabelService
 	    }
 		else
 		{
-			throw new UnauthorizedException("This User is Not Allow to Delete Note...!");
+			throw new UnauthorizedLabelException("This User is Not Allow to Delete Note...!");
 		}
         	
 	 } catch (NumberFormatException | SignatureException e) {

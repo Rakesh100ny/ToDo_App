@@ -7,14 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
+import javax.persistence.Table;
 
 import com.bridgelabz.todo.userservice.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@Table(name = "User_Label")
 public class Label {
 
 	@Id
@@ -26,7 +25,6 @@ public class Label {
 
 	@JsonIgnore
 	@ManyToOne
-	@NotFound(action=NotFoundAction.IGNORE)
 	@JoinColumn(name = "User_Id")
 	private User user;
 
