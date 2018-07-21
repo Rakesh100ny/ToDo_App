@@ -66,17 +66,4 @@ public class UserDaoImpl implements IUserDao {
 		System.out.println("User successfully Updated...!");
 	}
 
-	/*
-	 * @Override public User isCheckPassword(String email) {
-	 * 
-	 * Session session=sessionFactory.getCurrentSession();
-	 * 
-	 * @SuppressWarnings("deprecation") Criteria criteria =
-	 * session.createCriteria(User.class).add(Restrictions.eq("email",email));
-	 * 
-	 * User user = (User) criteria.uniqueResult();
-	 * System.out.println("userPass : "+user.getPassword());
-	 * 
-	 * return user; }
-	 */
 }

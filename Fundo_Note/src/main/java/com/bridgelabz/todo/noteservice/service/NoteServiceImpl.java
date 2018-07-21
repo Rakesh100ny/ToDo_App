@@ -44,7 +44,6 @@ public class NoteServiceImpl implements INoteService {
 	@Transactional
 	@Override
 	public Note getNoteById(long id) {
-		System.out.println("rakesh");
 		return noteDao.getNoteById(id);
 	}
 
@@ -58,17 +57,14 @@ public class NoteServiceImpl implements INoteService {
 
 		//Note note2=noteDao.getNoteById(note.getId());
 				
-		System.out.println("note2 : "+note.getId());
-
+	
 		try {
 			
 			long id=Long.parseLong(Token.getParseJWT(token));
 			
-			System.out.println("User id : "+id);
 			
 			if(id==note.getUser().getId())
 			{
-			 System.out.println("sonu");	
 			 noteDao.update(note);	
 			}
 			else

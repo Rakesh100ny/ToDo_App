@@ -1,15 +1,15 @@
 
 m
-squid:S106."9Replace this use of System.out or System.err by a logger.(Ÿ¾‚¯8±°¼œË,HÖÖBRMAJORZ
+squid:S106."9Replace this use of System.out or System.err by a logger.(Ÿ¾‚¯8ÕÏèË,H©ÚBRMAJORZ
 CODE_SMELL
-lsquid:S25890"7Remove this expression which always evaluates to "true"(Æ¿ô¾8ö¡ŸÀË,HÙÖBRMAJORZ
-CODE_SMELL
-`squid:S1148U"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’ï˜›Ë,HÔÖBRMINORZVULNERABILITY
 m
-squid:S1062"9Replace this use of System.out or System.err by a logger.(£ÆÏÁ8ö¡ŸÀË,H×ÖBRMAJORZ
+squid:S1062"9Replace this use of System.out or System.err by a logger.(£ÆÏÁ8ÕÏèË,HªÚBRMAJORZ
 CODE_SMELL
-`squid:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8àë®œË,HÓÖBRMINORZVULNERABILITY
 m
-squid:S106K"9Replace this use of System.out or System.err by a logger.(ğ‰í°8ö¡ŸÀË,HØÖBRMAJORZ
+squid:S106K"9Replace this use of System.out or System.err by a logger.(ğ‰í°8ÕÏèË,H«ÚBRMAJORZ
 CODE_SMELL
-`squid:S1148#"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç³Ô›Ë,HÕÖBRMINORZVULNERABILITY
+lsquid:S25890"7Remove this expression which always evaluates to "true"(Æ¿ô¾8ÕÏèË,H¬ÚBRMAJORZ
+CODE_SMELL
+`squid:S1148#"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H­ÚBRMINORZVULNERABILITY
+`squid:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H®ÚBRMINORZVULNERABILITY
+`squid:S1148U"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H¯ÚBRMINORZVULNERABILITY

@@ -2,10 +2,8 @@ package com.bridgelabz.todo.label.dao;
 
 import java.util.List;
 
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -25,14 +23,13 @@ public class LabelDaoImpl implements ILabelDao{
 	}
 
 	@Override
-	public List<Label> getAllLabels(User user) {
+	public List<Label> getAllLabels(long id) {
+
 		Session session=sessionFactory.getCurrentSession();
-		@SuppressWarnings("deprecation")
-		Criteria criteria = session.createCriteria(Label.class);
-		criteria.add(Restrictions.eq("user", user));
-		@SuppressWarnings("unchecked")
-		List<Label> labels = criteria.list();
-		return labels;
+		User user=session.get(User.class, id);
+		
+		
+		return user.getListOfLabels();
 	}
 
 	@Override
@@ -43,7 +40,7 @@ public class LabelDaoImpl implements ILabelDao{
 		 if(label==null)return false;
 		 
 		 
-		 session.delete(label);;
+		 session.delete(label);
 		 
 		 return true;
 		 

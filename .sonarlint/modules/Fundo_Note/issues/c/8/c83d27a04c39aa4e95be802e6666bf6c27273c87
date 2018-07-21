@@ -1,6 +1,6 @@
 
-isquid:EmptyStatementUsageCheck2"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,HÊÓBRMINORZ
-CODE_SMELL
 m
-squid:S106"9Replace this use of System.out or System.err by a logger.(œØ8ÙŸ›Ë,H§ÔBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(œØ8ÙŸ›Ë,H§ÛBRMAJORZ
+CODE_SMELL
+isquid:EmptyStatementUsageCheck3"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,H¦ÛBRMINORZ
 CODE_SMELL

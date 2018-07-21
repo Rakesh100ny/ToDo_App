@@ -1,5 +1,6 @@
 package com.bridgelabz.todo.label.model;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,24 +10,29 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.bridgelabz.todo.userservice.model.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+import org.springframework.stereotype.Component;
 
+import com.bridgelabz.todo.userservice.model.User;
+
+@Component
 @Entity
+@Cacheable
 @Table(name = "User_Label")
 public class Label {
 
 	@Id
-	@Column(name="Label_Id")
+	@Column(name="Label_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
 	private String labelName;
 
-	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name = "User_Id")
-	private User user;
+	@NotFound(action=NotFoundAction.IGNORE)
+	@JoinColumn(name="User_id")
+	private User userDetails;
 
 	public long getId() {
 		return id;
@@ -44,13 +50,11 @@ public class Label {
 		this.labelName = labelName;
 	}
 
-	public User getUser() {
-		return user;
+	public User getUserDetails() {
+		return userDetails;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserDetails(User userDetails) {
+		this.userDetails = userDetails;
 	}
-	
-	
 }

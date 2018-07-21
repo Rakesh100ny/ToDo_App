@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
-@ComponentScan("com.bridgelabz.todo")
+@ComponentScan("com.bridgelabz.todo.userservice")
 public class RedisConfig {
 	@SuppressWarnings("deprecation")
 	@Bean

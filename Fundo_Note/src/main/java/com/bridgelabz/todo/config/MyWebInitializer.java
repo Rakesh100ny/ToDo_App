@@ -17,6 +17,6 @@ public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletI
 	   @Override
 	   protected String[] getServletMappings() {
 		   System.out.println("rakesh");
-	      return new String[] { "/" };
+	      return new String[]{ "/" };
 	   }
 	}

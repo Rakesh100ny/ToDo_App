@@ -7,7 +7,6 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -22,8 +21,7 @@ import com.bridgelabz.todo.userservice.model.User;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScans({@ComponentScan("com.bridgelabz.todo.userservice"),@ComponentScan("com.bridgelabz.todo.noteservice"),@ComponentScan("com.bridgelabz.todo.label")})
-
+@ComponentScan("com.bridgelabz.todo")
 public class HibernateConfig {
 
 	@Autowired

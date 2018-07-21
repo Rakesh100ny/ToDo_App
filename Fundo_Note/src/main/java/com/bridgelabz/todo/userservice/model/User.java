@@ -16,6 +16,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.validation.Phone;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -47,14 +48,24 @@ public class User {
 	private boolean isActivated;
 
 	@Phone
-	@Column(name = "User_MobileNo")
+	@Column(name = "User_mobileNo")
 	private String mobileNo;
 
 	@JsonIgnore
 	@OneToMany(mappedBy="user",fetch=FetchType.EAGER,cascade=CascadeType.PERSIST)
 	private List<Note> listOfNotes = new ArrayList<Note>();
 	
+	@JsonIgnore
+	@OneToMany(mappedBy="userDetails",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	private List<Label> listOfLabels = new ArrayList<Label>();
 	
+	public List<Label> getListOfLabels() {
+		return listOfLabels;
+	}
+
+	public void setListOfLabels(List<Label> listOfLabels) {
+		this.listOfLabels = listOfLabels;
+	}
 
 	public User(RegisterModel registerModel) {
 		this.firstName = registerModel.getFirstName();

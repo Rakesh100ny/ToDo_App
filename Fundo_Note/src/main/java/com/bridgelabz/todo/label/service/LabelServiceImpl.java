@@ -48,7 +48,7 @@ public class LabelServiceImpl implements ILabelService
 			if(user != null)
 	        {
 				System.out.println("hello");
-	        	labels = labelDao.getAllLabels(user);
+	        	labels = labelDao.getAllLabels(user.getId());
 	        	return labels;
 	        }
 		} catch (NumberFormatException | SignatureException e) {

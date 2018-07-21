@@ -27,9 +27,6 @@ public class NoteController {
 	public ResponseEntity<?> addNote(@RequestBody Note note,@RequestHeader("userLoginToken")String token)
 	{
 		System.out.println("Creating User " + note.getTitle());
-
-		System.out.println("token in Note : "+token);
-		System.out.println("rakesh");
 	    
         noteService.addNote(note,token);
 
@@ -37,7 +34,7 @@ public class NoteController {
 	}
 
 	
-	//------------------- Update a User Note (Some Error is Occured)------------------------
+	//------------------- Update a User Note ------------------------
 	  @RequestMapping(value = "/updatenote", method = RequestMethod.PUT) 
 	  public ResponseEntity<?> updateNote(@RequestBody Note note,@RequestHeader("userLoginToken")String token) 
 	  { 
@@ -80,7 +77,5 @@ public class NoteController {
 	   
 	    return new ResponseEntity<>(new Response(false, "Note is not deleted...!"),HttpStatus.NO_CONTENT); 
 	   }
-	  
-	 
- 
+
 }

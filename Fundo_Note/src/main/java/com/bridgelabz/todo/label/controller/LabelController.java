@@ -52,7 +52,7 @@ public class LabelController
 			
 	}
 
-	@RequestMapping(value = "/deletelabel/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/deletelabel/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteLabel(@PathVariable("id") long id,@RequestHeader("userLoginToken")String token)
 	{
 		System.out.println("id : "+id);
