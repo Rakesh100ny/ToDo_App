@@ -16,13 +16,11 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
-import org.springframework.stereotype.Component;
 
 import com.bridgelabz.todo.userservice.model.User;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 
-@Component
 @Entity
 @Cacheable
 @Table(name = "User_Note")

@@ -12,11 +12,9 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
-import org.springframework.stereotype.Component;
 
 import com.bridgelabz.todo.userservice.model.User;
 
-@Component
 @Entity
 @Cacheable
 @Table(name = "User_Label")

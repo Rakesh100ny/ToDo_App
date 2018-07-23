@@ -7,21 +7,20 @@ import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.validation.Phone;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Component
 @Entity
 @Cacheable
 @Table(name = "User_Info")
@@ -52,11 +51,13 @@ public class User {
 	private String mobileNo;
 
 	@JsonIgnore
-	@OneToMany(mappedBy="user",fetch=FetchType.EAGER,cascade=CascadeType.PERSIST)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(mappedBy="user",cascade=CascadeType.PERSIST)
 	private List<Note> listOfNotes = new ArrayList<Note>();
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="userDetails",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(mappedBy="userDetails",cascade=CascadeType.PERSIST)
 	private List<Label> listOfLabels = new ArrayList<Label>();
 	
 	public List<Label> getListOfLabels() {

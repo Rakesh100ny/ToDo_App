@@ -15,7 +15,6 @@ import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
 
-@Transactional
 @Service
 public class LabelServiceImpl implements ILabelService
 {
@@ -25,10 +24,11 @@ public class LabelServiceImpl implements ILabelService
 	@Autowired
 	private IUserDao userDao;
 
+	@Transactional
 	@Override
 	public void addLabel(Label label, String token) {
 		try {
-			label.setUser(userDao.getUserById(Long.parseLong(Token.getParseJWT(token))));
+			label.setUserDetails(userDao.getUserById(Long.parseLong(Token.getParseJWT(token))));
 			labelDao.addLabel(label);
 
 		} catch (NumberFormatException | SignatureException e) {
@@ -37,6 +37,7 @@ public class LabelServiceImpl implements ILabelService
 		
 	}
 
+	@Transactional
 	@Override
 	public List<Label> getAllLabels(String token) {
 		List <Label> labels = null;
@@ -59,6 +60,7 @@ public class LabelServiceImpl implements ILabelService
 		return labels;
 	}
 
+	@Transactional
 	@Override
 	public boolean deleteLabel(long id, String token) 
 	{
@@ -68,7 +70,7 @@ public class LabelServiceImpl implements ILabelService
 	 {
 		User user=userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
 		
-		if(user.getId() == label.getUser().getId())
+		if(user.getId() == label.getUserDetails().getId())
 		{
          
          if (!labelDao.deleteLabelById(label.getId())) {

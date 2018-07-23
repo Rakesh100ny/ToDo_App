@@ -1,5 +1,7 @@
 package com.bridgelabz.todo.config;
 
+import javax.servlet.ServletContext;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -19,4 +21,9 @@ public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletI
 		   System.out.println("rakesh");
 	      return new String[]{ "/" };
 	   }
-	}
+	   
+	   @Override
+	  protected void registerContextLoaderListener(ServletContext servletContext) {
+		super.registerContextLoaderListener(servletContext);
+	   }
+  }
