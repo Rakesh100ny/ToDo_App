@@ -1,24 +1,24 @@
 
-squid:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8Á¼ÈèË,H€ÚBRMINORZ
+m
+squid:S106:"9Replace this use of System.out or System.err by a logger.(İŠ–é8Á¼ÈèË,HşÜBRMAJORZ
 CODE_SMELL
-“squid:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8Á¼ÈèË,HÚBRMINORZ
-CODE_SMELL
-^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8Á¼ÈèË,H‚ÚBRCRITICALZ
-CODE_SMELL
-csquid:S14528"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8Á¼ÈèË,HƒÚBRCRITICALZ
-CODE_SMELL
-r
-squid:S106"9Replace this use of System.out or System.err by a logger.(å¶Ø‚ıÿÿÿÿ8Á¼ÈèË,H„ÚBRMAJORZ
+“squid:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8Á¼ÈèË,HÿÜBRMINORZ
 CODE_SMELL
 m
-squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8Á¼ÈèË,H…ÚBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8Á¼ÈèË,H€İBRMAJORZ
+CODE_SMELL
+r
+squid:S1060"9Replace this use of System.out or System.err by a logger.(‘Â¸Šùÿÿÿÿ8Á¼ÈèË,HİBRMAJORZ
+CODE_SMELL
+^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8Á¼ÈèË,H‚İBRCRITICALZ
+CODE_SMELL
+csquid:S14528"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8Á¼ÈèË,HƒİBRCRITICALZ
+CODE_SMELL
+squid:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8Á¼ÈèË,H„İBRMINORZ
 CODE_SMELL
 l
-squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8Á¼ÈèË,H†ÚBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8Á¼ÈèË,H…İBRMAJORZ
 CODE_SMELL
 r
-squid:S1060"9Replace this use of System.out or System.err by a logger.(‘Â¸Šùÿÿÿÿ8Á¼ÈèË,H‡ÚBRMAJORZ
-CODE_SMELL
-m
-squid:S106:"9Replace this use of System.out or System.err by a logger.(İŠ–é8Á¼ÈèË,HˆÚBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(å¶Ø‚ıÿÿÿÿ8Á¼ÈèË,H†İBRMAJORZ
 CODE_SMELL

@@ -1,6 +1,8 @@
 package com.bridgelabz.todo.noteservice.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -9,14 +11,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
+import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.userservice.model.User;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.DateSerializer;
@@ -46,8 +53,21 @@ public class Note {
 	@JoinColumn(name="User_id")
 	private User user;
 	
+	@ManyToMany
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@JoinTable(name="User_Note_Label",joinColumns=@JoinColumn(name="Note_id"),inverseJoinColumns=@JoinColumn(name="Label_id"))
+	private List<Label> listOfLabels=new ArrayList<Label>();
+	
 	public User getUser() {
 		return user;
+	}
+
+	public List<Label> getListOfLabels() {
+		return listOfLabels;
+	}
+
+	public void setListOfLabels(List<Label> listOfLabels) {
+		this.listOfLabels = listOfLabels;
 	}
 
 	public void setUser(User user) {

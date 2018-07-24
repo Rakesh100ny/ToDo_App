@@ -1,0 +1,10 @@
+
+zsquid:UselessImportCheck
+"8Remove this unused import 'javax.persistence.FetchType'.(‡¯¿8›şÏáÌ,HÏİBRMINORZ
+CODE_SMELL
+Šsquid:UselessImportCheck"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„8©Ö÷ãÌ,HŞBRMINORZ
+CODE_SMELL
+|squid:UselessImportCheck":Remove this unused import 'javax.persistence.CascadeType'.( ì¤Ê8›şÏáÌ,HÎİBRMINORZ
+CODE_SMELL
+“squid:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(ØÚ¹Öüÿÿÿÿ8Å»´ØÌ,HÍİBRMINORZ
+CODE_SMELL

@@ -34,6 +34,19 @@ public class LabelController
 			
 	}
 
+	@RequestMapping(value = "/addlabelnote/{noteId}", method = RequestMethod.POST)
+	public ResponseEntity<?> addLabelNote(@RequestBody Label label, @RequestHeader("userLoginToken")String token)
+	{
+		System.out.println("Creating label " + label.getLabelName());
+		System.out.println("token in Note : "+token);
+		System.out.println("rakesh");
+		labelService.addLabel(label, token);
+		
+		return new ResponseEntity<>(new Response(true, "Label is created...!"),HttpStatus.OK);
+			
+	}
+
+	
 	@RequestMapping(value = "/labels", method = RequestMethod.GET)
 	public ResponseEntity<List<Label>> listAllLabels(@RequestHeader("userLoginToken")String token)
 	{
