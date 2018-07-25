@@ -15,4 +15,8 @@ public interface ILabelDao
 
 	Label getLabelById(long id);
 
+	long isUserExist(Label label);
+
+	void update(Label label);
+
 }

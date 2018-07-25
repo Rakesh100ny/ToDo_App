@@ -2,8 +2,11 @@ package com.bridgelabz.todo.label.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -52,5 +55,25 @@ public class LabelDaoImpl implements ILabelDao{
 		 Session session=sessionFactory.getCurrentSession();
 		  return session.get(Label.class, id);
     }
+
+	@Override
+	public long isUserExist(Label label) {
+		Session session = sessionFactory.getCurrentSession();
+		@SuppressWarnings("deprecation")
+		Criteria criteria = session.createCriteria(Label.class).add(Restrictions.eq("labelName", label.getLabelName()))
+				.setProjection(Projections.count("labelName"));
+
+		long count = (long) criteria.uniqueResult();
+
+		return count;		
+	}
+
+	@Override
+	public void update(Label label)
+	{
+		Session session=sessionFactory.getCurrentSession();
+		 session.update(label);
+		 System.out.println("Label is successfully updated...!");	
+	}
 
 }

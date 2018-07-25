@@ -1,10 +1,14 @@
 
-Æ%squid:RedundantThrowsDeclarationCheck"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.(™„•ƒşÿÿÿÿH¸ÍBRMINORZ
+“squid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "getToken".(´òªüÿÿÿÿHÍßBRMINORZ
 CODE_SMELL
-squid:S3008"NRename this field "KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¬ÉìùÿÿÿÿH¹ÍBRMINORZ
+Æ%squid:RedundantThrowsDeclarationCheck6"yRemove the declaration of thrown exception 'java.security.SignatureException', as it cannot be thrown from method's body.(™„•ƒşÿÿÿÿHÎßBRMINORZ
 CODE_SMELL
-“squid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "getToken".(´òªüÿÿÿÿHºÍBRMINORZ
+squid:S3008"NRename this field "KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¬ÉìùÿÿÿÿHÏßBRMINORZ
 CODE_SMELL
-msquid:S1118
-":Add a private constructor to hide the implicit public one.(¼ÎŸÌıÿÿÿÿH»ÍBRMAJORZ
+msquid:S1118	":Add a private constructor to hide the implicit public one.(¼ÎŸÌıÿÿÿÿHĞßBRMAJORZ
+CODE_SMELL
+r
+squid:S106'"9Replace this use of System.out or System.err by a logger.(®Éüüÿÿÿÿ8²»£‰Í,HÑßBRMAJORZ
+CODE_SMELL
+šsquid:S1488)"`Immediately return this expression instead of assigning it to the temporary variable "getToken".(´òªüÿÿÿÿ8²»£‰Í,HÒßBRMINORZ
 CODE_SMELL

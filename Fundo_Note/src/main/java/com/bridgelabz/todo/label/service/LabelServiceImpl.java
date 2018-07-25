@@ -11,6 +11,7 @@ import com.bridgelabz.todo.label.dao.ILabelDao;
 import com.bridgelabz.todo.label.exception.LabelNotFoundException;
 import com.bridgelabz.todo.label.exception.UnauthorizedLabelException;
 import com.bridgelabz.todo.label.model.Label;
+import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
@@ -88,6 +89,41 @@ public class LabelServiceImpl implements ILabelService
 	  }
 	 
 		return true;
+	}
+
+	@Transactional
+	@Override
+	public boolean isLabelExist(Label label)
+	{
+		long count = labelDao.isUserExist(label);
+
+		System.out.println("count : "+count);
+		if (count >= 1) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	@Transactional
+	@Override
+	public void update(Label label, String token) 
+	{		
+	 try {
+	  	long id=Long.parseLong(Token.getParseJWT(token));
+					
+			if(id==label.getUserDetails().getId() && label.getUserDetails().getId()!=0)
+			{
+			 labelDao.update(label);	
+			}
+			else
+			{
+			 throw new UnauthorizedException("This User is Not Allow to Update Note...!"); 	
+			}
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
+		}	
 	}
 
 	

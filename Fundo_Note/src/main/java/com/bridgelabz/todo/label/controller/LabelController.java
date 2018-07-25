@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bridgelabz.todo.label.exception.LabelAlreadyExistException;
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.label.service.ILabelService;
 import com.bridgelabz.todo.utility.Response;
@@ -28,23 +29,29 @@ public class LabelController
 		System.out.println("Creating label " + label.getLabelName());
 		System.out.println("token in Note : "+token);
 		System.out.println("rakesh");
+		if(labelService.isLabelExist(label))
+		{
+		 System.out.println("A Label with Name " + label.getLabelName() + " Already Exist");
+		 throw new LabelAlreadyExistException("Label already exists");
+		}
+		
 		labelService.addLabel(label, token);
 		
 		return new ResponseEntity<>(new Response(true, "Label is created...!"),HttpStatus.OK);
 			
 	}
-
-	@RequestMapping(value = "/addlabelnote/{noteId}", method = RequestMethod.POST)
-	public ResponseEntity<?> addLabelNote(@RequestBody Label label, @RequestHeader("userLoginToken")String token)
-	{
-		System.out.println("Creating label " + label.getLabelName());
-		System.out.println("token in Note : "+token);
-		System.out.println("rakesh");
-		labelService.addLabel(label, token);
-		
-		return new ResponseEntity<>(new Response(true, "Label is created...!"),HttpStatus.OK);
-			
-	}
+	
+	//------------------- Update a User Label ------------------------
+	  @RequestMapping(value = "/updatelabel", method = RequestMethod.PUT) 
+	  public ResponseEntity<?> updateNote(@RequestBody Label label,@RequestHeader("userLoginToken")String token) 
+	  { 
+		  System.out.println("Updating User label : " + label.getLabelName());
+	  
+	   labelService.update(label,token);
+	  
+	  return new ResponseEntity<>(new Response(true, "Note is successfully updated...!"),HttpStatus.OK);
+	  
+	  }
 
 	
 	@RequestMapping(value = "/labels", method = RequestMethod.GET)

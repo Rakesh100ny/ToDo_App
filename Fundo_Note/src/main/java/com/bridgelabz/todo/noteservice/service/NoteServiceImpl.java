@@ -57,13 +57,12 @@ public class NoteServiceImpl implements INoteService {
 
 		//Note note2=noteDao.getNoteById(note.getId());
 				
-	
+		
 		try {
 			
 			long id=Long.parseLong(Token.getParseJWT(token));
-			
-			
-			if(id==note.getUser().getId())
+					
+			if(id==note.getUser().getId() && note.getUser().getId()!=0)
 			{
 			 noteDao.update(note);	
 			}

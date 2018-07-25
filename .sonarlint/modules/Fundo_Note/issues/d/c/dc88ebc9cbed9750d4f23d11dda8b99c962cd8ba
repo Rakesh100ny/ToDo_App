@@ -1,21 +1,21 @@
 
-usquid:CallToDeprecatedMethod"6Remove this use of "createCriteria"; it is deprecated.(¹ºÊH¡ÛBRMINORZ
+Šsquid:S1488!"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­HÔŞBRMINORZ
 CODE_SMELL
-Šsquid:S1488!"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­H£ÛBRMINORZ
-CODE_SMELL
-Šsquid:S1488:"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­HÛBRMINORZ
-CODE_SMELL
-zsquid:CallToDeprecatedMethod+"6Remove this use of "createCriteria"; it is deprecated.(¨£ÑˆúÿÿÿÿH¢ÛBRMINORZ
+usquid:CallToDeprecatedMethod"6Remove this use of "createCriteria"; it is deprecated.(¹ºÊHÕŞBRMINORZ
 CODE_SMELL
 f
-squid:S106"9Replace this use of System.out or System.err by a logger.(æ§ã²HŸÛBRMAJORZ
+squid:S106B"9Replace this use of System.out or System.err by a logger.(³ÕüHÖŞBRMAJORZ
+CODE_SMELL
+usquid:CallToDeprecatedMethod8"6Remove this use of "createCriteria"; it is deprecated.(•úúÄH×ŞBRMINORZ
 CODE_SMELL
 f
-squid:S106B"9Replace this use of System.out or System.err by a logger.(³ÕüH ÛBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(æ§ã²HØŞBRMAJORZ
 CODE_SMELL
-~squid:S1192"FDefine a constant instead of duplicating this literal "email" 3 times.(¹ºÊ8†ÏÿıÆ,H›ÛBRCRITICALZ
+’squid:S1488."]Immediately return this expression instead of assigning it to the temporary variable "count".(êÒÅ‰8 ·ú›È,HÙŞBRMINORZ
 CODE_SMELL
-’squid:S1488."]Immediately return this expression instead of assigning it to the temporary variable "count".(êÒÅ‰8 ·ú›È,HšÛBRMINORZ
+~squid:S1192"FDefine a constant instead of duplicating this literal "email" 3 times.(¹ºÊ8†ÏÿıÆ,HÚŞBRCRITICALZ
 CODE_SMELL
-usquid:CallToDeprecatedMethod8"6Remove this use of "createCriteria"; it is deprecated.(•úúÄHÛBRMINORZ
+Šsquid:S1488:"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨ë¼­HÛŞBRMINORZ
+CODE_SMELL
+zsquid:CallToDeprecatedMethod+"6Remove this use of "createCriteria"; it is deprecated.(¨£ÑˆúÿÿÿÿHÜŞBRMINORZ
 CODE_SMELL

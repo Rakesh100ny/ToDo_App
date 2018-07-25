@@ -12,4 +12,8 @@ public interface ILabelService
 
 	boolean deleteLabel(long id, String token);
 
+	boolean isLabelExist(Label label);
+
+	void update(Label label, String token);
+
 }

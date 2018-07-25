@@ -1,11 +1,11 @@
 package com.bridgelabz.todo.label.exception;
 
-public class UnauthorizedLabelException extends RuntimeException {
+public class LabelAlreadyExistException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
 
-	private static final long serialVersionUID = -1653649020148430608L;
 	private String errorMessage;
-
-	public UnauthorizedLabelException(String errorMessage) {
+	
+	public LabelAlreadyExistException(String errorMessage) {
         super(errorMessage);
 		this.errorMessage = errorMessage;
 	}
@@ -13,5 +13,4 @@ public class UnauthorizedLabelException extends RuntimeException {
 	public String getErrorMessage() {
 		return errorMessage;
 	}
-
 }

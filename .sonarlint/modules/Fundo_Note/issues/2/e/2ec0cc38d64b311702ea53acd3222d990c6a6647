@@ -1,23 +1,23 @@
 
-}$squid:AssignmentInSubExpressionCheckÎ".Extract the assignment out of this expression.(ö®Ëù8­°ÁèË,H”ÛBRMAJORZ
+}$squid:AssignmentInSubExpressionCheckÎ".Extract the assignment out of this expression.(ö®Ëù8­°ÁèË,HÊŞBRMAJORZ
 CODE_SMELL
+Zsquid:S1148º"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHÒŞBRMINORZVULNERABILITY
 n
-squid:S106Ò"9Replace this use of System.out or System.err by a logger.(½“½8˜ø»É,H˜ÛBRMAJORZ
+squid:S106Ò"9Replace this use of System.out or System.err by a logger.(½“½8˜ø»É,HÍŞBRMAJORZ
 CODE_SMELL
-tsquid:S1126E"AReplace this if-then-else statement by a single return statement.(Ç¶ŞİüÿÿÿÿHŒÛBRMINORZ
+tsquid:S1126E"AReplace this if-then-else statement by a single return statement.(Ç¶ŞİüÿÿÿÿHĞŞBRMINORZ
 CODE_SMELL
-Zsquid:S1148º"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿH‹ÛBRMINORZVULNERABILITY
+€squid:S00117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯HÏŞBRMINORZ
+CODE_SMELL
+asquid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¡ÌÇ,HÎŞBRMINORZVULNERABILITY
+€squid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯HÑŞBRMINORZ
+CODE_SMELL
+Šsquid:S1192…"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(¹£˜ÛüÿÿÿÿHËŞBRCRITICALZ
+CODE_SMELL
+xsquid:HiddenFieldCheck˜">Rename "emailModel" which hides the field declared at line 28.(ŒÅÊHÉŞBRMAJORZ
+CODE_SMELL
 r
-squid:S106t"9Replace this use of System.out or System.err by a logger.(¬€µúÿÿÿÿ8Åõş¼È,H™ÛBRMAJORZ
+squid:S106t"9Replace this use of System.out or System.err by a logger.(¬€µúÿÿÿÿ8Åõş¼È,HÓŞBRMAJORZ
 CODE_SMELL
-xsquid:HiddenFieldCheck˜">Rename "emailModel" which hides the field declared at line 28.(ŒÅÊH–ÛBRMAJORZ
-CODE_SMELL
-asquid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¡ÌÇ,HŠÛBRMINORZVULNERABILITY
-€squid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯H†ÛBRMINORZ
-CODE_SMELL
-Šsquid:S1192…"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(¹£˜ÛüÿÿÿÿHÛBRCRITICALZ
-CODE_SMELL
-€squid:S00117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òò¯HÛBRMINORZ
-CODE_SMELL
-osquid:S1854Î"9Remove this useless assignment to local variable "token".(ö®Ëù8­°ÁèË,HˆÛBRMAJORZ
+osquid:S1854Î"9Remove this useless assignment to local variable "token".(ö®Ëù8­°ÁèË,HÌŞBRMAJORZ
 CODE_SMELL

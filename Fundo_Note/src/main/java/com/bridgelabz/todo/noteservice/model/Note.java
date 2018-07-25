@@ -53,10 +53,16 @@ public class Note {
 	@JoinColumn(name="User_id")
 	private User user;
 	
+		
 	@ManyToMany
 	@LazyCollection(LazyCollectionOption.FALSE)
 	@JoinTable(name="User_Note_Label",joinColumns=@JoinColumn(name="Note_id"),inverseJoinColumns=@JoinColumn(name="Label_id"))
 	private List<Label> listOfLabels=new ArrayList<Label>();
+	
+	
+	public Note() {}
+	
+
 	
 	public User getUser() {
 		return user;
@@ -134,7 +140,6 @@ public class Note {
 		return createdDate;
 	}
 
-	@JsonSerialize(using = DateSerializer.class)
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
@@ -143,7 +148,6 @@ public class Note {
 		return lastUpdatedDate;
 	}
 
-	@JsonSerialize(using = DateSerializer.class)
 	public void setLastUpdatedDate(Date lastUpdatedDate) {
 		this.lastUpdatedDate = lastUpdatedDate;
 	}
