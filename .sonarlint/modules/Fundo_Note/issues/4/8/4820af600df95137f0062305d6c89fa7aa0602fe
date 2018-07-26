@@ -1,0 +1,4 @@
+
+Zsquid:S2885"'Make "dateFormat" an instance variable.(¸Ë«ßÿÿÿÿÿ8‹´¬§Í,HıàBRMAJORZBUG
+â%squid:RedundantThrowsDeclarationCheck"Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException' which is a subclass of 'java.io.IOException'.(ä•·Ìúÿÿÿÿ8ÃÔ©§Í,HæàBRMINORZ
+CODE_SMELL

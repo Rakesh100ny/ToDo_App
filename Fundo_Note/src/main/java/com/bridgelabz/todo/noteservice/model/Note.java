@@ -25,8 +25,6 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.userservice.model.User;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 
 @Entity
 @Cacheable
@@ -136,6 +134,7 @@ public class Note {
 		this.isArchived = isArchived;
 	}
 
+	
 	public Date getCreatedDate() {
 		return createdDate;
 	}

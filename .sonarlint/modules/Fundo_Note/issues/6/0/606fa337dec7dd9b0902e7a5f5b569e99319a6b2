@@ -1,9 +1,5 @@
 
-¹squid:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.( Ñé¶8Ä »Í,HîßBRCRITICALZ
+squid:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(İÃÚÁ8Ø»»ØÌ,HùßBRMINORZ
 CODE_SMELL
-squid:S2293<"YReplace the type specification in this constructor call with the diamond operator ("<>").(İÃÚÁ8Ø»»ØÌ,H®ŞBRMINORZ
-CODE_SMELL
-”squid:UselessImportCheck"RRemove this unused import 'com.fasterxml.jackson.databind.ser.std.DateSerializer'.(±‹©”8“ºÇÍ,HõßBRMINORZ
-CODE_SMELL
-›squid:UselessImportCheck"TRemove this unused import 'com.fasterxml.jackson.databind.annotation.JsonSerialize'.(ÖÎèöúÿÿÿÿ8“ºÇÍ,HößBRMINORZ
+¹squid:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.( Ñé¶8Ä »Í,H÷ßBRCRITICALZ
 CODE_SMELL
