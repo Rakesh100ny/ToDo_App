@@ -1,18 +1,27 @@
 
-`squid:S1148t"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H²ßBRMINORZVULNERABILITY
+`squid:S1148'"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÕáBRMINORZVULNERABILITY
+m
+squid:S1066"9Replace this use of System.out or System.err by a logger.(šÇÕë8½ò„Æ,H×áBRMAJORZ
+CODE_SMELL
+`squid:S1148J"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HÒáBRMINORZVULNERABILITY
+m
+squid:S106\"9Replace this use of System.out or System.err by a logger.(ğ‰í°8€»®›Ë,HØáBRMAJORZ
+CODE_SMELL
+`squid:S1148w"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÔáBRMINORZVULNERABILITY
+…squid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(¯Öï„ıÿÿÿÿ8šƒ–ˆÍ,HÖáBRMAJORZ
+CODE_SMELL
+€squid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¬„“÷8€»®›Ë,HÙáBRMAJORZ
+CODE_SMELL
+m
+squid:S106q"9Replace this use of System.out or System.err by a logger.(—Ô£8Šã…ÜÍ,HşáBRMAJORZ
+CODE_SMELL
+`squid:S1148e"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HÑáBRMINORZVULNERABILITY
+m
+squid:S1067"9Replace this use of System.out or System.err by a logger.(¾õÅ8¢¦ŠÛÍ,HİáBRMAJORZ
+CODE_SMELL
 r
-squid:S106%"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,H³ßBRMAJORZ
+squid:S106%"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,HÓáBRMAJORZ
 CODE_SMELL
-`squid:S1148'"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H¯ßBRMINORZVULNERABILITY
-`squid:S1148e"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,H±ßBRMINORZVULNERABILITY
-`squid:S1148J"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,H°ßBRMINORZVULNERABILITY
-…squid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(¯Öï„ıÿÿÿÿ8šƒ–ˆÍ,HÉßBRMAJORZ
-CODE_SMELL
-m
-squid:S1066"9Replace this use of System.out or System.err by a logger.(šÇÕë8½ò„Æ,H®ßBRMAJORZ
-CODE_SMELL
-m
-squid:S106\"9Replace this use of System.out or System.err by a logger.(ğ‰í°8€»®›Ë,H¬ßBRMAJORZ
-CODE_SMELL
-€squid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¬„“÷8€»®›Ë,H­ßBRMAJORZ
+r
+squid:S106t"9Replace this use of System.out or System.err by a logger.(ƒéÑ¸şÿÿÿÿ8“ˆ†ÜÍ,HÿáBRMAJORZ
 CODE_SMELL

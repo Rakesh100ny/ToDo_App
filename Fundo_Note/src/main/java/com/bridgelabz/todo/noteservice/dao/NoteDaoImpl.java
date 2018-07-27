@@ -57,9 +57,10 @@ public class NoteDaoImpl implements INoteDao {
 	@Override
 	public List<Note> getAllNotes(long id) 
 	{
+		System.out.println("ranu3");
 		Session session=sessionFactory.getCurrentSession();
 		User user=session.get(User.class, id);
-		
+		System.out.println("ranu4");
 		
 		return user.getListOfNotes();
 	}

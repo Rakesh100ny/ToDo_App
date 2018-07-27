@@ -1,4 +1,6 @@
 
 l
-squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8©ï…£È,HĞ×BRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8©ï…£È,HÍáBRMAJORZ
+CODE_SMELL
+bsquid:S1185"(Remove this method to simply inherit it.(ã¥àÁùÿÿÿÿ8»²ÉØÍ,HÎáBRMINORZ
 CODE_SMELL

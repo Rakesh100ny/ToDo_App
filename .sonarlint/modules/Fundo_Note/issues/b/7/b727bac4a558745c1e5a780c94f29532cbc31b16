@@ -1,32 +1,31 @@
 
+csquid:S1452L"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8ô£š‡Í,H–âBRCRITICALZ
+CODE_SMELL
+^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8Á¼ÈèË,H—âBRCRITICALZ
+CODE_SMELL
+“squid:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8Á¼ÈèË,H˜âBRMINORZ
+CODE_SMELL
+squid:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8Á¼ÈèË,H™âBRMINORZ
+CODE_SMELL
+csquid:S1452."&Remove usage of generic wildcard type.(ëÉ¦Ôşÿÿÿÿ8ÅçòÍ,HšâBRCRITICALZ
+CODE_SMELL
+…squid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(¨†ÓÖşÿÿÿÿ8ó…€ÜÍ,H›âBRMAJORZ
+CODE_SMELL
+m
+squid:S106N"9Replace this use of System.out or System.err by a logger.(İŠ–é8ô£š‡Í,HœâBRMAJORZ
+CODE_SMELL
 l
-squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8Á¼ÈèË,H´ŞBRMAJORZ
-CODE_SMELL
-csquid:S1452."&Remove usage of generic wildcard type.(ëÉ¦Ôşÿÿÿÿ8ÅçòÍ,H»ŞBRCRITICALZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°—]8Á¼ÈèË,HâBRMAJORZ
 CODE_SMELL
 r
-squid:S106D"9Replace this use of System.out or System.err by a logger.(‘Â¸Šùÿÿÿÿ8Á¼ÈèË,HµŞBRMAJORZ
-CODE_SMELL
-“squid:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤§Ìüÿÿÿÿ8Á¼ÈèË,H²ŞBRMINORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(å¶Ø‚ıÿÿÿÿ8Á¼ÈèË,HâBRMAJORZ
 CODE_SMELL
 m
-squid:S106N"9Replace this use of System.out or System.err by a logger.(İŠ–é8ô£š‡Í,H¦ßBRMAJORZ
-CODE_SMELL
-m
-squid:S106""9Replace this use of System.out or System.err by a logger.(Ÿ†¢²8ÅçòÍ,HšßBRMAJORZ
-CODE_SMELL
-squid:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(£—ÛÖ8Á¼ÈèË,HºŞBRMINORZ
-CODE_SMELL
-^squid:S1452"&Remove usage of generic wildcard type.(¾¥ëã8Á¼ÈèË,H›ßBRCRITICALZ
-CODE_SMELL
-csquid:S1452L"&Remove usage of generic wildcard type.(·§ƒÏúÿÿÿÿ8ô£š‡Í,H¥ßBRCRITICALZ
+squid:S106""9Replace this use of System.out or System.err by a logger.(Ÿ†¢²8ÅçòÍ,HŸâBRMAJORZ
 CODE_SMELL
 r
-squid:S106"9Replace this use of System.out or System.err by a logger.(å¶Ø‚ıÿÿÿÿ8Á¼ÈèË,H¸ŞBRMAJORZ
-CODE_SMELL
-r
-squid:S1060"9Replace this use of System.out or System.err by a logger.(Ç°Çıÿÿÿÿ8ÅçòÍ,H½ŞBRMAJORZ
+squid:S1060"9Replace this use of System.out or System.err by a logger.(Ç°Çıÿÿÿÿ8ÅçòÍ,H âBRMAJORZ
 CODE_SMELL
 m
-squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8Á¼ÈèË,H·ŞBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(°ùğ8Á¼ÈèË,H¡âBRMAJORZ
 CODE_SMELL

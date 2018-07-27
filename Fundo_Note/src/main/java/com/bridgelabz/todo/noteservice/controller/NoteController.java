@@ -53,12 +53,21 @@ public class NoteController {
 	  @RequestMapping(value = "/note", method = RequestMethod.GET) 
 	  public ResponseEntity<List<Note>> listAllNotes(@RequestHeader("userLoginToken")String token)
 	  {
+		  System.out.println("ranu1");
+		  System.out.println("token : "+token);
 		  List<Note> users = noteService.getAllNotes(token);
 	  
 	  if(users.isEmpty())
 	  {
 		  return new ResponseEntity<List<Note>>(HttpStatus.NO_CONTENT); 
 	  }
+	  
+	  System.out.println("ranu6");
+	  for(Note note1 : users)
+		{
+		 System.out.println("Name : "+note1.getTitle());	
+		}
+	  
 	  return new ResponseEntity<List<Note>>(users, HttpStatus.OK); 
 	 }
 	  
@@ -79,3 +88,4 @@ public class NoteController {
 	   }
 
 }
+

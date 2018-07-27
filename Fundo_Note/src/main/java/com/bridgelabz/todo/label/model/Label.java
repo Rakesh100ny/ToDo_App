@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Cacheable;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +21,6 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.model.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Cacheable

@@ -52,7 +52,7 @@ public class NoteServiceImpl implements INoteService {
 	public void update(Note note,String token) {
 	
 		System.out.println("note id : "+note.getId());
-
+        System.out.println("note id using user : "+note.getUser().getId());
 		note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
 
 		//Note note2=noteDao.getNoteById(note.getId());
@@ -110,8 +110,11 @@ public class NoteServiceImpl implements INoteService {
 		List<Note> note = null;
 		try {
 
+			System.out.println("ranu2");
 			note = noteDao.getAllNotes(Long.parseLong(Token.getParseJWT(token)));
 
+			System.out.println("ranu5");
+			
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();
 		}
