@@ -1,5 +1,5 @@
 
-squid:S2293="YReplace the type specification in this constructor call with the diamond operator ("<>").(İÃÚÁ8âü—éË,HÄâBRMINORZ
+“squid:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").(ØÚ¹Öüÿÿÿÿ8ı€ìÙÅ,H¸ãBRMINORZ
 CODE_SMELL
-“squid:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(ØÚ¹Öüÿÿÿÿ8ı€ìÙÅ,HÅâBRMINORZ
+squid:S2293>"YReplace the type specification in this constructor call with the diamond operator ("<>").(İÃÚÁ8âü—éË,H¹ãBRMINORZ
 CODE_SMELL

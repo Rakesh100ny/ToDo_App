@@ -37,6 +37,7 @@ public class User {
 	@Column(name = "User_lName")
 	private String lastName;
 
+
 	@Column(name = "User_mailId")
 	private String email;
 
@@ -67,6 +68,9 @@ public class User {
 	public void setListOfLabels(List<Label> listOfLabels) {
 		this.listOfLabels = listOfLabels;
 	}
+	
+	public User() {
+	}
 
 	public User(RegisterModel registerModel) {
 		this.firstName = registerModel.getFirstName();
@@ -90,10 +94,7 @@ public class User {
 		this.mobileNo = mobileNo;
 	}
 
-	public User() {
-		isActivated = false;
-	}
-
+	
 	public boolean isActivated() {
 		return isActivated;
 	}

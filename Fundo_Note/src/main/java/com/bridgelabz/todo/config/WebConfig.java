@@ -33,7 +33,7 @@ public class WebConfig implements WebMvcConfigurer {
 		  .maxAge(4800);
 	}
 	
-/*	@Bean
+	@Bean
 	public RequestMappingHandlerAdapter getRequestMappingHandlerAdapter() {
 		RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
 		List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
@@ -45,6 +45,6 @@ public class WebConfig implements WebMvcConfigurer {
 	@Bean
 	public MappingJackson2HttpMessageConverter getJackson2HttpMessageConverter() {
 		return new MappingJackson2HttpMessageConverter();
-	}*/
+	}
 
 }

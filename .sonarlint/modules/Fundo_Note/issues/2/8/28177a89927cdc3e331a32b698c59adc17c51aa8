@@ -1,8 +1,8 @@
 
-’squid:S1488B"]Immediately return this expression instead of assigning it to the temporary variable "count".(κÒΕ‰8θ΅¥‚Ν,HυαBRMINORZ
+squid:CallToDeprecatedMethod?"6Remove this use of "createCriteria"; it is deprecated.(„“έύÿÿÿÿ8 ΟΆ‚Ν,HϋγBRMINORZ
+CODE_SMELL
+’squid:S1488B"]Immediately return this expression instead of assigning it to the temporary variable "count".(κÒΕ‰8θ΅¥‚Ν,HωγBRMINORZ
 CODE_SMELL
 m
-squid:S106L"9Replace this use of System.out or System.err by a logger.(·¤”8―„®‰Ν,HφαBRMAJORZ
-CODE_SMELL
-squid:CallToDeprecatedMethod?"6Remove this use of "createCriteria"; it is deprecated.(„“έύÿÿÿÿ8 ΟΆ‚Ν,HχαBRMINORZ
+squid:S106L"9Replace this use of System.out or System.err by a logger.(·¤”8―„®‰Ν,HϊγBRMAJORZ
 CODE_SMELL

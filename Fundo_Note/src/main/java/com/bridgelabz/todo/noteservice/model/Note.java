@@ -25,6 +25,7 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.userservice.model.User;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Cacheable
@@ -58,10 +59,11 @@ public class Note {
 	private List<Label> listOfLabels=new ArrayList<Label>();
 	
 	
-	public Note() {}
-	
 
-	
+	public Note() {
+		super();
+	}
+
 	public User getUser() {
 		return user;
 	}

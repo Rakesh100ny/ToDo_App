@@ -11,7 +11,9 @@ import com.bridgelabz.todo.label.dao.ILabelDao;
 import com.bridgelabz.todo.label.exception.LabelNotFoundException;
 import com.bridgelabz.todo.label.exception.UnauthorizedLabelException;
 import com.bridgelabz.todo.label.model.Label;
+import com.bridgelabz.todo.noteservice.dao.INoteDao;
 import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
+import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
@@ -24,6 +26,9 @@ public class LabelServiceImpl implements ILabelService
 	
 	@Autowired
 	private IUserDao userDao;
+	
+	@Autowired
+	private INoteDao noteDao;
 
 	@Transactional
 	@Override
@@ -65,16 +70,32 @@ public class LabelServiceImpl implements ILabelService
 	@Override
 	public boolean deleteLabel(long id, String token) 
 	{
-     Label label=labelDao.getLabelById(id);		
 		
 	 try 
 	 {
+	     Label label=labelDao.getLabelById(id);		
+
 		User user=userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
-		
+				
 		if(user.getId() == label.getUserDetails().getId())
 		{
-         
-         if (!labelDao.deleteLabelById(label.getId())) {
+		 List<Note> notes=user.getListOfNotes();
+              
+         for(Note note : notes)
+         {
+          List<Label> labels=note.getListOfLabels();
+                  
+          for(Label label1 : labels)
+          {
+          	if(label1.getId()==label.getId())
+        	{
+             note.getListOfLabels().remove(label1);
+             noteDao.update(note);
+            }
+          }
+         }
+        
+         if (!labelDao.deleteLabelById(id)) {
 				System.out.println("Unable to delete. User with id " + id + " not found");
 				throw new LabelNotFoundException("Label is not found...!");
 			 }
@@ -95,7 +116,7 @@ public class LabelServiceImpl implements ILabelService
 	@Override
 	public boolean isLabelExist(Label label)
 	{
-		long count = labelDao.isUserExist(label);
+		long count = labelDao.isLabelExist(label);
 
 		System.out.println("count : "+count);
 		if (count >= 1) {

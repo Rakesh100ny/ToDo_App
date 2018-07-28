@@ -16,6 +16,10 @@ public interface INoteService
 	 boolean deleteNoteById(long id,String token);
 	 
 	 List<Note> getAllNotes(String token);
+
+	void addLabelOnNote(long noteId, long labelId);
+
+	void removeLabelOnNote(long noteId, long labelId);
 	 
 
 }

@@ -1,27 +1,38 @@
 
-`squid:S1148'"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÕáBRMINORZVULNERABILITY
-m
-squid:S1066"9Replace this use of System.out or System.err by a logger.(šÇÕë8½ò„Æ,H×áBRMAJORZ
+€squid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(¬„“÷8€»®›Ë,H‚ãBRMAJORZ
 CODE_SMELL
-`squid:S1148J"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HÒáBRMINORZVULNERABILITY
-m
-squid:S106\"9Replace this use of System.out or System.err by a logger.(ğ‰í°8€»®›Ë,HØáBRMAJORZ
+`squid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,H†ãBRMINORZVULNERABILITY
+…squid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(¯Öï„ıÿÿÿÿ8šƒ–ˆÍ,HãBRMAJORZ
 CODE_SMELL
-`squid:S1148w"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÔáBRMINORZVULNERABILITY
-…squid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(¯Öï„ıÿÿÿÿ8šƒ–ˆÍ,HÖáBRMAJORZ
-CODE_SMELL
-€squid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¬„“÷8€»®›Ë,HÙáBRMAJORZ
+n
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ÔÕÊŞ8½¬ÉúÍ,HŒãBRMAJORZ
 CODE_SMELL
 m
-squid:S106q"9Replace this use of System.out or System.err by a logger.(—Ô£8Šã…ÜÍ,HşáBRMAJORZ
+squid:S106y"9Replace this use of System.out or System.err by a logger.(—Ô£8€»®›Ë,HŠãBRMAJORZ
 CODE_SMELL
-`squid:S1148e"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HÑáBRMINORZVULNERABILITY
 m
-squid:S1067"9Replace this use of System.out or System.err by a logger.(¾õÅ8¢¦ŠÛÍ,HİáBRMAJORZ
+squid:S106?"9Replace this use of System.out or System.err by a logger.(¾õÅ8ˆÂËúÍ,HãBRMAJORZ
+CODE_SMELL
+m
+squid:S106d"9Replace this use of System.out or System.err by a logger.(ğ‰í°8½ò„Æ,HƒãBRMAJORZ
+CODE_SMELL
+m
+squid:S106>"9Replace this use of System.out or System.err by a logger.(šÇÕë8¢¦ŠÛÍ,H…ãBRMAJORZ
+CODE_SMELL
+Šsquid:UselessImportCheck"HRemove this unused import 'net.bytebuddy.implementation.bytecode.Throw'.(€ü§Ÿ8ÖÒƒÎ,HšäBRMINORZ
+CODE_SMELL
+`squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H‡ãBRMINORZVULNERABILITY
+`squid:S1148/"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HˆãBRMINORZVULNERABILITY
+r
+squid:S106|"9Replace this use of System.out or System.err by a logger.(ƒéÑ¸şÿÿÿÿ8½¬ÉúÍ,HãBRMAJORZ
 CODE_SMELL
 r
-squid:S106%"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8½ò„Æ,HÓáBRMAJORZ
+squid:S106-"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8ˆÂËúÍ,HãBRMAJORZ
 CODE_SMELL
-r
-squid:S106t"9Replace this use of System.out or System.err by a logger.(ƒéÑ¸şÿÿÿÿ8“ˆ†ÜÍ,HÿáBRMAJORZ
+n
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ†¢²8½ò„Æ,HÿâBRMAJORZ
 CODE_SMELL
+n
+squid:S106¡"9Replace this use of System.out or System.err by a logger.(Û«‘©8áû‚Î,H äBRMAJORZ
+CODE_SMELL
+`squid:S1148R"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,H‰ãBRMINORZVULNERABILITY

@@ -57,7 +57,7 @@ public class LabelDaoImpl implements ILabelDao{
     }
 
 	@Override
-	public long isUserExist(Label label) {
+	public long isLabelExist(Label label) {
 		Session session = sessionFactory.getCurrentSession();
 		@SuppressWarnings("deprecation")
 		Criteria criteria = session.createCriteria(Label.class).add(Restrictions.eq("labelName", label.getLabelName()))

@@ -27,8 +27,6 @@ public class LabelController
 	public ResponseEntity<?> addLabel(@RequestBody Label label, @RequestHeader("userLoginToken")String token)
 	{
 		System.out.println("Creating label " + label.getLabelName());
-		System.out.println("token in Note : "+token);
-		System.out.println("rakesh");
 		if(labelService.isLabelExist(label))
 		{
 		 System.out.println("A Label with Name " + label.getLabelName() + " Already Exist");

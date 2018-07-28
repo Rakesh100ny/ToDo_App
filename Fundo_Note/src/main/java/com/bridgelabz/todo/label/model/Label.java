@@ -21,6 +21,8 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.model.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Cacheable
@@ -41,8 +43,12 @@ public class Label {
 	
 	@ManyToMany(mappedBy="listOfLabels")
 	@LazyCollection(LazyCollectionOption.FALSE)
+	@JsonIgnore
 	private List<Note> listOfNotes=new ArrayList<Note>(); 
-
+	
+	public Label() {
+		super();
+	}
 
 	public List<Note> getListOfNotes() {
 		return listOfNotes;
