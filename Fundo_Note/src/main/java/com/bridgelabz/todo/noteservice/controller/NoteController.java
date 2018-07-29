@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,27 +44,15 @@ public class NoteController {
 	}
 
 	// ------------------- Relation Between Note and Label ------------------------
-	@RequestMapping(value = "/relationNoteLabel/{noteId}/{labelId}/{status}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/relationNoteLabel/{noteId}/{labelId}", method = RequestMethod.PUT)
 	public ResponseEntity<?> updateRelationNoteLabel(@PathVariable("noteId") long noteId,
-			@PathVariable("labelId") long labelId, @PathVariable("status") String status) {
+			@PathVariable("labelId") long labelId) {
 		System.out.println("noteId : " + noteId);
 		System.out.println("labelId : " + labelId);
-		System.out.println("status : " + status);
 
-		switch (status)
-		{
-		 case "add"    : 
-			              noteService.addLabelOnNote(noteId,labelId);
-
-			break;
-		 case "remove" : noteService.removeLabelOnNote(noteId,labelId); 
-
-			break;
-
-		 default       : System.out.println("Invalid Status...Please check your status");
-			break;
-		}
-
+		noteService.relationBetweenNoteLabel(noteId,labelId);
+		
+		
 		System.out.println("Rakesh Soni Baberwal");
 
 		return new ResponseEntity<>(new Response(true, "Note is successfully updated...!"), HttpStatus.OK);

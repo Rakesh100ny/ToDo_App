@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.todo.label.dao.ILabelDao;
-import com.bridgelabz.todo.label.exception.LabelAlreadyExistException;
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.dao.INoteDao;
 import com.bridgelabz.todo.noteservice.exception.NoteNotFoundException;
@@ -18,8 +17,6 @@ import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.Token;
-
-import net.bytebuddy.implementation.bytecode.Throw;
 
 @Service
 public class NoteServiceImpl implements INoteService {
@@ -131,40 +128,47 @@ public class NoteServiceImpl implements INoteService {
 
 	@Transactional
 	@Override
-	public void addLabelOnNote(long noteId, long labelId) 
+	public void addLabelOnNote(Note note,Label label) 
 	{
-     Note note=noteDao.getNoteById(noteId);
-	 
-     Label label=labelDao.getLabelById(labelId);
-
-     if(note.getListOfLabels().contains(label))
-     {
-    	 System.out.println("A Label with Name " + label.getLabelName() + " Already Exist");
-		 throw new LabelAlreadyExistException("Label already exists"); 	 
-     }
-     else
-     {
+   
     	 note.getListOfLabels().add(label);
      	 label.getListOfNotes().add(note);
     	 noteDao.update(note);
     	 labelDao.update(label);
     		 
-     }
+  
  	}
 
 	@Transactional
 	@Override
-	public void removeLabelOnNote(long noteId, long labelId) {
-		 Note note=noteDao.getNoteById(noteId);
-		 System.out.println("Note title  : "+note.getTitle());
-		 Label label=labelDao.getLabelById(labelId);
-		 System.out.println("Label title : "+label.getLabelName());
+	public void removeLabelOnNote(Note note,Label label) {
 		 
 		 note.getListOfLabels().remove(label);
 		 label.getListOfNotes().remove(note);
 
 		 noteDao.update(note);
 	     labelDao.update(label);
+	}
+
+	@Transactional
+	@Override
+	public void relationBetweenNoteLabel(long noteId, long labelId) 
+	{
+		System.out.println("r1");
+		 Note note=noteDao.getNoteById(noteId);
+		 
+	     Label label=labelDao.getLabelById(labelId);
+	     
+	     if(note.getListOfLabels().contains(label))
+	     {
+	    	 System.out.println("r2");	 
+	      removeLabelOnNote(note, label); 	 
+	     }
+	     else
+	     {
+	    	 System.out.println("r3");
+	      addLabelOnNote(note, label); 	 
+	     }
 	}
 
 }

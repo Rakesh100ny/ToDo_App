@@ -2,6 +2,7 @@ package com.bridgelabz.todo.noteservice.service;
 
 import java.util.List;
 
+import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.model.Note;
 
 
@@ -17,9 +18,11 @@ public interface INoteService
 	 
 	 List<Note> getAllNotes(String token);
 
-	void addLabelOnNote(long noteId, long labelId);
+	void addLabelOnNote(Note note,Label label);
 
-	void removeLabelOnNote(long noteId, long labelId);
+	void removeLabelOnNote(Note note,Label label);
+
+	void relationBetweenNoteLabel(long noteId, long labelId);
 	 
 
 }
