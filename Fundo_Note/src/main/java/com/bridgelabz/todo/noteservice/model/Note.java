@@ -25,7 +25,6 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.userservice.model.User;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Cacheable
@@ -45,8 +44,18 @@ public class Note {
 	@Temporal(TemporalType.DATE)
 	private Date createdDate = new Date();
 	@Temporal(TemporalType.DATE)
-	private Date lastUpdatedDate = new Date() ;
+	private Date lastUpdatedDate = new Date();
+	
+	private Date reminderDate=new Date();
    
+	public Date getReminderDate() {
+		return reminderDate;
+	}
+
+	public void setReminderDate(Date reminderDate) {
+		this.reminderDate = reminderDate;
+	}
+
 	@ManyToOne
 	@NotFound(action=NotFoundAction.IGNORE)
 	@JoinColumn(name="User_id")

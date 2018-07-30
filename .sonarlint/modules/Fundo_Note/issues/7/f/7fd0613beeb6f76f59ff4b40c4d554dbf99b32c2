@@ -1,21 +1,13 @@
 
+asquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H¨åBRMINORZVULNERABILITY
 m
-squid:S106y"9Replace this use of System.out or System.err by a logger.(šÈŞ§8˜Çß€Î,H…äBRMAJORZ
+squid:S106v"9Replace this use of System.out or System.err by a logger.(šÈŞ§8ÕÏèË,HÆåBRMAJORZ
 CODE_SMELL
-lsquid:S25897"7Remove this expression which always evaluates to "true"(Æ¿ô¾8ÕÏèË,HÕãBRMAJORZ
-CODE_SMELL
+`squid:S1148j"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8øñ×Î,HÀåBRMINORZVULNERABILITY
 m
-squid:S1069"9Replace this use of System.out or System.err by a logger.(£ÆÏÁ8Š²¦‚Í,HĞãBRMAJORZ
+squid:S106`"9Replace this use of System.out or System.err by a logger.(ğ‰í°8Š²¦‚Í,HÅåBRMAJORZ
 CODE_SMELL
-`squid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8â¡¥‰Í,HØãBRMINORZVULNERABILITY
-m
-squid:S1065"9Replace this use of System.out or System.err by a logger.(Ÿ¾‚¯8ÕÏèË,HÓãBRMAJORZ
+`squid:S1148<"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H¤åBRMINORZVULNERABILITY
+`squid:S1148)"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H¦åBRMINORZVULNERABILITY
+{squid:S1126w"AReplace this if-then-else statement by a single return statement.(Ç¶Şİüÿÿÿÿ8©¹Ÿ‚Í,H¢åBRMINORZ
 CODE_SMELL
-m
-squid:S106c"9Replace this use of System.out or System.err by a logger.(ğ‰í°8Ù«Î,H„äBRMAJORZ
-CODE_SMELL
-asquid:S1148’"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,HÖãBRMINORZVULNERABILITY
-{squid:S1126z"AReplace this if-then-else statement by a single return statement.(Ç¶Şİüÿÿÿÿ8©¹Ÿ‚Í,HÒãBRMINORZ
-CODE_SMELL
-`squid:S1148)"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,H×ãBRMINORZVULNERABILITY
-`squid:S1148?"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕÏèË,HÔãBRMINORZVULNERABILITY

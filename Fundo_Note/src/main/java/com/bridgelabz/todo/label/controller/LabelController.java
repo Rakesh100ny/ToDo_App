@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bridgelabz.todo.label.exception.LabelAlreadyExistException;
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.label.service.ILabelService;
+import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.utility.Response;
 
 @RestController
@@ -70,6 +71,29 @@ public class LabelController
 			
 	}
 
+	@RequestMapping(value = "/labelNote/{id}", method = RequestMethod.GET)
+	public ResponseEntity<List<Note>> listAllLabelNotes(@PathVariable("id") long id,@RequestHeader("userLoginToken")String token)
+	{
+		
+			List<Note> notes = labelService.getAllLabelNote(id,token);
+			
+			if(notes.isEmpty())
+			{
+			 return new ResponseEntity<List<Note>>(HttpStatus.NO_CONTENT); 
+			}
+			
+
+			  for(Note note : notes)
+			  {
+			   System.out.println("List of Label Notes : "+note.getTitle()); 	  
+			  }
+				
+			
+			return new ResponseEntity<List<Note>>(notes, HttpStatus.OK); 
+			
+	}
+	
+	
 	@RequestMapping(value = "/deletelabel/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteLabel(@PathVariable("id") long id,@RequestHeader("userLoginToken")String token)
 	{

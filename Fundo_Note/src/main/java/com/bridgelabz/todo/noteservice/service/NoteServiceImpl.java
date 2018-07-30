@@ -115,10 +115,8 @@ public class NoteServiceImpl implements INoteService {
 		List<Note> note = null;
 		try {
 
-			System.out.println("ranu2");
 			note = noteDao.getAllNotes(Long.parseLong(Token.getParseJWT(token)));
 
-			System.out.println("ranu5");
 			
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();

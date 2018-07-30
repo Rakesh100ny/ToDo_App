@@ -47,17 +47,14 @@ public class LabelServiceImpl implements ILabelService
 	@Override
 	public List<Label> getAllLabels(String token) {
 		List <Label> labels = null;
-        User user;
+        
 		try {
-			user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
-			System.out.println("User id : "+user.getId());
 			
-			if(user != null)
-	        {
-				System.out.println("hello");
-	        	labels = labelDao.getAllLabels(user.getId());
+			long id=Long.parseLong(Token.getParseJWT(token));
+			
+		    	labels = labelDao.getAllLabels(id);
 	        	return labels;
-	        }
+	       
 		} catch (NumberFormatException | SignatureException e) {
 			
 			e.printStackTrace();
@@ -145,6 +142,20 @@ public class LabelServiceImpl implements ILabelService
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();
 		}	
+	}
+
+	@Transactional
+	@Override
+	public List<Note> getAllLabelNote(long id, String token)
+	{
+		List<Note> labelNotes = null;
+		
+
+		Label label=labelDao.getLabelById(id);
+		
+		labelNotes=label.getListOfNotes();
+		
+    	return labelNotes;
 	}
 
 	
