@@ -46,7 +46,7 @@ public class Note {
 	@Temporal(TemporalType.DATE)
 	private Date lastUpdatedDate = new Date();
 	
-	private Date reminderDate=new Date();
+	private Date reminderDate;
    
 	public Date getReminderDate() {
 		return reminderDate;

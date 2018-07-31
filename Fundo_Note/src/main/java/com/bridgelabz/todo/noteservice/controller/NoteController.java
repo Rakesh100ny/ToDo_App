@@ -36,7 +36,7 @@ public class NoteController {
 	@RequestMapping(value = "/updatenote", method = RequestMethod.PUT)
 	public ResponseEntity<?> updateNote(@RequestBody Note note, @RequestHeader("userLoginToken") String token) {
 		System.out.println("Updating User Note : " + note.getTitle());
-
+		System.out.println("Updating User Note Date : " + note.getReminderDate());
 		noteService.update(note, token);
 
 		return new ResponseEntity<>(new Response(true, "Note is successfully updated...!"), HttpStatus.OK);
@@ -73,7 +73,7 @@ public class NoteController {
 
 		System.out.println("ranu6");
 		for (Note note1 : users) {
-			System.out.println("Name : " + note1.getTitle());
+			System.out.println("Name : " + note1.getTitle() +"Reminder Date : "+note1.getReminderDate());
 		}
 
 		return new ResponseEntity<List<Note>>(users, HttpStatus.OK);

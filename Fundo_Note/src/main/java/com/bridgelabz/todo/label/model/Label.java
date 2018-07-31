@@ -21,7 +21,6 @@ import org.hibernate.annotations.NotFoundAction;
 
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.model.User;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
