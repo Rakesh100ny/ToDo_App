@@ -48,6 +48,16 @@ public class Note {
 	
 	private Date reminderDate;
    
+	private String imageUrl;
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 	public Date getReminderDate() {
 		return reminderDate;
 	}
