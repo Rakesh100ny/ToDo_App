@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -19,20 +20,19 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
+	private int maxUploadSizeInMb = 5 * 1024 * 1024; // 5 MB
+
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
-		
+
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-	  registry.addMapping("/**")
-   	  .allowedOrigins("*")
-		  .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
-		  .allowCredentials(false)
-		  .maxAge(4800);
+		registry.addMapping("/**").allowedOrigins("*").allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
+				.allowedHeaders("*").allowCredentials(false).maxAge(4800);
 	}
-	
+
 	@Bean
 	public RequestMappingHandlerAdapter getRequestMappingHandlerAdapter() {
 		RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
@@ -41,10 +41,20 @@ public class WebConfig implements WebMvcConfigurer {
 		requestMappingHandlerAdapter.setMessageConverters(messageConverters);
 		return requestMappingHandlerAdapter;
 	}
-	
+
 	@Bean
 	public MappingJackson2HttpMessageConverter getJackson2HttpMessageConverter() {
 		return new MappingJackson2HttpMessageConverter();
+	}
+
+	@Bean
+	public CommonsMultipartResolver multipartResolver() {
+
+		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+		commonsMultipartResolver.setMaxUploadSize(maxUploadSizeInMb * 2);
+		commonsMultipartResolver.setMaxUploadSizePerFile(maxUploadSizeInMb); // bytes
+		return commonsMultipartResolver;
+
 	}
 
 }
