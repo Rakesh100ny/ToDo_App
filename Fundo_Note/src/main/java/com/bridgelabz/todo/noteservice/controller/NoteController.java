@@ -98,7 +98,7 @@ public class NoteController {
 		if (!file.isEmpty()) 
 		{
    		 String path=noteService.storeServerSideImage(file);
-   		 System.out.println("path : "+path);
+   
 	 	 logger.info("Server File Location with Name=" + path);
       	 return new ResponseEntity<>(new Response(true, path),HttpStatus.OK);
 		} 
