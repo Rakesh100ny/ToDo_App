@@ -203,7 +203,7 @@ public class UserServiceImpl implements IUserService {
 	  
 			if(BCrypt.checkpw(password, user.getPassword()) && user.isActivated())
 			{
-			  return token=Token.generateTokenByUserInfo(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName());
+			  return token=Token.generateTokenByUserInfo(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName(),user.getProfilePic());
 			} 
 			else 
 			{

@@ -1,39 +1,39 @@
 
-m
-squid:S106¥"9Replace this use of System.out or System.err by a logger.(µûôQ8©‚×¬Î,HÉñBRMAJORZ
-CODE_SMELL
-m
-squid:S106k"9Replace this use of System.out or System.err by a logger.(ğ‰í°8¢¦ŠÛÍ,HÊñBRMAJORZ
-CODE_SMELL
-`squid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HËñBRMINORZVULNERABILITY
-n
-squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8½ò„Æ,HÌñBRMAJORZ
-CODE_SMELL
-asquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÓÍÑ¿Ñ,HÍñBRMINORZVULNERABILITY
+asquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÓÍÑ¿Ñ,HğñBRMINORZVULNERABILITY
 s
-squid:S106³"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8ˆÂËúÍ,HÎñBRMAJORZ
+squid:S106³"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8ˆÂËúÍ,HññBRMAJORZ
 CODE_SMELL
-asquid:S1148Ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÏñBRMINORZVULNERABILITY
 n
-squid:S106Ç"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8ˆÂËúÍ,HĞñBRMAJORZ
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8ˆÂËúÍ,HòñBRMAJORZ
 CODE_SMELL
-\squid:S1168Ğ"&Return an empty array instead of null.(¥¹ï8ÂùşÀÑ,HÑñBRMAJORZ
+`squid:S1148["#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HóñBRMINORZVULNERABILITY
+`squid:S1148r"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8â‘…¿Ñ,HôñBRMINORZVULNERABILITY
+m
+squid:S106N"9Replace this use of System.out or System.err by a logger.(¾õÅ8àáË¿Ñ,HõñBRMAJORZ
 CODE_SMELL
+m
+squid:S106¥"9Replace this use of System.out or System.err by a logger.(µûôQ8©‚×¬Î,HöñBRMAJORZ
+CODE_SMELL
+€squid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(½ÍÛ8¥ŞÒ¿Ñ,H÷ñBRMAJORZ
+CODE_SMELL
+m
+squid:S106k"9Replace this use of System.out or System.err by a logger.(ğ‰í°8¢¦ŠÛÍ,HøñBRMAJORZ
+CODE_SMELL
+n
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ŠŞ˜Æ8½ò„Æ,HùñBRMAJORZ
+CODE_SMELL
+n
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(ÕëÃ8½¬ÉúÍ,HúñBRMAJORZ
+CODE_SMELL
+\squid:S1168Ğ"&Return an empty array instead of null.(¥¹ï8ÂùşÀÑ,HûñBRMAJORZ
+CODE_SMELL
+ˆsquid:S2095µ"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ĞÁü¾Ñ,HüñBRBLOCKERZBUG
+`squid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HıñBRMINORZVULNERABILITY
+asquid:S1148º"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HşñBRMINORZVULNERABILITY
 r
-squid:S106<"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8Š«ö¾Ñ,HÒñBRMAJORZ
+squid:S106<"9Replace this use of System.out or System.err by a logger.(–´àşÿÿÿÿ8Š«ö¾Ñ,HÿñBRMAJORZ
 CODE_SMELL
-€squid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(½ÍÛ8¥ŞÒ¿Ñ,HÓñBRMAJORZ
-CODE_SMELL
+asquid:S1148Ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H€òBRMINORZVULNERABILITY
 m
-squid:S106N"9Replace this use of System.out or System.err by a logger.(¾õÅ8àáË¿Ñ,HÔñBRMAJORZ
-CODE_SMELL
-n
-squid:S106¨"9Replace this use of System.out or System.err by a logger.(ÕëÃ8½¬ÉúÍ,HÕñBRMAJORZ
-CODE_SMELL
-asquid:S1148º"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HÖñBRMINORZVULNERABILITY
-`squid:S1148r"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8â‘…¿Ñ,H×ñBRMINORZVULNERABILITY
-ˆsquid:S2095µ"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ĞÁü¾Ñ,HØñBRBLOCKERZBUG
-`squid:S1148["#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HÙñBRMINORZVULNERABILITY
-m
-squid:S106M"9Replace this use of System.out or System.err by a logger.(šÇÕë8ùíö¿Ñ,HÚñBRMAJORZ
+squid:S106M"9Replace this use of System.out or System.err by a logger.(šÇÕë8ùíö¿Ñ,HòBRMAJORZ
 CODE_SMELL

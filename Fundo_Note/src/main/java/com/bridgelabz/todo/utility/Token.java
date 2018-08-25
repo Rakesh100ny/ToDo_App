@@ -28,7 +28,7 @@ public class Token {
 		}
 		
 
-		public static String generateTokenByUserInfo(long id,String email,String firstName,String lastName)
+		public static String generateTokenByUserInfo(long id,String email,String firstName,String lastName,String profileImg)
 		{
 			long currentTime=System.currentTimeMillis();
 			Date currentDate=new Date(currentTime);
@@ -36,11 +36,10 @@ public class Token {
 			
 			String fullName=firstName+lastName;
 			
-			System.out.println("fullName : "+fullName);
 			
 			String getToken=Jwts.builder()
 					.setId(Long.toString(id))
-				    .setSubject(email) 
+				    .setSubject(email+profileImg) 
 					.setIssuer(fullName)
 					.setIssuedAt(currentDate)
 					.setExpiration(expireDate)

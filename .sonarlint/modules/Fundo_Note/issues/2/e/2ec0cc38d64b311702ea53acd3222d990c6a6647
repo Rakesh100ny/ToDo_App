@@ -1,23 +1,23 @@
 
-}$squid:AssignmentInSubExpressionCheckŒ".Extract the assignment out of this expression.(ˆÆÀ˘8≠∞¡ËÀ,H ﬁBRMAJORZ
+Äsquid:S00117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚèÚØHíÚBRMINORZ
 CODE_SMELL
-Zsquid:S1148∫"#Use a logger to log this exception.(Ä…‘Ö˝ˇˇˇˇH“ﬁBRMINORZVULNERABILITY
-n
-squid:S106“"9Replace this use of System.out or System.err by a logger.(ÅΩìΩ8éò¯ª…,HÕﬁBRMAJORZ
-CODE_SMELL
-tsquid:S1126E"AReplace this if-then-else statement by a single return statement.(«∂ﬁ›¸ˇˇˇˇH–ﬁBRMINORZ
-CODE_SMELL
-Äsquid:S00117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚèÚØHœﬁBRMINORZ
-CODE_SMELL
-asquid:S1148â"#Use a logger to log this exception.(Ä…‘Ö˝ˇˇˇˇ8ê∫°Ã«,HŒﬁBRMINORZVULNERABILITY
-Äsquid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚèÚØH—ﬁBRMINORZ
-CODE_SMELL
-äsquid:S1192Ö"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(π£ò€¸ˇˇˇˇHÀﬁBRCRITICALZ
-CODE_SMELL
-xsquid:HiddenFieldCheckò">Rename "emailModel" which hides the field declared at line 28.(å≈ù H…ﬁBRMAJORZ
-CODE_SMELL
+asquid:S1148â"#Use a logger to log this exception.(Ä…‘Ö˝ˇˇˇˇ8ê∫°Ã«,HñÚBRMINORZVULNERABILITY
 r
-squid:S106t"9Replace this use of System.out or System.err by a logger.(¨Äùµ˙ˇˇˇˇ8≈ı˛º»,H”ﬁBRMAJORZ
+squid:S106t"9Replace this use of System.out or System.err by a logger.(¨Äùµ˙ˇˇˇˇ8≈ı˛º»,HìÚBRMAJORZ
 CODE_SMELL
-osquid:S1854Œ"9Remove this useless assignment to local variable "token".(ˆÆÀ˘8≠∞¡ËÀ,HÃﬁBRMAJORZ
+osquid:S1854Œ"9Remove this useless assignment to local variable "token".(‰ùœ´8≠∞¡ËÀ,HèÚBRMAJORZ
+CODE_SMELL
+}$squid:AssignmentInSubExpressionCheckŒ".Extract the assignment out of this expression.(‰ùœ´8≠∞¡ËÀ,HîÚBRMAJORZ
+CODE_SMELL
+Zsquid:S1148∫"#Use a logger to log this exception.(Ä…‘Ö˝ˇˇˇˇHëÚBRMINORZVULNERABILITY
+äsquid:S1192Ö"SDefine a constant instead of duplicating this literal "User Not Found...!" 3 times.(π£ò€¸ˇˇˇˇHôÚBRCRITICALZ
+CODE_SMELL
+n
+squid:S106“"9Replace this use of System.out or System.err by a logger.(ÅΩìΩ8éò¯ª…,HïÚBRMAJORZ
+CODE_SMELL
+Äsquid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚèÚØHêÚBRMINORZ
+CODE_SMELL
+tsquid:S1126E"AReplace this if-then-else statement by a single return statement.(«∂ﬁ›¸ˇˇˇˇHóÚBRMINORZ
+CODE_SMELL
+xsquid:HiddenFieldCheckò">Rename "emailModel" which hides the field declared at line 28.(å≈ù HòÚBRMAJORZ
 CODE_SMELL

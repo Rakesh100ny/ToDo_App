@@ -51,6 +51,17 @@ public class User {
 	@Column(name = "User_mobileNo")
 	private String mobileNo;
 
+	@Column(name="profile_Pic")
+	private String profilePic;
+	
+	public String getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
+
 	@JsonIgnore
 	@LazyCollection(LazyCollectionOption.FALSE)
 	@OneToMany(mappedBy="user",cascade=CascadeType.PERSIST)
