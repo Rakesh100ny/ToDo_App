@@ -88,6 +88,7 @@ public class User {
 		this.lastName = registerModel.getLastName();
 		this.email = registerModel.getEmail();
 		this.mobileNo=registerModel.getMobileNo();
+		this.profilePic=registerModel.getProfilePic();
 	}
 
 	public List<Note> getListOfNotes() {

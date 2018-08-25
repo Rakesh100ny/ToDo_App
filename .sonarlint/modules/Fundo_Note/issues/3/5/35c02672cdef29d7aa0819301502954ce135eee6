@@ -1,12 +1,14 @@
 
-„squid:S1192,"NDefine a constant instead of duplicating this literal "Pattern.email" 3 times.(­ÌÿÈúÿÿÿÿH ¡RCRITICALZ
-CODE_SMELL
-wsquid:S1192'"FDefine a constant instead of duplicating this literal "email" 6 times.(Ä¤ÄüH›¡RCRITICALZ
-CODE_SMELL
-€squid:S1192'"ODefine a constant instead of duplicating this literal "NotEmpty.email" 3 times.(Ä¤ÄüHœ¡RCRITICALZ
-CODE_SMELL
-tsquid:S1126"AReplace this if-then-else statement by a single return statement.(°ÌÞˆûÿÿÿÿHŸ¡RMINORZ
+wsquid:S1192("FDefine a constant instead of duplicating this literal "email" 6 times.(Ä¤ÄüHßóBRCRITICALZ
 CODE_SMELL
 f
-squid:S106 "9Replace this use of System.out or System.err by a logger.(ÂÈ£èHš¡RMAJORZ
+squid:S106!"9Replace this use of System.out or System.err by a logger.(ÂÈ£èHÞóBRMAJORZ
+CODE_SMELL
+€squid:S1192("ODefine a constant instead of duplicating this literal "NotEmpty.email" 3 times.(Ä¤ÄüHÝóBRCRITICALZ
+CODE_SMELL
+tsquid:S1126"AReplace this if-then-else statement by a single return statement.(°ÌÞˆûÿÿÿÿHÜóBRMINORZ
+CODE_SMELL
+„squid:S1192-"NDefine a constant instead of duplicating this literal "Pattern.email" 3 times.(­ÌÿÈúÿÿÿÿHàóBRCRITICALZ
+CODE_SMELL
+ˆsquid:UselessImportCheck"GRemove this unused import 'com.bridgelabz.todo.userservice.model.User'.(Ï’Ý8äÝÿˆ×,HúóBRMINORZ
 CODE_SMELL

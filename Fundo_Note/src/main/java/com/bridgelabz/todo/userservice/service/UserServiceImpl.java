@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.exception.TokenExpireException;
 import com.bridgelabz.todo.userservice.exception.UserNotFoundException;
@@ -217,5 +218,55 @@ public class UserServiceImpl implements IUserService {
 	 }
 	
 		return token;
+	}
+
+    @Transactional
+	@Override
+	public User getCurrentUser(String token) {
+		
+		User user=null;
+		try 
+		{
+			long id=Long.parseLong(Token.getParseJWT(token));
+		user=userDao.getUserById(id);
+			
+			if(user==null)
+			{
+				throw new UserNotFoundException("User Not Found ...!");	
+			}
+			
+		 	
+		}
+		catch (SignatureException e) 
+		{
+		 e.printStackTrace();
+		}
+		return user;
+		
+		
+		
+	}
+
+	@Transactional
+	@Override
+	public void update(User user, String token) {
+
+		System.out.println("user id : " + user.getId());
+
+		try {
+
+			long id = Long.parseLong(Token.getParseJWT(token));
+
+			if (id == user.getId()) {
+				User user2= userDao.getUserById(id);
+				user2.setProfilePic(user.getProfilePic());
+				userDao.updateUser(user2);
+			} else {
+				throw new UnauthorizedException("This User is Not Allow to Update Note...!");
+			}
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
+		}
+
 	}
 }

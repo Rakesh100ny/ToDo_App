@@ -28,8 +28,7 @@ public class NoteController {
 
 	private static final Logger logger = LoggerFactory.getLogger(NoteController.class);
 
-	// -------------------Create a User
-	// Note--------------------------------------------
+	// -------------------Create a User Note--------------------------------------------
 
 	@RequestMapping(value = "/addnote", method = RequestMethod.POST, consumes = { "application/json" })
 	public ResponseEntity<?> addNote(@RequestBody Note note, @RequestHeader("userLoginToken") String token) {
@@ -61,8 +60,7 @@ public class NoteController {
 
 	}
 
-	// -------------------Retrieve All Users
-	// Notes--------------------------------------
+	// -------------------Retrieve All Users Notes--------------------------------------
 
 	@RequestMapping(value = "/note", method = RequestMethod.GET)
 	public ResponseEntity<List<Note>> listAllNotes(@RequestHeader("userLoginToken") String token) {

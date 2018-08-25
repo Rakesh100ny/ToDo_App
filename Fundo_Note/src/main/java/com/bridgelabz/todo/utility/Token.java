@@ -33,14 +33,13 @@ public class Token {
 			long currentTime=System.currentTimeMillis();
 			Date currentDate=new Date(currentTime);
 			Date expireDate=new Date(currentTime+ 24*60*60*1000);
-			
 			String fullName=firstName+lastName;
-			
-			
+				
+		System.out.println("profile img : "+profileImg);	
 			String getToken=Jwts.builder()
 					.setId(Long.toString(id))
-				    .setSubject(email+profileImg) 
-					.setIssuer(fullName)
+				    .setSubject(email+" "+profileImg)
+				    .setIssuer(fullName)
 					.setIssuedAt(currentDate)
 					.setExpiration(expireDate)
 					.signWith(SignatureAlgorithm.HS256,KEY)

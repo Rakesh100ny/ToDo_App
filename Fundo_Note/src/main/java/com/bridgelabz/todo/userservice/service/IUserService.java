@@ -28,4 +28,8 @@ public interface IUserService {
 
 	String verifyLogin(String email,String password);
 
+	User getCurrentUser(String token);
+
+	void update(User user, String token);
+
 }

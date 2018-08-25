@@ -7,6 +7,15 @@ public class RegisterModel {
 	private String email;
 	private String password;
 	private String mobileNo;
+	private String profilePic;
+
+	public String getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
 
 	public String getFirstName() {
 		return firstName;

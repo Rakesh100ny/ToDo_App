@@ -11,6 +11,7 @@ import com.bridgelabz.todo.userservice.model.ForgotModel;
 import com.bridgelabz.todo.userservice.model.LoginModel;
 import com.bridgelabz.todo.userservice.model.PasswordModel;
 import com.bridgelabz.todo.userservice.model.RegisterModel;
+import com.bridgelabz.todo.userservice.model.User;
 
 @Component
 public class UserValidation implements Validator {
@@ -39,7 +40,7 @@ public class UserValidation implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty.email");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty.password");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "mobileNo", "NotEmpty.mobileNo");
-
+		
 			if (!emailValidator.valid(user.getEmail())) {
 				errors.rejectValue("email", "Pattern.email");
 			}
@@ -66,8 +67,8 @@ public class UserValidation implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "newPassword", "NotEmpty.newPassword");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "NotEmpty.confirmPassword");
 
-
 		}
+		
 
 	}
 

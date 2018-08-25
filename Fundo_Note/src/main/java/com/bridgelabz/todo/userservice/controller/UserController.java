@@ -16,6 +16,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,7 @@ import com.bridgelabz.todo.userservice.model.ForgotModel;
 import com.bridgelabz.todo.userservice.model.LoginModel;
 import com.bridgelabz.todo.userservice.model.PasswordModel;
 import com.bridgelabz.todo.userservice.model.RegisterModel;
+import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.userservice.service.IUserService;
 import com.bridgelabz.todo.utility.Response;
 import com.bridgelabz.todo.validation.UserValidation;
@@ -38,10 +40,10 @@ public class UserController {
 	@Autowired
 	private UserValidation userValidation;
 
-	@InitBinder
+/*	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
 		binder.addValidators(userValidation);
-	}
+	}*/
 
 	@Value("${redirect.login}")
 	String login;
@@ -135,6 +137,31 @@ public class UserController {
 
 	}
 
+	/*---------------------------Get Login User--------------------------*/
+	@RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
+	public ResponseEntity<User> getCurrentUser(@RequestHeader("userLoginToken") String token)
+	{
+       System.out.println("/user token : "+token);
+       
+       User user=userService.getCurrentUser(token);
+       
+       System.out.println("User Image : "+user.getProfilePic());
+       
+		
+		return new ResponseEntity<User>(user, HttpStatus.OK);
+	}
+	
+	// ------------------- Update User  ------------------------
+	@RequestMapping(value = "/updateUser", method = RequestMethod.PUT)
+	public ResponseEntity<?> updateNote(@RequestBody User user, @RequestHeader("userLoginToken") String token) {
+		System.out.println("Updating User id : " + user.getId());
+		System.out.println("rakesh image upload");
+		userService.update(user,token);
+
+
+		return new ResponseEntity<>(new Response(true, "User is successfully updated...!"), HttpStatus.OK);
+
+	}
 	/*---------------------------------reset Password------------------------------------*/
 	@RequestMapping(value = "/resetpassword", method = RequestMethod.POST)
 	public ResponseEntity<?> restPassword(@Validated @RequestBody PasswordModel passwordModel, BindingResult result,
