@@ -29,6 +29,12 @@ public interface INoteService
 	String storeServerSideImage(MultipartFile file);
 
 	byte[] toGetImage(String name);
+
+	void addCollaboratorOnNote(int userid, int noteid);
+
+	boolean removeCollaboratorOnNote(int userid, int noteid);
+
+	List<Note> getAllCollaboratedNotes(String token);
 	 
 
 }

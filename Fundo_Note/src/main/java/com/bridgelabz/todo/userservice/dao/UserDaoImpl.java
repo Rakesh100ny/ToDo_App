@@ -1,6 +1,9 @@
 package com.bridgelabz.todo.userservice.dao;
 
+ import java.util.List;
+
 import org.hibernate.Criteria;
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
@@ -65,5 +68,16 @@ public class UserDaoImpl implements IUserDao {
 		session.update(user);
 		System.out.println("User successfully Updated...!");
 	}
+
+	//<====================================== Get All Users =============================>	
+		@Override
+		public List<User> getallusers() {
+			Session session=sessionFactory.getCurrentSession();
+			Query q = session.createQuery("select email,id from User ");
+			List<User> list = q.list();
+			return list;
+			
+			
+		}
 
 }

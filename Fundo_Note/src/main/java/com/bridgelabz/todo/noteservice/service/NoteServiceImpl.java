@@ -208,4 +208,88 @@ public class NoteServiceImpl implements INoteService {
 		return null;
 	}
 
+	//<==================================== Add Collaborator On Note ==============================>	 
+	 
+	 
+		@Transactional
+		public void addCollaboratorOnNote(int userid,int noteid) {
+			
+			System.out.println("Entering in to the note label service");
+			Note note = noteDao.getNoteById(noteid);
+			System.out.println("Note in collaborator:"+note);
+
+			User user = userDao.getUserById(userid);
+			System.out.println("user in collaborator:"+user);
+			
+			List<User> collaboratorUser =  note.getCollaboratedUser();
+			collaboratorUser.add(user);
+			note.setCollaboratedUser(collaboratorUser);
+			
+			List<Note> collaboratorNotes = user.getCollaboratorNotes();
+			collaboratorNotes.add(note);
+			user.setCollaboratorNotes(collaboratorNotes);
+			
+			userDao.updateUser(user);
+			noteDao.update(note);
+
+	}
+
+	//<================================== Remove Collaborator On Note ===========================>	
+		
+		@Transactional
+		public boolean removeCollaboratorOnNote(int userid, int noteid) {
+			System.out.println("Entering in to the note label service");
+			Note note = noteDao.getNoteById(noteid);
+			System.out.println("Note in collaborator:"+note);
+
+			User user = userDao.getUserById(userid);
+			System.out.println("user in collaborator:"+user);
+			
+			List<User> collaboratorUser =  note.getCollaboratedUser();
+			for(User user2:collaboratorUser) {
+				if(userid == user2.getId()) {
+					collaboratorUser.remove(user2);
+					break;
+				}
+			}
+		    note.setCollaboratedUser(collaboratorUser);
+		
+			List<Note> collaboratorNotes = user.getCollaboratorNotes();
+			for(Note note2 :collaboratorNotes) {
+				if(noteid == note2.getId()) {
+					collaboratorNotes.remove(note2);
+					break;
+				}
+			}
+			user.setCollaboratorNotes(collaboratorNotes);
+			
+			userDao.updateUser(user);
+			noteDao.update(note);
+			return true;
+		}
+		
+		
+	//<================================== Get All Collaborators ==============================>	
+		
+		
+		@Transactional
+		public List<Note> getAllCollaboratedNotes(String token) {
+			System.out.println(token);
+			long id;
+			List<Note> listofCollaboratedNotes = null;
+			try {
+				id = Long.parseLong(Token.getParseJWT(token));
+		
+				User user = userDao.getUserById(id);
+
+				listofCollaboratedNotes = user.getCollaboratorNotes();
+				System.out.println(listofCollaboratedNotes);
+			
+			} catch (NumberFormatException | SignatureException e) {
+				e.printStackTrace();
+			}
+			return listofCollaboratedNotes;
+
+		}
+
 }

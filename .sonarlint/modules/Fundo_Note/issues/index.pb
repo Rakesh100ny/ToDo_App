@@ -119,21 +119,11 @@ Y
 )src/main/resources/imageConfig.properties,a/8/a8cc29b876ab1fd7d3106adea4ceafe8ef454870
 N
 src/main/webapp/image/java.jpg,8/a/8a989e5aee779281484858f2f9bd0aaac325eff3
-Q
-!src/main/webapp/image/images.jpeg,8/c/8cdf09fd31464a541ff33ebdc17142833fcd6b80
-U
-%src/main/webapp/image/images (2).jpeg,e/0/e0d212067f7ac53a225769dd74005e050f519d79
-U
-%src/main/webapp/image/images (1).jpeg,2/0/20bb97f94cacaa2c84962f4160fecf9ba41e873e
-S
-#src/main/webapp/image/download.jpeg,1/d/1db0bec202bdad7503018fa52366618f88360b34
-W
-'src/main/webapp/image/download (1).jpeg,9/9/990cfe810b5e133dbf263a2cc76885c0b2beb173
-R
-"src/main/webapp/image/profile1.png,4/7/478fbd849e23a7d80e255a895fed78548f70ae62
-R
-"src/main/webapp/image/profile2.png,9/3/93d714a7a6ed25b97532dc33a564bcae273591e7
 t
 Dsrc/main/java/com/bridgelabz/todo/userservice/model/ForgotModel.java,8/c/8cffe4cb4bf9f20596e4f80d0014bc910d7865ef
 Q
 !src/main/webapp/image/profile.png,5/f/5fcb083cbbdc32a96fe9b18e0c53992a38eab08c
+O
+src/main/webapp/image/undefined,e/7/e7d6828b9eed5039d460438df0a5aa7afba15bae
+L
+src/main/webapp/image/c.jpeg,4/8/48885f42d3edca83ab52b3e3cc78a7e067d685fb

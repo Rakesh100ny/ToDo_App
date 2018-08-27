@@ -1,6 +1,7 @@
 package com.bridgelabz.todo.userservice.service;
 
 import java.security.SignatureException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -268,5 +269,18 @@ public class UserServiceImpl implements IUserService {
 			e.printStackTrace();
 		}
 
+	}
+
+	//<======================================== Get All Users ===========================>
+
+	@Transactional
+	@Override
+	public List<User> getAllUsers() {
+		List<User> listofUsers=userDao.getallusers();
+		
+		return listofUsers;
+		
+		
+		
 	}
 }

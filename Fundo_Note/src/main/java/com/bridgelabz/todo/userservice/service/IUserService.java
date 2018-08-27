@@ -1,5 +1,7 @@
 package com.bridgelabz.todo.userservice.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.bridgelabz.todo.userservice.model.EmailModel;
@@ -31,5 +33,7 @@ public interface IUserService {
 	User getCurrentUser(String token);
 
 	void update(User user, String token);
+
+	List<User> getAllUsers();
 
 }

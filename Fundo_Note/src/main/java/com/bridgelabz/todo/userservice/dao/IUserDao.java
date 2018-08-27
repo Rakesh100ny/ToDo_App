@@ -1,5 +1,7 @@
 package com.bridgelabz.todo.userservice.dao;
 
+import java.util.List;
+
 import com.bridgelabz.todo.userservice.model.User;
 
 
@@ -18,4 +20,6 @@ public interface IUserDao
 	 User getUserById(long id);
  
      void updateUser(User user);
+
+	List<User> getallusers();
 }

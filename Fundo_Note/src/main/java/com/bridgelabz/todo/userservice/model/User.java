@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -72,6 +75,21 @@ public class User {
 	@OneToMany(mappedBy="userDetails",cascade=CascadeType.PERSIST)
 	private List<Label> listOfLabels = new ArrayList<Label>();
 	
+
+	@ManyToMany
+	@LazyCollection(value = LazyCollectionOption.FALSE)
+	@JsonIgnore
+	 @JoinTable(name="User_Notes_collaborator",joinColumns = @JoinColumn( name="USER_Id"),inverseJoinColumns = @JoinColumn( name="NoteId"))
+	private List<Note> collaboratorNotes;
+	
+	public List<Note> getCollaboratorNotes() {
+		return collaboratorNotes;
+	}
+
+	public void setCollaboratorNotes(List<Note> collaboratorNotes) {
+		this.collaboratorNotes = collaboratorNotes;
+	}
+
 	public List<Label> getListOfLabels() {
 		return listOfLabels;
 	}

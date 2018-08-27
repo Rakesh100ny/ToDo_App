@@ -132,4 +132,51 @@ public class NoteController {
 		
 
 	}
+	
+	  
+	 //<========================================= Add Collaborator On Note ============================> 
+	  
+	  @RequestMapping(value = "/addCollaboratorOnNote/{id}/{id1}", method = RequestMethod.POST)
+	 	public ResponseEntity<?> addCollaboratorOnNote(@PathVariable("id") int userid,
+	 			@PathVariable("id1") int noteid) {
+	 		System.out.println("noteId : " + noteid);
+	 		System.out.println("userId : " + userid);
+
+	 		noteService.addCollaboratorOnNote(userid,noteid);
+
+	 		return new ResponseEntity<>(new Response(true, noteid+""), HttpStatus.OK);
+
+	 	}
+	  
+	  
+	 //<================================ Remove Collaborator On Note ===============================> 
+	  
+	  @RequestMapping(value = "/removeCollaboratorOnNote/{id}/{id1}", method = RequestMethod.POST)
+		public ResponseEntity<?> deleteCollaborator(@PathVariable("id") int userid,
+				@PathVariable("id1") int noteid) {
+			System.out.println("noteId : " + noteid);
+			System.out.println("userid : " + userid);
+	 if(noteService.removeCollaboratorOnNote(userid, noteid))
+	 {
+
+			return new ResponseEntity<>(new Response(true,noteid+""), HttpStatus.OK);
+	 }
+	return new ResponseEntity<>( HttpStatus.NOT_ACCEPTABLE);
+
+		}
+	  
+	 
+	//<=================================GetAll Collaborators ===============================>  
+	  
+	  
+	  @RequestMapping(value="/getAllCollaboratedNotes" ,method = RequestMethod.GET)
+	  public ResponseEntity<List<Note>> getAllCollaboratedNotes(@RequestHeader("userLoginToken") String token)
+	  {
+		  System.out.println("Token:"+token);
+		  List<Note> list=noteService.getAllCollaboratedNotes(token);
+		  System.out.println("NOTE LIST SIZE::"+list.size());
+		 return new ResponseEntity<>(list,HttpStatus.OK); 
+		  
+	  }
+	  
 }

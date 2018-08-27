@@ -77,7 +77,18 @@ public class Note {
 	@JoinTable(name="User_Note_Label",joinColumns=@JoinColumn(name="Note_id"),inverseJoinColumns=@JoinColumn(name="Label_id"))
 	private List<Label> listOfLabels=new ArrayList<Label>();
 	
-	
+
+	@ManyToMany(mappedBy = "collaboratorNotes")
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private List<User> collaboratedUser;
+
+	public List<User> getCollaboratedUser() {
+		return collaboratedUser;
+	}
+
+	public void setCollaboratedUser(List<User> collaboratedUser) {
+		this.collaboratedUser = collaboratedUser;
+	}
 
 	public Note() {
 		super();

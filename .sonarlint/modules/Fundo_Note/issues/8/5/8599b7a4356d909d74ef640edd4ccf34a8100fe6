@@ -1,45 +1,47 @@
 
-n
-squid:S106±"9Replace this use of System.out or System.err by a logger.(œñ±Ó8¶–ó„×,HãòBRMAJORZ
-CODE_SMELL
-^squid:S1452Q"&Remove usage of generic wildcard type.(‹„êÕ8Ò‰ŒË,H·òBRCRITICALZ
+m
+squid:S1069"9Replace this use of System.out or System.err by a logger.(£·£¸8¶–ó„×,H™ôBRMAJORZ
 CODE_SMELL
 m
-squid:S106D"9Replace this use of System.out or System.err by a logger.(èÕÁá8Øæƒ½È,HµòBRMAJORZ
+squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8²„…×,H“ôBRMAJORZ
 CODE_SMELL
 s
-squid:S106"9Replace this use of System.out or System.err by a logger.(‚çÎşÿÿÿÿ8ò¶ˆ×,HğóBRMAJORZ
+squid:S106œ"9Replace this use of System.out or System.err by a logger.(‚çÎşÿÿÿÿ8Øæƒ½È,HôBRMAJORZ
 CODE_SMELL
-_squid:S1452ƒ"&Remove usage of generic wildcard type.(´¦Æè8æëè„×,HâòBRCRITICALZ
+”squid:S2293•"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8¼õş„×,HœôBRMINORZ
 CODE_SMELL
-^squid:S1452h"&Remove usage of generic wildcard type.(Æ«›ó8Ô™¶ÑÇ,H³òBRCRITICALZ
+^squid:S1452f"&Remove usage of generic wildcard type.(Æ«›ó8Ô™¶ÑÇ,HšôBRCRITICALZ
 CODE_SMELL
-^squid:S14529"&Remove usage of generic wildcard type.(Ÿ’•8×šúœÇ,H»òBRCRITICALZ
+csquid:S1452s"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8æëè„×,HôBRCRITICALZ
 CODE_SMELL
-csquid:S1452u"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8Ï¹¦ëÇ,H±òBRCRITICALZ
+”squid:S2293¾"YReplace the type specification in this constructor call with the diamond operator ("<>").(äèÚ‹ûÿÿÿÿ8ù¨ù«×,H÷BRMINORZ
+CODE_SMELL
+squid:S1192="QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,H‘ôBRCRITICALZ
+CODE_SMELL
+^squid:S1452O"&Remove usage of generic wildcard type.(‹„êÕ8×šúœÇ,HôBRCRITICALZ
+CODE_SMELL
+squid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(‡ÍîS8Ç¶ú©×,HÍôBRMAJORZ
 CODE_SMELL
 n
-squid:S106"9Replace this use of System.out or System.err by a logger.(…¶Öğ8¨„‰×,HƒôBRMAJORZ
+squid:S106"9Replace this use of System.out or System.err by a logger.(´Ñ÷´8Ï¹¦ëÇ,H–ôBRMAJORZ
+CODE_SMELL
+dsquid:S1452¥"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8Ò‰ŒË,HôBRCRITICALZ
+CODE_SMELL
+n
+squid:S106›"9Replace this use of System.out or System.err by a logger.(…¶Öğ8æĞë…×,H”ôBRMAJORZ
 CODE_SMELL
 r
-squid:S106R"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8æĞë…×,H¾óBRMAJORZ
+squid:S106P"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8…ÙƒÆÉ,H•ôBRMAJORZ
 CODE_SMELL
-squid:S1192?"QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,H²òBRCRITICALZ
+^squid:S14527"&Remove usage of generic wildcard type.(Ÿ’•8Ï¹¦ëÇ,HôBRCRITICALZ
+CODE_SMELL
+dsquid:S1452š"&Remove usage of generic wildcard type.(şãí®şÿÿÿÿ8æĞë…×,H’ôBRCRITICALZ
 CODE_SMELL
 s
-squid:S106”"9Replace this use of System.out or System.err by a logger.(ë ˜ÿÿÿÿÿ8Ï¹¦ëÇ,H¸òBRMAJORZ
-CODE_SMELL
-dsquid:S1452§"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8æĞë…×,H½óBRCRITICALZ
-CODE_SMELL
-”squid:S2293—"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8¼õş„×,H±óBRMINORZ
-CODE_SMELL
-dsquid:S1452œ"&Remove usage of generic wildcard type.(şãí®şÿÿÿÿ8Ê‹šÇ,H´òBRCRITICALZ
+squid:S106’"9Replace this use of System.out or System.err by a logger.(ë ˜ÿÿÿÿÿ8¨„‰×,H—ôBRMAJORZ
 CODE_SMELL
 n
-squid:S106"9Replace this use of System.out or System.err by a logger.(´Ñ÷´8…ÙƒÆÉ,H¹òBRMAJORZ
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(œñ±Ó8ò¶ˆ×,H›ôBRMAJORZ
 CODE_SMELL
-m
-squid:S106;"9Replace this use of System.out or System.err by a logger.(£·£¸8²„…×,HüòBRMAJORZ
-CODE_SMELL
-€squid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ì‚ŠÑ8§Å„‰×,H‡ôBRMAJORZ
+_squid:S1452"&Remove usage of generic wildcard type.(´¦Æè8Ê‹šÇ,HôBRCRITICALZ
 CODE_SMELL

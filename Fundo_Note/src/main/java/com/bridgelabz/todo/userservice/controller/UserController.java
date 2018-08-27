@@ -1,6 +1,7 @@
 package com.bridgelabz.todo.userservice.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,8 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -29,7 +28,6 @@ import com.bridgelabz.todo.userservice.model.RegisterModel;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.userservice.service.IUserService;
 import com.bridgelabz.todo.utility.Response;
-import com.bridgelabz.todo.validation.UserValidation;
 
 @PropertySource("classpath:clientside.properties")
 @RestController
@@ -37,10 +35,10 @@ public class UserController {
 	@Autowired
 	IUserService userService;
 
-	@Autowired
+	/*	@Autowired
 	private UserValidation userValidation;
 
-/*	@InitBinder
+	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
 		binder.addValidators(userValidation);
 	}*/
@@ -182,5 +180,15 @@ public class UserController {
 		return new ResponseEntity<>(new Response(true, "Password is Successfully Updated...!"), HttpStatus.OK);
 
 	}
+	
+	//<====================================== Get All Users =======================================>	
+	
+		@RequestMapping(value="/getallUsers" ,method = RequestMethod.GET)
+		  public ResponseEntity<List<User>> getAllUsers(@RequestHeader("userLoginToken") String token)
+		  {
+			  List<User> list=userService.getAllUsers();  
+			 return new ResponseEntity<List<User>>( list,HttpStatus.CREATED); 
+			  
+		  }
 
 }
