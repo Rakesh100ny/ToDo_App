@@ -123,7 +123,5 @@ t
 Dsrc/main/java/com/bridgelabz/todo/userservice/model/ForgotModel.java,8/c/8cffe4cb4bf9f20596e4f80d0014bc910d7865ef
 Q
 !src/main/webapp/image/profile.png,5/f/5fcb083cbbdc32a96fe9b18e0c53992a38eab08c
-O
-src/main/webapp/image/undefined,e/7/e7d6828b9eed5039d460438df0a5aa7afba15bae
 L
 src/main/webapp/image/c.jpeg,4/8/48885f42d3edca83ab52b3e3cc78a7e067d685fb
