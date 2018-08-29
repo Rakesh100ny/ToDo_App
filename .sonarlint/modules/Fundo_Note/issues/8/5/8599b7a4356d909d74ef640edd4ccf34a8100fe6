@@ -1,47 +1,32 @@
 
-m
-squid:S1069"9Replace this use of System.out or System.err by a logger.(£·£¸8¶–ó„×,H™ôBRMAJORZ
+squid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(‡ÍîS8Ç¶ú©×,H¹øBRMAJORZ
+CODE_SMELL
+_squid:S1452€"&Remove usage of generic wildcard type.(´¦Æè8æëè„×,H·øBRCRITICALZ
+CODE_SMELL
+dsquid:S1452š"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8æĞë…×,H²øBRCRITICALZ
+CODE_SMELL
+^squid:S1452e"&Remove usage of generic wildcard type.(Æ«›ó8Ô™¶ÑÇ,HÀøBRCRITICALZ
 CODE_SMELL
 m
-squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8²„…×,H“ôBRMAJORZ
+squid:S1069"9Replace this use of System.out or System.err by a logger.(£·£¸8¶–ó„×,H¼øBRMAJORZ
 CODE_SMELL
-s
-squid:S106œ"9Replace this use of System.out or System.err by a logger.(‚çÎşÿÿÿÿ8Øæƒ½È,HôBRMAJORZ
+m
+squid:S106B"9Replace this use of System.out or System.err by a logger.(èÕÁá8²„…×,H¾øBRMAJORZ
 CODE_SMELL
-”squid:S2293•"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8¼õş„×,HœôBRMINORZ
+”squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8¼õş„×,H°øBRMINORZ
 CODE_SMELL
-^squid:S1452f"&Remove usage of generic wildcard type.(Æ«›ó8Ô™¶ÑÇ,HšôBRCRITICALZ
-CODE_SMELL
-csquid:S1452s"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8æëè„×,HôBRCRITICALZ
-CODE_SMELL
-”squid:S2293¾"YReplace the type specification in this constructor call with the diamond operator ("<>").(äèÚ‹ûÿÿÿÿ8ù¨ù«×,H÷BRMINORZ
-CODE_SMELL
-squid:S1192="QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,H‘ôBRCRITICALZ
-CODE_SMELL
-^squid:S1452O"&Remove usage of generic wildcard type.(‹„êÕ8×šúœÇ,HôBRCRITICALZ
-CODE_SMELL
-squid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(‡ÍîS8Ç¶ú©×,HÍôBRMAJORZ
-CODE_SMELL
-n
-squid:S106"9Replace this use of System.out or System.err by a logger.(´Ñ÷´8Ï¹¦ëÇ,H–ôBRMAJORZ
-CODE_SMELL
-dsquid:S1452¥"&Remove usage of generic wildcard type.(ÈÈğüÿÿÿÿ8Ò‰ŒË,HôBRCRITICALZ
-CODE_SMELL
-n
-squid:S106›"9Replace this use of System.out or System.err by a logger.(…¶Öğ8æĞë…×,H”ôBRMAJORZ
+squid:S1192="QDefine a constant instead of duplicating this literal "Check All Fileds" 4 times.(ş©¬ÿÿÿÿÿ8íäŸ¦È,HµøBRCRITICALZ
 CODE_SMELL
 r
-squid:S106P"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8…ÙƒÆÉ,H•ôBRMAJORZ
+squid:S106P"9Replace this use of System.out or System.err by a logger.(¾£¦Öÿÿÿÿÿ8…ÙƒÆÉ,HºøBRMAJORZ
 CODE_SMELL
-^squid:S14527"&Remove usage of generic wildcard type.(Ÿ’•8Ï¹¦ëÇ,HôBRCRITICALZ
+”squid:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(äèÚ‹ûÿÿÿÿ8ù¨ù«×,H¸øBRMINORZ
 CODE_SMELL
-dsquid:S1452š"&Remove usage of generic wildcard type.(şãí®şÿÿÿÿ8æĞë…×,H’ôBRCRITICALZ
+dsquid:S1452“"&Remove usage of generic wildcard type.(şãí®şÿÿÿÿ8Ê‹šÇ,H³øBRCRITICALZ
 CODE_SMELL
-s
-squid:S106’"9Replace this use of System.out or System.err by a logger.(ë ˜ÿÿÿÿÿ8¨„‰×,H—ôBRMAJORZ
+csquid:S1452r"&Remove usage of generic wildcard type.(ü¦Şáıÿÿÿÿ8Ò‰ŒË,H´øBRCRITICALZ
 CODE_SMELL
-n
-squid:S106¯"9Replace this use of System.out or System.err by a logger.(œñ±Ó8ò¶ˆ×,H›ôBRMAJORZ
+^squid:S1452O"&Remove usage of generic wildcard type.(‹„êÕ8×šúœÇ,H½øBRCRITICALZ
 CODE_SMELL
-_squid:S1452"&Remove usage of generic wildcard type.(´¦Æè8Ê‹šÇ,HôBRCRITICALZ
+^squid:S14527"&Remove usage of generic wildcard type.(Ÿ’•8Ï¹¦ëÇ,H»øBRCRITICALZ
 CODE_SMELL

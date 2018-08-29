@@ -82,8 +82,7 @@ public class UserController {
 		if (result.hasErrors()) {
 			return new ResponseEntity<>(new Response(false, "Check All Fileds"), HttpStatus.BAD_REQUEST);
 		}
-
-		
+	
 		String token=userService.verifyLogin(loginModel.getEmail(),loginModel.getPassword());
 		
 		if(token!="")
@@ -139,24 +138,14 @@ public class UserController {
 	@RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
 	public ResponseEntity<User> getCurrentUser(@RequestHeader("userLoginToken") String token)
 	{
-       System.out.println("/user token : "+token);
-       
-       User user=userService.getCurrentUser(token);
-       
-       System.out.println("User Image : "+user.getProfilePic());
-       
-		
-		return new ResponseEntity<User>(user, HttpStatus.OK);
+      User user=userService.getCurrentUser(token);
+ 	  return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 	
 	// ------------------- Update User  ------------------------
 	@RequestMapping(value = "/updateUser", method = RequestMethod.PUT)
 	public ResponseEntity<?> updateNote(@RequestBody User user, @RequestHeader("userLoginToken") String token) {
-		System.out.println("Updating User id : " + user.getId());
-		System.out.println("rakesh image upload");
 		userService.update(user,token);
-
-
 		return new ResponseEntity<>(new Response(true, "User is successfully updated...!"), HttpStatus.OK);
 
 	}
@@ -164,29 +153,21 @@ public class UserController {
 	@RequestMapping(value = "/resetpassword", method = RequestMethod.POST)
 	public ResponseEntity<?> restPassword(@Validated @RequestBody PasswordModel passwordModel, BindingResult result,
 			HttpServletRequest request) {
-
-
 		if (result.hasErrors()) {
 			return new ResponseEntity<>(new Response(false, "Check All Fileds"), HttpStatus.BAD_REQUEST);
 		}
-
 		String token = request.getHeader("tokenForgotPassword");
-
-		System.out.println("Reset Token : " + token);
-
-
 		userService.restPassword(token, passwordModel.getNewPassword());
-
 		return new ResponseEntity<>(new Response(true, "Password is Successfully Updated...!"), HttpStatus.OK);
 
 	}
 	
-	//<====================================== Get All Users =======================================>	
+	//----------------------------------- Get All Users --------------------------------------------	
 	
-		@RequestMapping(value="/getallUsers" ,method = RequestMethod.GET)
+		@RequestMapping(value="/getAllUsers" ,method = RequestMethod.GET)
 		  public ResponseEntity<List<User>> getAllUsers(@RequestHeader("userLoginToken") String token)
 		  {
-			  List<User> list=userService.getAllUsers();  
+			  List<User> list=userService.getAllUsers(token);  
 			 return new ResponseEntity<List<User>>( list,HttpStatus.CREATED); 
 			  
 		  }

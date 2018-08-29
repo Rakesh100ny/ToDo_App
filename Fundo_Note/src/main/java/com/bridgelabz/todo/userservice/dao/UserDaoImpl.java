@@ -32,9 +32,7 @@ public class UserDaoImpl implements IUserDao {
 		Session session = sessionFactory.getCurrentSession();
 		@SuppressWarnings("deprecation")
 		Criteria criteria = session.createCriteria(User.class).add(Restrictions.eq("email", email));
-
 		User user = (User) criteria.uniqueResult();
-
 		return user;
 
 	}
@@ -69,9 +67,9 @@ public class UserDaoImpl implements IUserDao {
 		System.out.println("User successfully Updated...!");
 	}
 
-	//<====================================== Get All Users =============================>	
 		@Override
-		public List<User> getallusers() {
+		public List<User> getAllUsers()
+		{
 			Session session=sessionFactory.getCurrentSession();
 			Query q = session.createQuery("select email,id from User ");
 			List<User> list = q.list();

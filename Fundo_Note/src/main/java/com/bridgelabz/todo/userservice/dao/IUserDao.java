@@ -21,5 +21,5 @@ public interface IUserDao
  
      void updateUser(User user);
 
-	List<User> getallusers();
+	List<User> getAllUsers();
 }

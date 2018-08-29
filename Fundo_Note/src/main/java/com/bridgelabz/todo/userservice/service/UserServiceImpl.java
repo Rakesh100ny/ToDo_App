@@ -1,6 +1,7 @@
 package com.bridgelabz.todo.userservice.service;
 
 import java.security.SignatureException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import com.bridgelabz.todo.userservice.model.RegisterModel;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.RedisUtility;
 import com.bridgelabz.todo.utility.Token;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 
 @Service
 public class UserServiceImpl implements IUserService {
@@ -271,16 +273,37 @@ public class UserServiceImpl implements IUserService {
 
 	}
 
-	//<======================================== Get All Users ===========================>
 
 	@Transactional
 	@Override
-	public List<User> getAllUsers() {
-		List<User> listofUsers=userDao.getallusers();
+	public List<User> getAllUsers(String token) 
+	{
+		ArrayList<User> listofUsers=null; 	
+	 try 
+	 {
+		long id=Long.parseLong(Token.getParseJWT(token));
+		User user=userDao.getUserById(id);
+		
+		System.out.println("Owner : "+user.getEmail());
+		
+		listofUsers=(ArrayList<User>) userDao.getAllUsers();
+			
+       for(int i=0;i<listofUsers.size();i++)
+       {
+    	System.out.println("User Array : "+listofUsers.get(i).toString());
+/*		if(user.getId() == user1.getId()) 
+			{
+			 listofUsers.remove(user1);
+			 break;
+			}
+		}*/
+       }
+	 }
+	 catch (NumberFormatException | SignatureException e) 
+	 {
+		e.printStackTrace();
+	 }	
 		
 		return listofUsers;
-		
-		
-		
 	}
 }

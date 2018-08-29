@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.model.Note;
+import com.bridgelabz.todo.userservice.model.User;
 
 
 public interface INoteService 
@@ -30,11 +31,11 @@ public interface INoteService
 
 	byte[] toGetImage(String name);
 
-	void addCollaboratorOnNote(int userid, int noteid);
+	void addCollaboratorOnNote(long userid, long noteid);
 
-	boolean removeCollaboratorOnNote(int userid, int noteid);
+	boolean removeCollaboratorOnNote(long userid, long noteid);
 
-	List<Note> getAllCollaboratedNotes(String token);
+	List<User> getAllCollaboratedUsers(long id);
 	 
 
 }
