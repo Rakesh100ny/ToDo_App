@@ -165,10 +165,10 @@ public class UserController {
 	//----------------------------------- Get All Users --------------------------------------------	
 	
 		@RequestMapping(value="/getAllUsers" ,method = RequestMethod.GET)
-		  public ResponseEntity<List<User>> getAllUsers(@RequestHeader("userLoginToken") String token)
+		  public ResponseEntity<List<?>> getAllUsers(@RequestHeader("userLoginToken") String token)
 		  {
-			  List<User> list=userService.getAllUsers(token);  
-			 return new ResponseEntity<List<User>>( list,HttpStatus.CREATED); 
+			  List<?> list=userService.getAllUsers(token);  
+			 return new ResponseEntity<List<?>>( list,HttpStatus.CREATED); 
 			  
 		  }
 

@@ -1,7 +1,6 @@
 package com.bridgelabz.todo.userservice.service;
 
 import java.security.SignatureException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +20,6 @@ import com.bridgelabz.todo.userservice.model.RegisterModel;
 import com.bridgelabz.todo.userservice.model.User;
 import com.bridgelabz.todo.utility.RedisUtility;
 import com.bridgelabz.todo.utility.Token;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 
 @Service
 public class UserServiceImpl implements IUserService {
@@ -207,7 +205,7 @@ public class UserServiceImpl implements IUserService {
 	  
 			if(BCrypt.checkpw(password, user.getPassword()) && user.isActivated())
 			{
-			  return token=Token.generateTokenByUserInfo(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName(),user.getProfilePic());
+			  return token=Token.generateTokenByUserInfo(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName());
 			} 
 			else 
 			{
@@ -276,9 +274,9 @@ public class UserServiceImpl implements IUserService {
 
 	@Transactional
 	@Override
-	public List<User> getAllUsers(String token) 
+	public List<?> getAllUsers(String token) 
 	{
-		ArrayList<User> listofUsers=null; 	
+	  List<Object[]> listofUsers=null; 	
 	 try 
 	 {
 		long id=Long.parseLong(Token.getParseJWT(token));
@@ -286,18 +284,18 @@ public class UserServiceImpl implements IUserService {
 		
 		System.out.println("Owner : "+user.getEmail());
 		
-		listofUsers=(ArrayList<User>) userDao.getAllUsers();
+		listofUsers= userDao.getAllUsers();
 			
        for(int i=0;i<listofUsers.size();i++)
        {
-    	System.out.println("User Array : "+listofUsers.get(i).toString());
-/*		if(user.getId() == user1.getId()) 
+    	System.out.println(listofUsers.get(i));
+		if(user.getId() == (Long)listofUsers.get(i)[1]) 
 			{
-			 listofUsers.remove(user1);
+			 listofUsers.remove(listofUsers.get(i));
 			 break;
 			}
-		}*/
-       }
+		}
+      
 	 }
 	 catch (NumberFormatException | SignatureException e) 
 	 {

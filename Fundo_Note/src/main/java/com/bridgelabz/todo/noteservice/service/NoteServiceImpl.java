@@ -7,8 +7,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.security.SignatureException;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -21,6 +26,7 @@ import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.dao.INoteDao;
 import com.bridgelabz.todo.noteservice.exception.NoteNotFoundException;
 import com.bridgelabz.todo.noteservice.exception.UnauthorizedException;
+import com.bridgelabz.todo.noteservice.model.Links;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.dao.IUserDao;
 import com.bridgelabz.todo.userservice.model.User;
@@ -44,8 +50,7 @@ public class NoteServiceImpl implements INoteService {
 
 	@Value("${response.path}")
 	private String responsePath;
-	
-	
+
 	@Transactional
 	@Override
 	public void addNote(Note note, String token) {
@@ -55,6 +60,12 @@ public class NoteServiceImpl implements INoteService {
 			 * note.setCreatedDate(new Date(System.currentTimeMillis()));
 			 * note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
 			 */
+			Set<Links> listofurlinfo = urlinfo(note.getDescription());
+
+			if (!listofurlinfo.isEmpty()) {
+				note.setLinks(listofurlinfo);
+			}
+
 			note.setUser(user);
 			noteDao.addNote(note, user);
 		} catch (NumberFormatException | SignatureException e) {
@@ -75,11 +86,14 @@ public class NoteServiceImpl implements INoteService {
 		System.out.println("note id : " + note.getId());
 		System.out.println("note id using user : " + note.getUser().getId());
 		note.setLastUpdatedDate(new Date(System.currentTimeMillis()));
+
 		try {
 
 			long id = Long.parseLong(Token.getParseJWT(token));
+			Set<Links> listofurlinfo = urlinfo(note.getDescription());
 
 			if (id == note.getUser().getId() && note.getUser().getId() != 0) {
+				note.setLinks(listofurlinfo);
 				noteDao.update(note);
 			} else {
 				throw new UnauthorizedException("This User is Not Allow to Update Note...!");
@@ -119,7 +133,7 @@ public class NoteServiceImpl implements INoteService {
 		List<Note> note = null;
 		try {
 			note = noteDao.getAllNotes(Long.parseLong(Token.getParseJWT(token)));
-			
+
 		} catch (NumberFormatException | SignatureException e) {
 			e.printStackTrace();
 		}
@@ -174,18 +188,17 @@ public class NoteServiceImpl implements INoteService {
 			e.printStackTrace();
 		}
 
-		return responsePath+file.getOriginalFilename();
+		return responsePath + file.getOriginalFilename();
 	}
 
 	@Override
-	public byte[] toGetImage(String name) 
-	{
-		File serverFile = new File(path+File.separator+name);
+	public byte[] toGetImage(String name) {
+		File serverFile = new File(path + File.separator + name);
 		if (serverFile.exists()) {
-           
-		try {
-		 return Files.readAllBytes(serverFile.toPath());
-			
+
+			try {
+				return Files.readAllBytes(serverFile.toPath());
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -194,85 +207,160 @@ public class NoteServiceImpl implements INoteService {
 		return null;
 	}
 
-	//------------------------------------ Add Collaborator On Note------------------------------------	 
-	 
-	 
-		@Transactional
-		public void addCollaboratorOnNote(long userid,long noteid) {
-			
-			Note note = noteDao.getNoteById(noteid);
+	@Override
+	@Transactional
+	public void addCollaboratorOnNote(long userid, long noteid) {
 
-			System.out.println("note Info : "+note.getId()+" "+note.getTitle());
-			
-			User user = userDao.getUserById(userid);
-			
-			System.out.println("user Info : "+user.getId()+" "+user.getEmail());
-			
-			List<User> collaboratorUser =  note.getCollaboratedUser();
-			collaboratorUser.add(user);
-			note.setCollaboratedUser(collaboratorUser);
-			
-			List<Note> collaboratorNotes = user.getCollaboratorNotes();
-			collaboratorNotes.add(note);
-			user.setCollaboratorNotes(collaboratorNotes);
-		
-			
-			userDao.updateUser(user);
-			noteDao.update(note);
+		Note note = noteDao.getNoteById(noteid);
+
+		System.out.println("note Info : " + note.getId() + " " + note.getTitle());
+
+		User user = userDao.getUserById(userid);
+
+		System.out.println("user Info : " + user.getId() + " " + user.getEmail());
+
+		List<User> collaboratorUser = note.getCollaboratedUser();
+		collaboratorUser.add(user);
+		note.setCollaboratedUser(collaboratorUser);
+
+		List<Note> collaboratorNotes = user.getCollaboratorNotes();
+		collaboratorNotes.add(note);
+		user.setCollaboratorNotes(collaboratorNotes);
+
+		userDao.updateUser(user);
+		noteDao.update(note);
 
 	}
 
-	//------------------------------------- Remove Collaborator On Note----------------------------------	
-		
-		@Transactional
-		public boolean removeCollaboratorOnNote(long userid,long noteid) {
-			Note note = noteDao.getNoteById(noteid);
-			User user = userDao.getUserById(userid);
-						
-			List<User> collaboratorUser =  note.getCollaboratedUser();
-			for(User user2:collaboratorUser) 
-			{
-				if(userid == user2.getId()) 
-				{
-				 collaboratorUser.remove(user2);
-				 break;
+	@Override
+	@Transactional
+	public boolean removeCollaboratorOnNote(long userid, long noteid) {
+		Note note = noteDao.getNoteById(noteid);
+		User user = userDao.getUserById(userid);
+
+		List<User> collaboratorUser = note.getCollaboratedUser();
+		for (User user2 : collaboratorUser) {
+			if (userid == user2.getId()) {
+				collaboratorUser.remove(user2);
+				break;
+			}
+		}
+		note.setCollaboratedUser(collaboratorUser);
+
+		List<Note> collaboratorNotes = user.getCollaboratorNotes();
+		for (Note note2 : collaboratorNotes) {
+			if (noteid == note2.getId()) {
+				collaboratorNotes.remove(note2);
+				break;
+			}
+		}
+		user.setCollaboratorNotes(collaboratorNotes);
+
+		userDao.updateUser(user);
+		noteDao.update(note);
+
+		return true;
+	}
+
+	@Override
+	@Transactional
+	public List<User> getAllCollaboratedUsers(long id) {
+
+		System.out.println("id : " + id);
+
+		Note note = noteDao.getNoteById(id);
+
+		return note.getCollaboratedUser();
+
+	}
+
+	@Transactional
+	@Override
+	public List<Note> getAllCollaboratedNotes(String token) {
+		List<Note> listOfNotes = null;
+
+		try {
+			User user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));
+			listOfNotes = user.getCollaboratorNotes();
+
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
+		}
+
+		return listOfNotes;
+	}
+
+	@Override
+	public Set<Links> urlinfo(String description) {
+
+		String urlregex = "^((((https?|ftps?|gopher|telnet|nntp)://)|(mailto:|news:))(%[0-9A-Fa-f]{2}|[-()_.!~*';/?:@&=+$,A-Za-z0-9])+)([).!';/?:,][[:blank:]])?$";
+		description = description.replaceAll("(\r\n | \n)", "\\s");
+		String[] descripArray = description.split("\\s+");
+
+		Links urlinfo = null;
+		Pattern p = Pattern.compile(urlregex);
+
+		Set<String> listofurl = new HashSet<String>();
+		Set<Links> listofurlinfo = new HashSet<Links>();
+
+		for (int i = 0; i < descripArray.length; i++) {
+			if (p.matcher(descripArray[i]).matches()) {
+				listofurl.add(descripArray[i]);
+			}
+		}
+
+		for (String url : listofurl) {
+
+			if (url != null) {
+				Document doc;
+				try {
+					doc = Jsoup.connect(url).get();
+					String urlTitle = doc.title();
+
+					String urlDescription = url.split("://")[1].split("/")[0];
+					String urlImage = doc.select("meta[property=og:image]").first().attr("content");
+
+					urlinfo = new Links();
+					urlinfo.setUrl(url);
+					urlinfo.setUrlTitle(urlTitle);
+					urlinfo.setUrlDescription(urlDescription);
+					urlinfo.setUrlImage(urlImage);
+
+					listofurlinfo.add(urlinfo);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+		}
+		return listofurlinfo;
+	}
+
+	@Override
+	@Transactional
+	public void removeurlinfo(String token, Note note, long id) {
+
+		long userId;
+		try {
+			userId = Long.parseLong(Token.getParseJWT(token));
+			Note updatingnote = noteDao.getNoteById(note.getId());
+
+			if (updatingnote.getUser().getId() == userId) {
+				Links url = noteDao.getByUrlId(id);
+
+				if (updatingnote.getLinks().contains(url)) {
+					updatingnote.getLinks().remove(url);
+					boolean status = noteDao.deleteUrl(url.getId());
+					if (status) {
+						noteDao.update(updatingnote);
+					}
 				}
 			}
-		    note.setCollaboratedUser(collaboratorUser);
-		
-			List<Note> collaboratorNotes = user.getCollaboratorNotes();
-			for(Note note2 :collaboratorNotes)
-			{
-				if(noteid == note2.getId()) 
-				{
-					collaboratorNotes.remove(note2);
-					break;
-				}
-			}
-			user.setCollaboratorNotes(collaboratorNotes);
-			
-			userDao.updateUser(user);
-			noteDao.update(note);
-			
-			return true; 
+		} catch (NumberFormatException | SignatureException e) {
+			e.printStackTrace();
 		}
-		
-		
-	//----------------------------------------Get All Collaborators--------------------------------------	
-		
-		
-		@Transactional
-		public List<User> getAllCollaboratedUsers(long id) {
-			
-			
-				System.out.println("id : "+id);
-				
-				Note note = noteDao.getNoteById(id);
 
-				
-			
-			return note.getCollaboratedUser();
-
-		}
+	}
 
 }

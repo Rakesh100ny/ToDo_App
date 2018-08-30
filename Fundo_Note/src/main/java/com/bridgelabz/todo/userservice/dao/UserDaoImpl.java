@@ -3,11 +3,11 @@ package com.bridgelabz.todo.userservice.dao;
  import java.util.List;
 
 import org.hibernate.Criteria;
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -68,11 +68,11 @@ public class UserDaoImpl implements IUserDao {
 	}
 
 		@Override
-		public List<User> getAllUsers()
+		public List<Object[]> getAllUsers()
 		{
 			Session session=sessionFactory.getCurrentSession();
 			Query q = session.createQuery("select email,id from User ");
-			List<User> list = q.list();
+			List<Object[]> list = q.getResultList();
 			return list;
 			
 			

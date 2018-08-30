@@ -28,8 +28,7 @@ public class NoteController {
 
 	private static final Logger logger = LoggerFactory.getLogger(NoteController.class);
 
-	// -------------------Create a User
-	// Note--------------------------------------------
+	// ---------------Create a User Note--------------------------------------------
 
 	@RequestMapping(value = "/addnote", method = RequestMethod.POST, consumes = { "application/json" })
 	public ResponseEntity<?> addNote(@RequestBody Note note, @RequestHeader("userLoginToken") String token) {
@@ -57,8 +56,7 @@ public class NoteController {
 
 	}
 
-	// -------------------Retrieve All Users
-	// Notes--------------------------------------
+	// ----------------Retrieve All Users Notes--------------------------------------
 
 	@RequestMapping(value = "/note", method = RequestMethod.GET)
 	public ResponseEntity<List<Note>> listAllNotes(@RequestHeader("userLoginToken") String token) {
@@ -107,8 +105,7 @@ public class NoteController {
 		}
 	}
 
-	// -----------------------------Retrive Image with help of
-	// src--------------------------------
+	// -------------------------Retrive Image with help of src--------------------------------
 
 	@RequestMapping(value = "/image/{name:.+}", method = RequestMethod.GET)
 	public ResponseEntity<?> showFile(@PathVariable("name") String name) {
@@ -123,8 +120,7 @@ public class NoteController {
 
 	}
 
-	// -------------------------------- Add Collaborator On
-	// Note----------------------------------------
+	// ---------------------------- Add Collaborator On Note----------------------------------------
 
 	@RequestMapping(value = "/addCollaboratorOnNote/{id}/{id1}", method = RequestMethod.POST)
 	public ResponseEntity<?> addCollaboratorOnNote(@PathVariable("id") long userid, @PathVariable("id1") long noteid) {
@@ -133,8 +129,7 @@ public class NoteController {
 
 	}
 
-	// --------------------------------Remove Collaborator On
-	// Note---------------------------------------
+	// --------------------------Remove Collaborator On Note---------------------------------------
 
 	@RequestMapping(value = "/removeCollaboratorOnNote/{id}/{id1}", method = RequestMethod.POST)
 	public ResponseEntity<?> deleteCollaborator(@PathVariable("id") long userid, @PathVariable("id1") long noteid)
@@ -147,19 +142,43 @@ public class NoteController {
 
 	}
 
-	// ---------------------------------Get All
-	// Collaborators--------------------------------------------
+	// ---------------------------------Get All Collaborated User--------------------------------------------
 
-	@RequestMapping(value = "/getAllCollaboratedNotes/{id}", method = RequestMethod.GET)
-	public ResponseEntity<List<User>> getAllCollaboratedNotes(@PathVariable("id") long id) {
+	@RequestMapping(value = "/getAllCollaboratedUsers/{id}", method = RequestMethod.GET)
+	public ResponseEntity<List<User>> getAllCollaboratedUsers(@PathVariable("id") long id) {
 
 		List<User> list = noteService.getAllCollaboratedUsers(id);
-		System.out.println("NOTE LIST SIZE::" + list.size());
-		for (User user : list) {
-			System.out.println("User Info : " + user.getId() + " " + user.getEmail());
+		
+		if(list.isEmpty())
+		{
+	     return new ResponseEntity<>(HttpStatus.NO_CONTENT);		
 		}
 		return new ResponseEntity<>(list, HttpStatus.OK);
 
+	}
+
+	// ---------------------------------Get All Collaborated Noted--------------------------------------------
+
+	@RequestMapping(value = "/getAllCollaboratedNotes", method = RequestMethod.GET)
+	public ResponseEntity<List<Note>> getAllCollaboratedNotes( @RequestHeader("userLoginToken") String token)
+	{
+
+		List<Note> list = noteService.getAllCollaboratedNotes(token);
+		if(list.isEmpty())
+		{
+	     return new ResponseEntity<>(HttpStatus.NO_CONTENT);		
+		}
+		return new ResponseEntity<List<Note>>(list, HttpStatus.OK);
+
+	}
+	
+	@RequestMapping(value="/removeurlinfo/{id}", method= RequestMethod.PUT)
+	public ResponseEntity<?> removeUrl(@RequestBody Note note, @PathVariable long id,@RequestHeader("userLoginToken") String token){
+
+		noteService.removeurlinfo(token, note, id);
+	
+		return new ResponseEntity<>(HttpStatus.OK);
+		
 	}
 
 }

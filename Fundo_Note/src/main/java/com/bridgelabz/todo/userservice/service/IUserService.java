@@ -34,6 +34,6 @@ public interface IUserService {
 
 	void update(User user, String token);
 
-	List<User> getAllUsers(String token);
+	List<?> getAllUsers(String token);
 
 }

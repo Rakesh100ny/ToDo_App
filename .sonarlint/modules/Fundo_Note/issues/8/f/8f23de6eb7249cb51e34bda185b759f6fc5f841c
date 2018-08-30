@@ -1,33 +1,34 @@
 
-ˆsquid:S2095©"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ĞÁü¾Ñ,HšøBRBLOCKERZBUG
-`squid:S1148n"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H¬øBRMINORZVULNERABILITY
-m
-squid:S106K"9Replace this use of System.out or System.err by a logger.(šÇÕë8ÿ‡£ª×,HúøBRMAJORZ
+€squid:CommentedOutCodeLine6"<This block of commented-out lines of code should be removed.(½ÍÛ8¥ŞÒ¿Ñ,HÒûBRMAJORZ
 CODE_SMELL
 n
-squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(¸ö¥8½ò„Æ,H¢øBRMAJORZ
-CODE_SMELL
-m
-squid:S106L"9Replace this use of System.out or System.err by a logger.(¾õÅ8½¬ÉúÍ,HŸøBRMAJORZ
-CODE_SMELL
-`squid:S1148="#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,H¯øBRMINORZVULNERABILITY
-\squid:S1168Â"&Return an empty array instead of null.(¥¹ï8ÂùşÀÑ,H øBRMAJORZ
-CODE_SMELL
-m
-squid:S106g"9Replace this use of System.out or System.err by a logger.(ğ‰í°8ÿ‡£ª×,H©øBRMAJORZ
+squid:S106Í"9Replace this use of System.out or System.err by a logger.(¸ö¥8ÿ‡£ª×,HÅûBRMAJORZ
 CODE_SMELL
 s
-squid:S106¨"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8Š«ö¾Ñ,H—øBRMAJORZ
+squid:S106§"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8½¬ÉúÍ,HÔûBRMAJORZ
 CODE_SMELL
+asquid:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£÷ºª×,HÈûBRMINORZVULNERABILITY
+m
+squid:S106K"9Replace this use of System.out or System.err by a logger.(¾õÅ8ÿ‡£ª×,HÑûBRMAJORZ
+CODE_SMELL
+\squid:S1168À"&Return an empty array instead of null.(¥¹ï8ÂùşÀÑ,HÌûBRMAJORZ
+CODE_SMELL
+asquid:S1148¼"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8€ƒáÍØ,HâûBRMINORZVULNERABILITY
+m
+squid:S106J"9Replace this use of System.out or System.err by a logger.(šÇÕë8ÿ‡£ª×,HÉûBRMAJORZ
+CODE_SMELL
+`squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,HÎûBRMINORZVULNERABILITY
+`squid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HÏûBRMINORZVULNERABILITY
+ˆsquid:S2095¨"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ĞÁü¾Ñ,HÇûBRBLOCKERZBUG
+m
+squid:S106É"9Replace this use of System.out or System.err by a logger.(¢×£r8Š«ö¾Ñ,HÊûBRMAJORZ
+CODE_SMELL
+asquid:S1148­"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,HĞûBRMINORZVULNERABILITY
+`squid:S1148<"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÓÍÑ¿Ñ,HÍûBRMINORZVULNERABILITY
+`squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,HËûBRMINORZVULNERABILITY
 n
-squid:S106Œ"9Replace this use of System.out or System.err by a logger.(İŠ–é8ÿ‡£ª×,H¸ùBRMAJORZ
+squid:S106ş"9Replace this use of System.out or System.err by a logger.(İŠ–é8½ò„Æ,HÆûBRMAJORZ
 CODE_SMELL
 m
-squid:S106Í"9Replace this use of System.out or System.err by a logger.(¢×£r8¢¦ŠÛÍ,H“ùBRMAJORZ
+squid:S106f"9Replace this use of System.out or System.err by a logger.(ğ‰í°8¢¦ŠÛÍ,HÓûBRMAJORZ
 CODE_SMELL
-`squid:S1148X"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÓÍÑ¿Ñ,H¥øBRMINORZVULNERABILITY
-€squid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(½ÍÛ8¥ŞÒ¿Ñ,H®øBRMAJORZ
-CODE_SMELL
-`squid:S1148|"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H™øBRMINORZVULNERABILITY
-asquid:S1148®"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,H¡øBRMINORZVULNERABILITY
-asquid:S1148¾"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£÷ºª×,H˜øBRMINORZVULNERABILITY

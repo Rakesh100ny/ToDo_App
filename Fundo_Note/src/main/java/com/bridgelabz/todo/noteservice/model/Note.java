@@ -3,10 +3,13 @@ package com.bridgelabz.todo.noteservice.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +17,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -49,6 +53,10 @@ public class Note {
 	private Date reminderDate;
    
 	private String imageUrl;
+	
+	@Column
+	@OneToMany (cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	private Set<Links> links;
 	
 	public String getImageUrl() {
 		return imageUrl;
@@ -181,6 +189,14 @@ public class Note {
 
 	public void setLastUpdatedDate(Date lastUpdatedDate) {
 		this.lastUpdatedDate = lastUpdatedDate;
+	}
+
+	public Set<Links> getLinks() {
+		return links;
+	}
+
+	public void setLinks(Set<Links> links) {
+		this.links = links;
 	}
 
 }

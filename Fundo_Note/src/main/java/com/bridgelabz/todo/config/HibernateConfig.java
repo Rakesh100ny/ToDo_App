@@ -15,6 +15,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.bridgelabz.todo.label.model.Label;
+import com.bridgelabz.todo.noteservice.model.Links;
 import com.bridgelabz.todo.noteservice.model.Note;
 import com.bridgelabz.todo.userservice.model.User;
 
@@ -57,7 +58,7 @@ public class HibernateConfig {
 		factoryBean.setPackagesToScan("com.bridgelabz.todo.userservice.model");
 		factoryBean.setPackagesToScan("com.bridgelabz.todo.noteservice.model");
 		factoryBean.setPackagesToScan("com.bridgelabz.todo.label.model");
-		factoryBean.setAnnotatedClasses(User.class,Note.class,Label.class);
+		factoryBean.setAnnotatedClasses(User.class,Note.class,Label.class,Links.class);
 		
 
 		return factoryBean;
