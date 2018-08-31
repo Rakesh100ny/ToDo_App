@@ -209,27 +209,24 @@ public class NoteServiceImpl implements INoteService {
 
 	@Override
 	@Transactional
-	public void addCollaboratorOnNote(long userid, long noteid) {
-
+	public void addCollaboratorOnNote(long userid, long noteid) 
+	{
+	   
 		Note note = noteDao.getNoteById(noteid);
-
-		System.out.println("note Info : " + note.getId() + " " + note.getTitle());
 
 		User user = userDao.getUserById(userid);
 
-		System.out.println("user Info : " + user.getId() + " " + user.getEmail());
+		  List<User> collaboratorUser = note.getCollaboratedUser();
+		  collaboratorUser.add(user);
+		  note.setCollaboratedUser(collaboratorUser);
 
-		List<User> collaboratorUser = note.getCollaboratedUser();
-		collaboratorUser.add(user);
-		note.setCollaboratedUser(collaboratorUser);
+		  List<Note> collaboratorNotes = user.getCollaboratorNotes();
+		  collaboratorNotes.add(note);
+		  user.setCollaboratorNotes(collaboratorNotes);
 
-		List<Note> collaboratorNotes = user.getCollaboratorNotes();
-		collaboratorNotes.add(note);
-		user.setCollaboratorNotes(collaboratorNotes);
-
-		userDao.updateUser(user);
-		noteDao.update(note);
-
+		  userDao.updateUser(user);
+		  noteDao.update(note);
+		
 	}
 
 	@Override

@@ -1,6 +1,12 @@
 
-m
-squid:S106"9Replace this use of System.out or System.err by a logger.(œØ8ÙŸ›Ë,HßåBRMAJORZ
+isquid:EmptyStatementUsageCheck8"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,HùıBRMINORZ
 CODE_SMELL
-isquid:EmptyStatementUsageCheck3"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,HİåBRMINORZ
+m
+squid:S106$"9Replace this use of System.out or System.err by a logger.(œØ8ÙŸ›Ë,HúıBRMAJORZ
+CODE_SMELL
+isquid:EmptyStatementUsageCheck`"Remove this empty statement.(¦Şı±ıÿÿÿÿ8ô§¹ôØ,HûıBRMINORZ
+CODE_SMELL
+€squid:CommentedOutCodeLineT"<This block of commented-out lines of code should be removed.(âö‹8ô§¹ôØ,HüıBRMAJORZ
+CODE_SMELL
+squid:CallToDeprecatedMethodI"6Remove this use of "createCriteria"; it is deprecated.(ƒ¥£Åøÿÿÿÿ8ô§¹ôØ,HııBRMINORZ
 CODE_SMELL
