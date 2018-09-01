@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.security.SignatureException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -274,7 +275,7 @@ public class NoteServiceImpl implements INoteService {
 	@Transactional
 	@Override
 	public List<Note> getAllCollaboratedNotes(String token) {
-		List<Note> listOfNotes = null;
+		List<Note> listOfNotes = new ArrayList<Note>();
 
 		try {
 			User user = userDao.getUserById(Long.parseLong(Token.getParseJWT(token)));

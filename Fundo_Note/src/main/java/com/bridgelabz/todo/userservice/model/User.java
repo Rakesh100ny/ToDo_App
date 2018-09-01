@@ -80,7 +80,7 @@ public class User {
 	@LazyCollection(value = LazyCollectionOption.FALSE)
 	@JsonIgnore
 	 @JoinTable(name="User_Notes_collaborator",joinColumns = @JoinColumn( name="USER_Id"),inverseJoinColumns = @JoinColumn( name="NoteId"))
-	private List<Note> collaboratorNotes;
+	private List<Note> collaboratorNotes = new ArrayList<>();
 	
 	public List<Note> getCollaboratorNotes() {
 		return collaboratorNotes;

@@ -68,9 +68,7 @@ public class NoteController {
 			System.out.println("Note Info : " + noteInfo.getTitle());
 		}
 
-		if (users.isEmpty()) {
-			return new ResponseEntity<List<Note>>(HttpStatus.NO_CONTENT);
-		}
+		
 		return new ResponseEntity<List<Note>>(users, HttpStatus.OK);
 	}
 
@@ -164,10 +162,7 @@ public class NoteController {
 	{
 
 		List<Note> list = noteService.getAllCollaboratedNotes(token);
-		if(list.isEmpty())
-		{
-	     return new ResponseEntity<>(HttpStatus.NO_CONTENT);		
-		}
+		
 		return new ResponseEntity<List<Note>>(list, HttpStatus.OK);
 
 	}

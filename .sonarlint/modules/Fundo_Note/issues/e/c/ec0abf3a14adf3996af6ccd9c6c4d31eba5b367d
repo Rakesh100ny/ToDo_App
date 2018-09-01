@@ -1,53 +1,51 @@
 
-m
-squid:S106,"9Replace this use of System.out or System.err by a logger.(èÃ¦Õ8‚¡†ÜÍ,HØıBRMAJORZ
+csquid:S1452m"&Remove usage of generic wildcard type.(˜Ùïúÿÿÿÿ8‘Û¯úÍ,HÀşBRCRITICALZ
 CODE_SMELL
-“squid:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ‘Òúÿÿÿÿ8¢µÛÍØ,HÙıBRMINORZ
+squid:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘˜‡ú8¢µÛÍØ,HßşBRMINORZ
 CODE_SMELL
-^squid:S1452P"&Remove usage of generic wildcard type.(éÀûÂ8‘Û¯úÍ,HÚıBRCRITICALZ
-CODE_SMELL
-r
-squid:S106#"9Replace this use of System.out or System.err by a logger.(Ã•…Éşÿÿÿÿ8¬ş¡¤Ñ,HÛıBRMAJORZ
-CODE_SMELL
-m
-squid:S106A"9Replace this use of System.out or System.err by a logger.(õ®·‡8¢™œ§Ø,HÜıBRMAJORZ
-CODE_SMELL
-dsquid:S1452‡"&Remove usage of generic wildcard type.(Îùµ¹úÿÿÿÿ8î¾›…Æ,HİıBRCRITICALZ
-CODE_SMELL
-csquid:S1452o"&Remove usage of generic wildcard type.(˜Ùïúÿÿÿÿ8¸—•¿Ñ,HŞıBRCRITICALZ
-CODE_SMELL
-m
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(åÔãÅ8‹¡õ¦Ø,HßıBRMAJORZ
+squid:S2293¦"YReplace the type specification in this constructor call with the diamond operator ("<>").(½õ®ë8¦½ò„Æ,HÑşBRMINORZ
 CODE_SMELL
 l
-squid:S106+"9Replace this use of System.out or System.err by a logger.(‚ú†8„ç±ÁÑ,HàıBRMAJORZ
-CODE_SMELL
-ksquid:S2629c"7Use the built-in formatting to construct this argument.(úêÌi8Ğº¿Ñ,HáıBRMAJORZ
-CODE_SMELL
-^squid:S1452]"&Remove usage of generic wildcard type.(Ôƒ‡’8›¡§É,HâıBRCRITICALZ
-CODE_SMELL
-squid:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(½õ®ë8¦½ò„Æ,HãıBRMINORZ
-CODE_SMELL
-“squid:S2293s"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßšõúÿÿÿÿ8‘Áé¾Ñ,HäıBRMINORZ
+squid:S106+"9Replace this use of System.out or System.err by a logger.(‚ú†8„ç±ÁÑ,HÈşBRMAJORZ
 CODE_SMELL
 m
-squid:S106D"9Replace this use of System.out or System.err by a logger.(ÏÎùÖ8¦½ò„Æ,HåıBRMAJORZ
+squid:S106D"9Replace this use of System.out or System.err by a logger.(ÏÎùÖ8¦½ò„Æ,HËşBRMAJORZ
 CODE_SMELL
-usquid:S3457c"AFormat specifiers should be used instead of string concatenation.(úêÌi8Ğº¿Ñ,HæıBRMAJORZ
+r
+squid:S106#"9Replace this use of System.out or System.err by a logger.(Ã•…Éşÿÿÿÿ8¬ş¡¤Ñ,HÍşBRMAJORZ
 CODE_SMELL
-csquid:S1452""&Remove usage of generic wildcard type.(½±²’ûÿÿÿÿ8¬ş¡¤Ñ,HçıBRCRITICALZ
+»%squid:RedundantThrowsDeclarationCheck["lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ôƒ‡’8ÊŒù¾Ñ,HÏşBRMINORZ
 CODE_SMELL
-^squid:S14524"&Remove usage of generic wildcard type.(œšÈ¨8™–•ª×,HèıBRCRITICALZ
+csquid:S1452""&Remove usage of generic wildcard type.(½±²’ûÿÿÿÿ8¬ş¡¤Ñ,HÆşBRCRITICALZ
 CODE_SMELL
-“squid:S2293f"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßšõúÿÿÿÿ8ÌéŠÂÑ,HéıBRMINORZ
+ksquid:S2629a"7Use the built-in formatting to construct this argument.(úêÌi8Ğº¿Ñ,HĞşBRMAJORZ
 CODE_SMELL
-]squid:S1452~"&Remove usage of generic wildcard type.(½ÃŸ(8¦½ò„Æ,HêıBRCRITICALZ
+m
+squid:S106O"9Replace this use of System.out or System.err by a logger.(åÔãÅ8‹¡õ¦Ø,HÊşBRMAJORZ
 CODE_SMELL
-csquid:S1452*"&Remove usage of generic wildcard type.(ùéÒœüÿÿÿÿ8™–•ª×,HëıBRCRITICALZ
+m
+squid:S106,"9Replace this use of System.out or System.err by a logger.(èÃ¦Õ8‚¡†ÜÍ,HÌşBRMAJORZ
 CODE_SMELL
-squid:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘˜‡ú8¦½ò„Æ,HìıBRMINORZ
+^squid:S1452N"&Remove usage of generic wildcard type.(éÀûÂ8¦½ò„Æ,HÁşBRCRITICALZ
 CODE_SMELL
-»%squid:RedundantThrowsDeclarationCheck]"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ôƒ‡’8ÊŒù¾Ñ,HíıBRMINORZ
+“squid:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßšõúÿÿÿÿ8‘Áé¾Ñ,HÄşBRMINORZ
 CODE_SMELL
-_squid:S1452°"&Remove usage of generic wildcard type.(À¹ó8‚Ä¶ôØ,HîıBRCRITICALZ
+csquid:S1452*"&Remove usage of generic wildcard type.(ùéÒœüÿÿÿÿ8™–•ª×,HÓşBRCRITICALZ
+CODE_SMELL
+m
+squid:S106A"9Replace this use of System.out or System.err by a logger.(õ®·‡8¢™œ§Ø,HÉşBRMAJORZ
+CODE_SMELL
+dsquid:S1452…"&Remove usage of generic wildcard type.(Îùµ¹úÿÿÿÿ8›¡§É,HÂşBRCRITICALZ
+CODE_SMELL
+“squid:S2293q"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßšõúÿÿÿÿ8ÌéŠÂÑ,H¾şBRMINORZ
+CODE_SMELL
+^squid:S14524"&Remove usage of generic wildcard type.(œšÈ¨8™–•ª×,H½şBRCRITICALZ
+CODE_SMELL
+_squid:S1452«"&Remove usage of generic wildcard type.(À¹ó8‚Ä¶ôØ,HÎşBRCRITICALZ
+CODE_SMELL
+usquid:S3457a"AFormat specifiers should be used instead of string concatenation.(úêÌi8Ğº¿Ñ,HÃşBRMAJORZ
+CODE_SMELL
+^squid:S1452["&Remove usage of generic wildcard type.(Ôƒ‡’8î¾›…Æ,HÇşBRCRITICALZ
+CODE_SMELL
+]squid:S1452|"&Remove usage of generic wildcard type.(½ÃŸ(8¸—•¿Ñ,HÅşBRCRITICALZ
 CODE_SMELL
