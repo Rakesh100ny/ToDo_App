@@ -1,9 +1,10 @@
 package com.bridgelabz.todo.noteservice.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Criteria;
-import org.hibernate.Query;
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -32,6 +33,7 @@ public class NoteDaoImpl implements INoteDao {
 	public void update(Note note)
 	{
 	 Session session=sessionFactory.getCurrentSession();
+	 System.out.println("updated date" +note.getLastUpdatedDate());
 	 session.update(note);
 	 System.out.println("Note is successfully updated...!");
 	}
@@ -98,6 +100,23 @@ public class NoteDaoImpl implements INoteDao {
 		 return true;
 		 
 	}
-  
+
+	@Override
+	public void deleteAllTrashedNote() 
+	{
+		Date date=new Date(new Date().getTime()-(20*1000));
+		Session session=sessionFactory.getCurrentSession();
+	    
+		
+		Query query=session.createQuery("delete from Note where isTrashed=true AND lastUpdatedDate <:date");
+		query.setParameter("date", date);
+		
+
+		int count=query.executeUpdate();
+		if(count>0) {
+			System.out.println("Number of notes delted " +count);
+		}
+		
+	}
 	
 }

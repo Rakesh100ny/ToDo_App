@@ -12,16 +12,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-
+import javax.transaction.Transactional;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
-
 import com.bridgelabz.todo.label.dao.ILabelDao;
 import com.bridgelabz.todo.label.model.Label;
 import com.bridgelabz.todo.noteservice.dao.INoteDao;
@@ -359,6 +357,13 @@ public class NoteServiceImpl implements INoteService {
 			e.printStackTrace();
 		}
 
+	}
+
+	@Transactional
+	@Override
+	public void deleteAllTrashNotes() 
+	{
+		noteDao.deleteAllTrashedNote();	
 	}
 
 }

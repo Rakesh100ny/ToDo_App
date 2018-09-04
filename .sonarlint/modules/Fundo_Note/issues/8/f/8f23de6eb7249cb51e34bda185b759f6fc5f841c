@@ -1,36 +1,36 @@
 
-asquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¸óØ,H³şBRMINORZVULNERABILITY
+”squid:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(àÜÉûùÿÿÿÿ8ÀúÆ Ú,H€CRMINORZ
+CODE_SMELL
+\squid:S1168Î"&Return an empty array instead of null.(¥¹ï8ÀúÆ Ú,H—€CRMAJORZ
+CODE_SMELL
+€squid:CommentedOutCodeLine;"<This block of commented-out lines of code should be removed.(½ÍÛ8ÀúÆ Ú,H’€CRMAJORZ
+CODE_SMELL
+ˆsquid:S2095¶"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ÀúÆ Ú,H‘€CRBLOCKERZBUG
+`squid:S1148e"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H™€CRMINORZVULNERABILITY
+`squid:S1148G"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H˜€CRMINORZVULNERABILITY
+asquid:S1148Ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H€CRMINORZVULNERABILITY
+squid:S2293”"YReplace the type specification in this constructor call with the diamond operator ("<>").(ü°«8ÀúÆ Ú,H€CRMINORZ
+CODE_SMELL
+asquid:S1148›"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H€CRMINORZVULNERABILITY
+asquid:S1148Ç"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,HŸ€CRMINORZVULNERABILITY
 s
-squid:S106·"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8½¬ÉúÍ,H¶şBRMAJORZ
+squid:S106µ"9Replace this use of System.out or System.err by a logger.(à…ğùÿÿÿÿ8ÀúÆ Ú,H•€CRMAJORZ
 CODE_SMELL
 m
-squid:S106X"9Replace this use of System.out or System.err by a logger.(¾õÅ8±‰ ÷Ø,H­şBRMAJORZ
+squid:S106t"9Replace this use of System.out or System.err by a logger.(ğ‰í°8ÀúÆ Ú,H”€CRMAJORZ
 CODE_SMELL
-€squid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(½ÍÛ8¥ŞÒ¿Ñ,H·şBRMAJORZ
-CODE_SMELL
-\squid:S1168Ğ"&Return an empty array instead of null.(¥¹ï8ÂùşÀÑ,H¸şBRMAJORZ
-CODE_SMELL
-m
-squid:S106W"9Replace this use of System.out or System.err by a logger.(šÇÕë8ÿ‡£ª×,H«şBRMAJORZ
-CODE_SMELL
-`squid:S1148}"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H¯şBRMINORZVULNERABILITY
-”squid:S2293®"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦…±Åûÿÿÿÿ8è¸óØ,HªşBRMINORZ
-CODE_SMELL
-”squid:S2293­"YReplace the type specification in this constructor call with the diamond operator ("<>").(àÜÉûùÿÿÿÿ8è¸óØ,HºşBRMINORZ
-CODE_SMELL
-asquid:S1148‹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£÷ºª×,H°şBRMINORZVULNERABILITY
-asquid:S1148Ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å€ÀÉ,H²şBRMINORZVULNERABILITY
-asquid:S1148ç"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ò„Æ,H»şBRMINORZVULNERABILITY
-ˆsquid:S2095¸"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(ßÌ ¸ÿÿÿÿÿ8ĞÁü¾Ñ,HµşBRBLOCKERZBUG
-`squid:S1148g"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„€†ÀÉ,H®şBRMINORZVULNERABILITY
-`squid:S1148I"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8€ƒáÍØ,H¬şBRMINORZVULNERABILITY
-asquid:S1148½"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÓÍÑ¿Ñ,H±şBRMINORZVULNERABILITY
+`squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,Hš€CRMINORZVULNERABILITY
 n
-squid:S106‹"9Replace this use of System.out or System.err by a logger.(İŠ–é8ÿ‡£ª×,H¼şBRMAJORZ
+squid:S106‰"9Replace this use of System.out or System.err by a logger.(İŠ–é8ÀúÆ Ú,H–€CRMAJORZ
 CODE_SMELL
-asquid:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¸óØ,H¹şBRMINORZVULNERABILITY
 m
-squid:S106v"9Replace this use of System.out or System.err by a logger.(ğ‰í°8¢¦ŠÛÍ,H´şBRMAJORZ
+squid:S106U"9Replace this use of System.out or System.err by a logger.(šÇÕë8ÿ‡£ª×,HœÿBRMAJORZ
 CODE_SMELL
-squid:S2293–"YReplace the type specification in this constructor call with the diamond operator ("<>").(ü°«8’˜ÿ¥Ù,HÖşBRMINORZ
+asquid:S1148»"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,Hœ€CRMINORZVULNERABILITY
+”squid:S2293¬"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦…±Åûÿÿÿÿ8ÀúÆ Ú,H€CRMINORZ
 CODE_SMELL
+m
+squid:S106V"9Replace this use of System.out or System.err by a logger.(¾õÅ8ÀúÆ Ú,H“€CRMAJORZ
+CODE_SMELL
+asquid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H›€CRMINORZVULNERABILITY
+asquid:S1148å"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀúÆ Ú,H €CRMINORZVULNERABILITY

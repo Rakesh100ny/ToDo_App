@@ -21,4 +21,6 @@ public interface INoteDao {
 
 	boolean deleteUrl(long id);
 
+	void deleteAllTrashedNote();
+
 }

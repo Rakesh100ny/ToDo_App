@@ -44,4 +44,6 @@ public interface INoteService
 	Set<Links> urlinfo(String description);
 
 	void removeurlinfo(String token, Note note, long id);
+
+	void deleteAllTrashNotes();
 }

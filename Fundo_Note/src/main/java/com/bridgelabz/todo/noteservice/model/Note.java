@@ -47,8 +47,8 @@ public class Note {
 	private boolean isArchived;
 	@Temporal(TemporalType.DATE)
 	private Date createdDate = new Date();
-	@Temporal(TemporalType.DATE)
-	private Date lastUpdatedDate = new Date();
+
+	private Date lastUpdatedDate;
 	
 	private Date reminderDate;
    

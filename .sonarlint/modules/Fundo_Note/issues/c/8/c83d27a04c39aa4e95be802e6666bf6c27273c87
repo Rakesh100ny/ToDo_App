@@ -1,12 +1,18 @@
 
-isquid:EmptyStatementUsageCheck8"Remove this empty statement.(ã¦éáøÿÿÿÿ8÷»½…Æ,HùıBRMINORZ
+l
+squid:S106$"9Replace this use of System.out or System.err by a logger.(šå˜8ÙŸ›Ë,HµÿBRMAJORZ
 CODE_SMELL
 m
-squid:S106$"9Replace this use of System.out or System.err by a logger.(œØ8ÙŸ›Ë,HúıBRMAJORZ
+squid:S106&"9Replace this use of System.out or System.err by a logger.(œØ8”ø­Ú,HÀÿBRMAJORZ
 CODE_SMELL
-isquid:EmptyStatementUsageCheck`"Remove this empty statement.(¦Şı±ıÿÿÿÿ8ô§¹ôØ,HûıBRMINORZ
+isquid:EmptyStatementUsageCheckb"Remove this empty statement.(¦Şı±ıÿÿÿÿ8÷»½…Æ,H²ÿBRMINORZ
 CODE_SMELL
-€squid:CommentedOutCodeLineT"<This block of commented-out lines of code should be removed.(âö‹8ô§¹ôØ,HüıBRMAJORZ
+isquid:EmptyStatementUsageCheck:"Remove this empty statement.(ã¦éáøÿÿÿÿ8ô§¹ôØ,H´ÿBRMINORZ
 CODE_SMELL
-squid:CallToDeprecatedMethodI"6Remove this use of "createCriteria"; it is deprecated.(ƒ¥£Åøÿÿÿÿ8ô§¹ôØ,HııBRMINORZ
+€squid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(âö‹8ô§¹ôØ,H³ÿBRMAJORZ
+CODE_SMELL
+squid:CallToDeprecatedMethodK"6Remove this use of "createCriteria"; it is deprecated.(ƒ¥£Åøÿÿÿÿ8ô§¹ôØ,H±ÿBRMINORZ
+CODE_SMELL
+r
+squid:S106u"9Replace this use of System.out or System.err by a logger.(ŸÉÂŞøÿÿÿÿ8ªÃç Ú,HÇ€CRMAJORZ
 CODE_SMELL
